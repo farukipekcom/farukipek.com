@@ -21,9 +21,10 @@ import {
 } from "@chakra-ui/react";
 import Blog from "./pages/Blog";
 import Post from "./pages/Post";
-const base = new Airtable({ apiKey: "keyh0pAZnYNujCri8" }).base(
-  "appoPS45E5iQEwpMt"
-);
+console.log();
+const base = new Airtable({
+  apiKey: `${process.env.REACT_APP_AIRTABLE_KEY}`,
+}).base(`${process.env.REACT_APP_AIRTABLE_BASE_ID}`);
 
 function App({ theme }) {
   const [about, setAbout] = useState([]);

@@ -765,3 +765,19 @@ td {
 .blog-post span img {
   margin: 0 auto;
 }
+
+.footer-icon {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 42px !important;
+  width: 42px !important;
+  justify-content: center !important;
+  padding: 10px !important;
+}
+
+.footer-icon svg {
+  width: 28px;
+  height: 28px;
+}

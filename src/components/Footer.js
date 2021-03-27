@@ -10,7 +10,7 @@ const Footer = () => {
             w="100%"
             display="flex"
             alignItems="center"
-            justifyContent={{ sm: "center", md: "flex-start" }}
+            justifyContent={{ base: "center", sm: "center", md: "flex-start" }}
             pl="10px"
           >
             <a href="/" className="Header-logo" title="Faruk İpek">
@@ -24,7 +24,7 @@ const Footer = () => {
             display="flex"
             alignItems="center"
             mt={{ base: "20px", md: "0" }}
-            justifyContent={{ sm: "center", md: "flex-end" }}
+            justifyContent={{ base: "center", sm: "center", md: "flex-end" }}
             pr="10px"
           >
             <Link
@@ -37,6 +37,7 @@ const Footer = () => {
               display="flex"
               alignItems="center"
               borderRadius="50%"
+              className="footer-icon"
             >
               <svg
                 aria-hidden="true"
@@ -65,6 +66,7 @@ const Footer = () => {
               display="flex"
               alignItems="center"
               borderRadius="50%"
+              className="footer-icon"
             >
               <svg
                 aria-hidden="true"
@@ -93,6 +95,7 @@ const Footer = () => {
               display="flex"
               alignItems="center"
               borderRadius="50%"
+              className="footer-icon"
             >
               <svg
                 aria-hidden="true"
@@ -121,6 +124,7 @@ const Footer = () => {
               display="flex"
               alignItems="center"
               borderRadius="50%"
+              className="footer-icon"
             >
               <svg
                 aria-hidden="true"
@@ -148,6 +152,7 @@ const Footer = () => {
               display="flex"
               alignItems="center"
               borderRadius="50%"
+              className="footer-icon"
             >
               <svg
                 aria-hidden="true"

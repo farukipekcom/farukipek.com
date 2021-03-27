@@ -10,19 +10,18 @@ import {
   Text,
 } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
+
 const base = new Airtable({
   apiKey: `${process.env.REACT_APP_AIRTABLE_KEY}`,
 }).base(`${process.env.REACT_APP_AIRTABLE_BASE_ID}`);
-function Post({ match }) {
-  const [port, setPort] = useState([]);
 
+function Post({ match }) {
+  const [BlogItem, setBlogItem] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     base("blog").find(`${match.params.id}`, function (err, record) {
-      setPort(record);
+      setBlogItem(record);
       setLoading(true);
-      console.log("2");
-      console.log(match.params.id);
     });
   }, []);
 
@@ -37,14 +36,14 @@ function Post({ match }) {
             mr="10px"
           >
             <Image
-              src={port.fields.image[0].url}
-              alt={port.fields.project_name}
+              src={BlogItem.fields.image[0].url}
+              alt={BlogItem.fields.project_name}
               objectFit="cover"
               height="400px"
               className="Work-photo"
             />
             <Heading as="h2" fontSize="32px" fontWeight="700" mt="5">
-              {port.fields.title}
+              {BlogItem.fields.title}
             </Heading>
             <Box display="flex" h="30px" alignItems="center">
               <Box
@@ -59,13 +58,13 @@ function Post({ match }) {
               </Box>
               <Box ml="20px" display="flex" justifyContent="flex-end">
                 <Text color="#6d7d8c" fontWeight="600" fontSize="14px">
-                  {port.fields.date}
+                  {BlogItem.fields.date}
                 </Text>
               </Box>
             </Box>
             <Box className="blog-post">
               <ReactMarkdown escapeHtml={false}>
-                {port.fields.details}
+                {BlogItem.fields.details}
               </ReactMarkdown>
             </Box>
           </Grid>

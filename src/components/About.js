@@ -1,16 +1,6 @@
 import React from "react";
-
 import images from "../img";
-import {
-  Container,
-  Grid,
-  GridItem,
-  Box,
-  Image,
-  Heading,
-  Text,
-} from "@chakra-ui/react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Container, Grid, Box, Image, Heading, Text } from "@chakra-ui/react";
 
 const About = () => {
   return (
@@ -70,13 +60,13 @@ const About = () => {
             alignItems="center"
             justifyContent="flex-end"
             pr="10px"
-            w={{ sm: "0", md: "320px" }}
           >
-            <LazyLoadImage
+            <Image
               src={images.profile}
-              borderRadius="full"
-              boxSize="320px"
+              borderradius="full"
+              boxsize="320px"
               alt="Faruk İpek"
+              w={{ sm: "0", md: "320px" }}
             />
           </Box>
         </Grid>

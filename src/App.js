@@ -1,77 +1,27 @@
 import "./App.css";
-import images from "./img";
-import Airtable from "airtable";
-import React, { useEffect, useState } from "react";
-import About from "./components/About";
-import Header from "./components/Header";
-import Portfolio from "./components/Portfolio";
-import { BrowserRouter, Router, Switch, Route } from "react-router-dom";
-
+import React from "react";
 import Anasayfa from "./pages/Anasayfa";
-import {
-  Box,
-  Button,
-  Text,
-  Link,
-  Spinner,
-  extendTheme,
-  Container,
-  ChakraProvider,
-  Image,
-} from "@chakra-ui/react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Blog from "./pages/Blog";
 import Post from "./pages/Post";
-console.log();
-const base = new Airtable({
-  apiKey: `${process.env.REACT_APP_AIRTABLE_KEY}`,
-}).base(`${process.env.REACT_APP_AIRTABLE_BASE_ID}`);
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App({ theme }) {
-  const [about, setAbout] = useState([]);
-  const [portfolio, setPortfolio] = useState([]);
-  const [blog, setBlog] = useState([]);
-
-  useEffect(() => {
-    base("about")
-      .select({ view: "Grid view" })
-      .eachPage((records, fetchNextPage) => {
-        setAbout(records);
-        fetchNextPage();
-      });
-    base("portfolio")
-      .select({ view: "Grid view" })
-      .eachPage((records, fetchNextPage) => {
-        setPortfolio(records);
-        fetchNextPage();
-      });
-    base("blog")
-      .select({ view: "Grid view" })
-      .eachPage((records, fetchNextPage) => {
-        setBlog(records);
-        fetchNextPage();
-      });
-  }, []);
-  const id = 4;
+function App() {
   return (
-    <div className="App">
-      {blog.map((blog) => {
-        return <div></div>;
-      })}
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <Anasayfa />
-          </Route>
-          <Route path="/blog">
-            <Blog blog={blog} />
-          </Route>
-          <Route path="/post/:slug_name">
-            <Post blog={blog} />
-          </Route>
-        </Switch>
-      </BrowserRouter>
+    <div>
+      <Router>
+        <div className="App">
+          <Header></Header>
+          <Switch>
+            <Route path="/" exact component={Anasayfa} />
+            <Route path="/blog" exact component={Blog} />
+            <Route path="/blog/:id" component={Post} />
+          </Switch>
+          <Footer></Footer>
+        </div>
+      </Router>
     </div>
   );
 }
-
 export default App;

@@ -1,9 +1,5 @@
 import React from "react";
-import { Container, Grid, GridItem, Link, Box, Text } from "@chakra-ui/react";
-import App from "../App";
-import Blog from "../pages/Blog";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Anasayfa from "../pages/Anasayfa";
+import { Container, Grid, Link, Box, Text } from "@chakra-ui/react";
 const Header = () => {
   return (
     <>
@@ -12,8 +8,13 @@ const Header = () => {
           <Box
             w="100%"
             display="flex"
+            justifyContent={{
+              base: "center",
+              sm: "center",
+              md: "flex-start",
+              lg: "flex-start",
+            }}
             alignItems="center"
-            justifyContent={{ sm: "center", md: "flex-start" }}
             pl="10px"
           >
             <a href="/" className="Header-logo" title="Faruk İpek">
@@ -26,7 +27,12 @@ const Header = () => {
             w="100%"
             display="flex"
             alignItems="center"
-            justifyContent={{ sm: "center", md: 'flex-end"' }}
+            justifyContent={{
+              base: "center",
+              sm: "center",
+              md: "flex-end",
+              lg: "flex-end",
+            }}
             pr="10px"
           >
             <Link href="/">

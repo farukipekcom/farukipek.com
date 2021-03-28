@@ -10,6 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
+import { Helmet } from "react-helmet";
 
 const base = new Airtable({
   apiKey: `${process.env.REACT_APP_AIRTABLE_KEY}`,
@@ -45,21 +46,33 @@ function Post({ match }) {
   }, [id]);
 
   return (
-    <div>
+    <>
       {loading ? (
         <Container maxW="1200px" mt="40px" mb="40px">
+          <Helmet>
+            <title>Faruk İpek | {BlogItem.fields.title}</title>
+            <meta
+              name="description"
+              content="Merhaba! Ben Faruk İpek. 2013 yılında ilk adımlarımı attığım bu sektörde, şu an freelance front-end developer olarak devam etmekteyim."
+            />
+          </Helmet>
           <Grid
             templateColumns={{ sm: "1fr", md: "1fr" }}
             gap={5}
             ml="10px"
             mr="10px"
           >
-            <Image
-              src={BlogItem.fields.image[0].url}
-              objectFit="cover"
-              height="400px"
-              className="Work-photo"
-            />
+            {BlogItem.fields.image > 0 ? (
+              <Image
+                src={BlogItem.fields.image[0].url}
+                objectFit="cover"
+                height="400px"
+                className="Work-photo"
+              />
+            ) : (
+              ""
+            )}
+
             <Heading as="h2" fontSize="32px" fontWeight="700" mt="5">
               {BlogItem.fields.title}
             </Heading>
@@ -102,7 +115,7 @@ function Post({ match }) {
           </Grid>
         </Container>
       )}
-    </div>
+    </>
   );
 }
 

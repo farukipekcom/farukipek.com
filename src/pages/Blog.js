@@ -3,7 +3,7 @@ import Airtable from "airtable";
 import "../App.css";
 import { Link } from "react-router-dom";
 import { Container, Spinner, Grid, Box, Image, Text } from "@chakra-ui/react";
-
+import { Helmet } from "react-helmet";
 const base = new Airtable({
   apiKey: `${process.env.REACT_APP_AIRTABLE_KEY}`,
 }).base(`${process.env.REACT_APP_AIRTABLE_BASE_ID}`);
@@ -22,6 +22,13 @@ const Blog = ({ Theme }) => {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>Faruk İpek | Blog</title>
+        <meta
+          name="description"
+          content="Merhaba! Ben Faruk İpek. 2013 yılında ilk adımlarımı attığım bu sektörde, şu an freelance front-end developer olarak devam etmekteyim."
+        />
+      </Helmet>
       {loading ? (
         <Container maxW="1200px" mb="20px" p="0px">
           {blog[0] ? (
@@ -43,14 +50,18 @@ const Blog = ({ Theme }) => {
                       flexDirection="column"
                     >
                       <Box mb="20px">
-                        <Image
-                          src={item.fields.image[0].url}
-                          objectFit="cover"
-                          h={[300, 300, 220]}
-                          borderRadius="8px"
-                          w="100%"
-                          className="Work-photo"
-                        />
+                        {item.fields.image > 0 ? (
+                          <Image
+                            src={item.fields.image[0].url}
+                            objectFit="cover"
+                            h={[300, 300, 220]}
+                            borderRadius="8px"
+                            w="100%"
+                            className="Work-photo"
+                          />
+                        ) : (
+                          "Görsel Yok"
+                        )}
                       </Box>
                       <Box display="flex" h="30px" alignItems="center">
                         <Box

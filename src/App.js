@@ -6,10 +6,17 @@ import Footer from "./components/Footer";
 import Blog from "./pages/Blog";
 import Post from "./pages/Post";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 function App() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Faruk İpek</title>
+        <meta
+          name="description"
+          content="Merhaba! Ben Faruk İpek. 2013 yılında ilk adımlarımı attığım bu sektörde, şu an freelance front-end developer olarak devam etmekteyim."
+        />
+      </Helmet>
       <Router>
         <div className="App">
           <Header></Header>
@@ -21,7 +28,7 @@ function App() {
           <Footer></Footer>
         </div>
       </Router>
-    </div>
+    </>
   );
 }
 export default App;

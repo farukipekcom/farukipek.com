@@ -23,7 +23,7 @@ const Blog = ({ Theme }) => {
   return (
     <>
       <Helmet>
-        <title>Faruk İpek | Blog</title>
+        <title>Blog | Faruk İpek</title>
         <meta
           name="description"
           content="Merhaba! Ben Faruk İpek. 2013 yılında ilk adımlarımı attığım bu sektörde, şu an freelance front-end developer olarak devam etmekteyim."

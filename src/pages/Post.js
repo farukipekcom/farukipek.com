@@ -10,6 +10,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
+import { useHistory } from "react-router-dom";
+
 import { Helmet } from "react-helmet";
 
 const base = new Airtable({
@@ -20,6 +22,10 @@ function Post({ match }) {
   const [BlogItem, setBlogItem] = useState([]);
   const [loading, setLoading] = useState(false);
   const [blog, setBlog] = useState([]);
+  let history = useHistory();
+  const redirect = () => {
+    history.push("/404");
+  };
   let [id, setId] = useState("");
   useEffect(() => {
     base("blog")
@@ -35,6 +41,9 @@ function Post({ match }) {
         setId(item.id);
       }
     });
+    if (id.length <= 0) {
+      redirect();
+    }
   });
   useEffect(() => {
     if (id.length > 0) {
@@ -50,7 +59,7 @@ function Post({ match }) {
       {loading ? (
         <Container maxW="1200px" mt="40px" mb="40px">
           <Helmet>
-            <title>Faruk İpek | {BlogItem.fields.title}</title>
+            <title>{BlogItem.fields.title} | Faruk İpek</title>
             <meta
               name="description"
               content="Merhaba! Ben Faruk İpek. 2013 yılında ilk adımlarımı attığım bu sektörde, şu an freelance front-end developer olarak devam etmekteyim."

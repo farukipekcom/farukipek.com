@@ -18,12 +18,31 @@ const base = new Airtable({
 function Post({ match }) {
   const [BlogItem, setBlogItem] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [blog, setBlog] = useState([]);
+  let [id, setId] = useState("");
   useEffect(() => {
-    base("blog").find(`${match.params.id}`, function (err, record) {
-      setBlogItem(record);
-      setLoading(true);
-    });
+    base("blog")
+      .select({ view: "Grid view" })
+      .eachPage((records, fetchNextPage) => {
+        setBlog(records);
+        fetchNextPage();
+      });
   }, []);
+  useEffect(() => {
+    blog.map((item) => {
+      if (item.fields.slug == match.params.slug) {
+        setId(item.id);
+      }
+    });
+  });
+  useEffect(() => {
+    if (id.length > 0) {
+      base("blog").find(`${id}`, function (err, record) {
+        setBlogItem(record);
+        setLoading(true);
+      });
+    }
+  }, [id]);
 
   return (
     <div>
@@ -37,7 +56,6 @@ function Post({ match }) {
           >
             <Image
               src={BlogItem.fields.image[0].url}
-              alt={BlogItem.fields.project_name}
               objectFit="cover"
               height="400px"
               className="Work-photo"

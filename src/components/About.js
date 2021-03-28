@@ -1,6 +1,14 @@
 import React from "react";
 import images from "../img";
-import { Container, Grid, Box, Image, Heading, Text } from "@chakra-ui/react";
+import {
+  Container,
+  Grid,
+  Link,
+  Box,
+  Image,
+  Heading,
+  Text,
+} from "@chakra-ui/react";
 
 const About = () => {
   return (
@@ -29,29 +37,29 @@ const About = () => {
             </Text>
             <Text fontSize="18px" lineHeight="1.5em" mt="20px">
               İzlediğim dizileri{" "}
-              <a
+              <Link
                 href="https://www.pogdesign.co.uk/cat/profile/farukipekcom"
                 target="_blank"
                 className="underline-about-link"
               >
                 PogDesign
-              </a>
+              </Link>
               ’da listeliyorum. Çektiğim fotoğraflara{" "}
-              <a
+              <Link
                 href="https://www.instagram.com/farukipekcom/"
                 target="_blank"
                 className="underline-about-link"
               >
                 Instagram
-              </a>{" "}
+              </Link>{" "}
               profilimden bakabilirsiniz. Dinlediğim şarkılara ise{" "}
-              <a
+              <Link
                 href="https://open.spotify.com/user/11133935052"
                 target="_blank"
                 className="underline-about-link"
               >
                 Spotify
-              </a>{" "}
+              </Link>{" "}
               profilimden erişebilirsiniz.
             </Text>
           </Box>

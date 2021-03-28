@@ -65,13 +65,7 @@ const Portfolio = () => {
                           fontWeight="600"
                           mt="20px"
                         >
-                          <Link
-                            href={item.fields.project_link}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            {item.fields.project_name}
-                          </Link>
+                          {item.fields.project_name}
                         </Heading>
                       </Link>
                     </Box>

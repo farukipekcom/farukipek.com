@@ -13,11 +13,11 @@ const Footer = () => {
             justifyContent={{ base: "center", sm: "center", md: "flex-start" }}
             pl="10px"
           >
-            <a href="/" className="Header-logo" title="Faruk İpek">
+            <Link href="/" className="Header-logo" title="Faruk İpek">
               <Text fontSize="18px" fontWeight="600">
                 © 2021 Faruk İpek
               </Text>
-            </a>
+            </Link>
           </Box>
           <Box
             w="100%"
@@ -44,7 +44,7 @@ const Footer = () => {
                 focusable="false"
                 data-prefix="fab"
                 data-icon="facebook-f"
-                class="svg-inline--fa fa-facebook-f fa-w-10"
+                className="svg-inline--fa fa-facebook-f fa-w-10"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 320 512"
@@ -73,7 +73,7 @@ const Footer = () => {
                 focusable="false"
                 data-prefix="fab"
                 data-icon="twitter"
-                class="svg-inline--fa fa-twitter fa-w-16"
+                className="svg-inline--fa fa-twitter fa-w-16"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -102,7 +102,7 @@ const Footer = () => {
                 focusable="false"
                 data-prefix="fab"
                 data-icon="instagram"
-                class="svg-inline--fa fa-instagram fa-w-14"
+                className="svg-inline--fa fa-instagram fa-w-14"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -131,7 +131,7 @@ const Footer = () => {
                 focusable="false"
                 data-prefix="fab"
                 data-icon="linkedin-in"
-                class="svg-inline--fa fa-linkedin-in fa-w-14"
+                className="svg-inline--fa fa-linkedin-in fa-w-14"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -159,7 +159,7 @@ const Footer = () => {
                 focusable="false"
                 data-prefix="fab"
                 data-icon="github"
-                class="svg-inline--fa fa-github fa-w-16"
+                className="svg-inline--fa fa-github fa-w-16"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512"

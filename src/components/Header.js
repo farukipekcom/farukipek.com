@@ -17,11 +17,11 @@ const Header = () => {
             alignItems="center"
             pl="10px"
           >
-            <a href="/" className="Header-logo" title="Faruk İpek">
+            <Link href="/" className="Header-logo" title="Faruk İpek">
               <Text fontSize="48px" fontWeight="600">
                 Faruk İpek
               </Text>
-            </a>
+            </Link>
           </Box>
           <Box
             w="100%"

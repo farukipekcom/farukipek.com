@@ -16,7 +16,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={Anasayfa} />
             <Route path="/blog" exact component={Blog} />
-            <Route path="/blog/:id" component={Post} />
+            <Route path="/blog/:slug" component={Post} />
           </Switch>
           <Footer></Footer>
         </div>

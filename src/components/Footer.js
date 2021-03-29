@@ -143,8 +143,9 @@ const Footer = () => {
               </svg>
             </Link>{" "}
             <Link
-              href="https://github.com/farukipekcoms"
+              href="https://github.com/farukipekcom"
               ml="10px"
+              target="_blank"
               backgroundColor="#333"
               w="42px"
               h="42px"

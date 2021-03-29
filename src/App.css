@@ -20,6 +20,7 @@ body {
   margin: 0 !important;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji !important;
+  letter-spacing: 0.2px;
 }
 
 /**
@@ -735,6 +736,9 @@ td {
 }
 .blog-post .twitter-tweet {
   margin: 0 auto !important;
+}
+.blog-post .twitter-tweet iframe {
+  width: 100% !important;
 }
 .blog-post p a {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);

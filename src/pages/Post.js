@@ -92,17 +92,7 @@ function Post({ match }) {
               {BlogItem.fields.title}
             </Heading>
             <Box display="flex" h="30px" alignItems="center">
-              <Box
-                backgroundColor="#ffc33d"
-                borderRadius="5px"
-                pl="8px"
-                pr="8px"
-              >
-                <Text p="1" color="white" fontSize="14px" fontWeight="500">
-                  E-Ticaret
-                </Text>
-              </Box>
-              <Box ml="20px" display="flex" justifyContent="flex-end">
+              <Box display="flex" justifyContent="flex-end">
                 <Text color="#6d7d8c" fontWeight="600" fontSize="14px">
                   {BlogItem.fields.date}
                 </Text>

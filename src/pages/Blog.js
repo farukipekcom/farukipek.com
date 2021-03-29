@@ -59,33 +59,7 @@ const Blog = ({ Theme }) => {
                           className="Work-photo"
                         />
                       </Box>
-                      <Box display="flex" h="30px" alignItems="center">
-                        <Box
-                          backgroundColor="#ffc33d"
-                          w="max-content"
-                          borderRadius="5px"
-                          pl="8px"
-                          pr="8px"
-                        >
-                          <Text
-                            p="1"
-                            color="white"
-                            fontSize="14px"
-                            fontWeight="500"
-                          >
-                            E-Ticaret
-                          </Text>
-                        </Box>
-                        <Box ml="auto" display="flex" justifyContent="flex-end">
-                          <Text
-                            color="#6d7d8c"
-                            fontWeight="600"
-                            fontSize="14px"
-                          >
-                            {item.fields.date}
-                          </Text>
-                        </Box>
-                      </Box>
+
                       <Box mt="20px">
                         <Text
                           fontSize="20px"
@@ -104,6 +78,17 @@ const Blog = ({ Theme }) => {
                         >
                           {`${`${item.fields.details}`.substring(0, 150)}..`}
                         </Text>
+                      </Box>
+                      <Box display="flex" h="30px" alignItems="center">
+                        <Box ml="auto" display="flex" justifyContent="flex-end">
+                          <Text
+                            color="#6d7d8c"
+                            fontWeight="600"
+                            fontSize="14px"
+                          >
+                            {item.fields.date}
+                          </Text>
+                        </Box>
                       </Box>
                     </Box>
                   </Link>

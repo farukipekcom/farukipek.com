@@ -1,9 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
 const Theme = extendTheme({
-  fonts: {
-    heading: "Montserrat",
-    body: "Montserrat",
-  },
   components: {
     Link: {
       baseStyle: {

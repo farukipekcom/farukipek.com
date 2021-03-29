@@ -50,18 +50,14 @@ const Blog = ({ Theme }) => {
                       flexDirection="column"
                     >
                       <Box mb="20px">
-                        {item.fields.image > 0 ? (
-                          <Image
-                            src={item.fields.image[0].url}
-                            objectFit="cover"
-                            h={[300, 300, 220]}
-                            borderRadius="8px"
-                            w="100%"
-                            className="Work-photo"
-                          />
-                        ) : (
-                          "Görsel Yok"
-                        )}
+                        <Image
+                          src={item.fields.image[0].url}
+                          objectFit="cover"
+                          h={[300, 300, 220]}
+                          borderRadius="8px"
+                          w="100%"
+                          className="Work-photo"
+                        />
                       </Box>
                       <Box display="flex" h="30px" alignItems="center">
                         <Box

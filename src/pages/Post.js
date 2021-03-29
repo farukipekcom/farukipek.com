@@ -1,5 +1,6 @@
 import Airtable from "airtable";
 import React, { useEffect, useState } from "react";
+
 import {
   Box,
   Spinner,
@@ -17,7 +18,21 @@ import { Helmet } from "react-helmet";
 const base = new Airtable({
   apiKey: `${process.env.REACT_APP_AIRTABLE_KEY}`,
 }).base(`${process.env.REACT_APP_AIRTABLE_BASE_ID}`);
+const TwitterContainer = () => {
+  useEffect(() => {
+    const anchor = document.createElement("a");
+    anchor.setAttribute("class", "twitter-timeline");
+    anchor.setAttribute("data-theme", "dark");
+    anchor.setAttribute("data-tweet-limit", "5");
+    anchor.setAttribute("data-chrome", "noheader nofooter noborders");
+    anchor.setAttribute("href", "https://twitter.com/HeyMarkKop");
+    document.getElementsByClassName("twitter-embed")[0].appendChild(anchor);
 
+    const script = document.createElement("script");
+    script.setAttribute("src", "https://platform.twitter.com/widgets.js");
+    document.getElementsByClassName("twitter-embed")[0].appendChild(script);
+  }, []);
+};
 function Post({ match }) {
   const [BlogItem, setBlogItem] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -41,9 +56,6 @@ function Post({ match }) {
         setId(item.id);
       }
     });
-    if (id.length <= 0) {
-      redirect();
-    }
   });
   useEffect(() => {
     if (id.length > 0) {
@@ -64,6 +76,11 @@ function Post({ match }) {
               name="description"
               content="Merhaba! Ben Faruk İpek. 2013 yılında ilk adımlarımı attığım bu sektörde, şu an freelance front-end developer olarak devam etmekteyim."
             />
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
           </Helmet>
           <Grid
             templateColumns={{ sm: "1fr", md: "1fr" }}
@@ -71,17 +88,6 @@ function Post({ match }) {
             ml="10px"
             mr="10px"
           >
-            {BlogItem.fields.image > 0 ? (
-              <Image
-                src={BlogItem.fields.image[0].url}
-                objectFit="cover"
-                height="400px"
-                className="Work-photo"
-              />
-            ) : (
-              ""
-            )}
-
             <Heading as="h2" fontSize="32px" fontWeight="700" mt="5">
               {BlogItem.fields.title}
             </Heading>

@@ -1,5 +1,6 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import Airtable from "airtable";
+import React, { useEffect, useState } from "react";
 import Anasayfa from "./pages/Anasayfa";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -14,10 +15,22 @@ import {
 } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
+const base = new Airtable({
+  apiKey: `${process.env.REACT_APP_AIRTABLE_KEY}`,
+}).base(`${process.env.REACT_APP_AIRTABLE_BASE_ID}`);
 function App() {
   useEffect(() => {
     ReactGA.initialize("UA-130214097-6");
     ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+  const [blog, setBlog] = useState([]);
+  useEffect(async () => {
+    base("blog")
+      .select({ view: "Grid view" })
+      .eachPage((records, fetchNextPage) => {
+        setBlog(records);
+        fetchNextPage();
+      });
   }, []);
   return (
     <>
@@ -33,8 +46,11 @@ function App() {
           <Header></Header>
           <Switch>
             <Route path="/" exact component={Anasayfa} />
-            <Route path="/blog" exact component={Blog} />
-            <Route path="/blog/:slug" component={Post} />
+            <Route path="/blog" exact component={() => <Blog blog={blog} />} />
+            <Route
+              path="/blog/:slug"
+              render={({ match }) => <Post post={blog} match={match} />}
+            />
             <Route path="/404" component={NotFoundPage} />
             <Redirect to="/404" />
           </Switch>

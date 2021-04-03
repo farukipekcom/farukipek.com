@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Grid, Link, Box, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { Container, Grid, Box, Text } from "@chakra-ui/react";
 const Header = () => {
   return (
     <>
@@ -17,7 +18,7 @@ const Header = () => {
             alignItems="center"
             pl="10px"
           >
-            <Link href="/" className="Header-logo" title="Faruk İpek">
+            <Link to="/" className="Header-logo" title="Faruk İpek">
               <Text fontSize="48px" fontWeight="600">
                 Faruk İpek
               </Text>
@@ -35,21 +36,31 @@ const Header = () => {
             }}
             pr="10px"
           >
-            <Link href="/">
+            <Link to="/">
               <Text fontSize="18px" fontWeight="500" className="underline-link">
                 Anasayfa
               </Text>
             </Link>
-            <Link href="/blog" ml="20px">
-              <Text fontSize="18px" fontWeight="500" className="underline-link">
+            <Link to="/blog">
+              <Text
+                fontSize="18px"
+                ml="20px"
+                fontWeight="500"
+                className="underline-link"
+              >
                 Blog
               </Text>
             </Link>
-            <Link href="mailto:faruk@farukipek.com" ml="20px">
-              <Text fontSize="18px" fontWeight="500" className="underline-link">
+            <a href="mailto:faruk@farukipek.com">
+              <Text
+                ml="20px"
+                fontSize="18px"
+                fontWeight="500"
+                className="underline-link"
+              >
                 İletişim
               </Text>
-            </Link>
+            </a>
           </Box>
         </Grid>
       </Container>

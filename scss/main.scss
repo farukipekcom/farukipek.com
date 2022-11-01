@@ -1,14 +1,14 @@
 // Abstracts
-@import "abstracts/mixin";
-@import "abstracts/variables";
+@import "abstracts/_mixin";
+@import "abstracts/_variables";
 
 // Base
-@import "base/formalize";
-@import "base/normalize";
+@import "base/_formalize";
+@import "base/_normalize";
 
 // Layout
-@import "layout/header";
-@import "layout/footer";
+@import "layout/_header";
+@import "layout/_footer";
 
 // Pages
-@import "pages/home";
+@import "pages/_home";

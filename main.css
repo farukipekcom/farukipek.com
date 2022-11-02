@@ -497,18 +497,7 @@ body {
 .homepage .container {
   width: 1080px;
 }
-.homepage-hero-heading {
-  font-size: 4em;
-  font-weight: 600;
-  line-height: 84px;
-  letter-spacing: -3%;
-}
-.homepage-hero-details {
-  font-size: 1.5em;
-  font-weight: 500;
-  margin-top: 16px;
-}
-.homepage-hero-hireme {
+.homepage-hireme {
   display: flex;
   align-items: center;
   width: max-content;
@@ -522,18 +511,18 @@ body {
   border: 1px solid transparent;
   transition: background-color 0.4s, color 0.4s, border 0.4s;
 }
-.homepage-hero-hireme:hover {
+.homepage-hireme:hover {
   background-color: #12161c;
   color: #fff;
   border: 1px solid #fff;
   transition: background-color 0.4s, color 0.4s, border 0.4s;
 }
-.homepage-hero-hireme:hover:hover svg {
+.homepage-hireme:hover:hover svg {
   fill: #fff;
   rotate: -45deg;
   transition: fill 0.4s, rotate 0.4s;
 }
-.homepage-hero-hireme svg {
+.homepage-hireme svg {
   margin-left: 8px;
   transition: fill 0.4s, rotate 0.4s;
 }

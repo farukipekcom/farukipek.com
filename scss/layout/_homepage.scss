@@ -3,41 +3,32 @@
   .container {
     width: 1080px;
   }
-  &-hero {
-    &-heading {
-      @include heading1;
-    }
-    &-details {
-      @include heading3;
-      margin-top: 16px;
-    }
-    &-hireme {
-      display: flex;
-      align-items: center;
-      width: max-content;
-      margin-top: 32px;
-      @include link;
-      padding: 16px 32px;
-      background-color: #fff;
-      color: $background;
-      border-radius: $border;
-      border: 1px solid transparent;
+  &-hireme {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin-top: 32px;
+    @include link;
+    padding: 16px 32px;
+    background-color: #fff;
+    color: $background;
+    border-radius: $border;
+    border: 1px solid transparent;
+    transition: background-color 0.4s, color 0.4s, border 0.4s;
+    &:hover {
+      background-color: $dark;
+      color: #fff;
+      border: 1px solid #fff;
       transition: background-color 0.4s, color 0.4s, border 0.4s;
-      &:hover {
-        background-color: $dark;
-        color: #fff;
-        border: 1px solid #fff;
-        transition: background-color 0.4s, color 0.4s, border 0.4s;
-        &:hover svg {
-          fill: #fff;
-          rotate: -45deg;
-          transition: fill 0.4s, rotate 0.4s;
-        }
-      }
-      svg {
-        margin-left: 8px;
+      &:hover svg {
+        fill: #fff;
+        rotate: -45deg;
         transition: fill 0.4s, rotate 0.4s;
       }
+    }
+    svg {
+      margin-left: 8px;
+      transition: fill 0.4s, rotate 0.4s;
     }
   }
   &-blog {
@@ -52,7 +43,6 @@
         height: 56px;
         display: flex;
         align-items: center;
-        // justify-content: space-between;
         margin-left: -16px;
         padding-left: 16px;
         padding-right: 16px;

@@ -28,3 +28,14 @@ body {
     z-index: -1;
   }
 }
+
+.shadow {
+  font-size: 80px;
+  font-weight: 700;
+  color: #24282e;
+  position: absolute;
+  text-transform: uppercase;
+  left: -70px;
+  top: -90px;
+  z-index: -1;
+}

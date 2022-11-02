@@ -111,7 +111,6 @@ main {
      */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -417,6 +416,17 @@ body {
   z-index: -1;
 }
 
+.shadow {
+  font-size: 80px;
+  font-weight: 700;
+  color: #24282e;
+  position: absolute;
+  text-transform: uppercase;
+  left: -70px;
+  top: -90px;
+  z-index: -1;
+}
+
 .header {
   height: 80px;
   position: relative;
@@ -456,6 +466,150 @@ body {
   height: 540px;
   position: absolute;
   z-index: -1;
+}
+
+.homepage {
+  padding-top: 200px;
+}
+.homepage .container {
+  width: 1080px;
+}
+.homepage-hero-heading {
+  font-size: 4em;
+  font-weight: 600;
+  line-height: 84px;
+  letter-spacing: -3%;
+}
+.homepage-hero-details {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-top: 16px;
+}
+.homepage-hero-hireme {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin-top: 32px;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 16px 32px;
+  background-color: #fff;
+  color: #1b1f25;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: background-color 0.4s, color 0.4s, border 0.4s;
+}
+.homepage-hero-hireme:hover {
+  background-color: #12161c;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: background-color 0.4s, color 0.4s, border 0.4s;
+}
+.homepage-hero-hireme:hover:hover svg {
+  fill: #fff;
+  rotate: -45deg;
+  transition: fill 0.4s, rotate 0.4s;
+}
+.homepage-hero-hireme svg {
+  margin-left: 8px;
+  transition: fill 0.4s, rotate 0.4s;
+}
+.homepage-blog {
+  margin-top: 200px;
+  position: relative;
+}
+.homepage-blog-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.homepage-blog-list-post {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  margin-left: -16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: calc(100% + 32px);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: background-color 0.4s, border 0.4s;
+}
+.homepage-blog-list-post:hover {
+  background-color: #12161c;
+  border: 1px solid #5d616a;
+  transition: background-color 0.4s, border 0.4s;
+}
+.homepage-blog-list-post:hover svg {
+  opacity: 1;
+  fill: white;
+  margin-left: 8px;
+  rotate: -45deg;
+  transition: opacity 0.4s;
+}
+.homepage-blog-list-post svg {
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+.homepage-blog-list-post-title {
+  font-size: 1em;
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #5d616a;
+}
+.homepage-blog-list-post-date {
+  font-size: 0.75em;
+  font-weight: 500;
+  margin-left: auto;
+}
+.homepage-projects {
+  margin-top: 200px;
+  position: relative;
+}
+.homepage-projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 24px;
+}
+.homepage-projects-list-item {
+  width: calc(50% - 16px);
+  background-color: #1b1f25;
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid #5d616a;
+  transition: background-color 0.4s;
+}
+.homepage-projects-list-item:hover {
+  background-color: #12161c;
+  transition: background-color 0.4s;
+}
+.homepage-projects-list-item-title {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.homepage-projects-list-item-category {
+  margin-top: 8px;
+  font-size: 0.75em;
+  font-weight: 500;
+}
+.homepage-heading {
+  font-size: 1.75em;
+  font-weight: 600;
+}
+.homepage-link {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  color: #5d616a;
+}
+.homepage-link svg {
+  margin-left: 12px;
+  fill: #5d616a;
 }
 
 .footer {

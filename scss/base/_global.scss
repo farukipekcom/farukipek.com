@@ -39,3 +39,24 @@ body {
   top: -90px;
   z-index: -1;
 }
+
+.hero {
+  &-page-title {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1;
+    position: absolute;
+    top: -60px;
+    left: -70px;
+    color: #24282e;
+    text-transform: uppercase;
+    z-index: -1;
+  }
+  &-title {
+    @include heading1;
+  }
+  &-details {
+    @include heading3;
+    margin-top: 16px;
+  }
+}

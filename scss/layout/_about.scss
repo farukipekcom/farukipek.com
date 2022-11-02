@@ -1,0 +1,33 @@
+.about {
+  margin-top: 120px;
+  .container {
+    width: 1080px;
+    position: relative;
+  }
+  &-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+
+    &-left {
+      width: 500px;
+      &-text {
+        @include heading3;
+      }
+      img {
+        margin-top: 80px;
+        border-radius: $border;
+      }
+    }
+    &-right {
+      width: 500px;
+      &-text {
+        @include text;
+      }
+      img {
+        margin-top: 80px;
+        border-radius: $border;
+      }
+    }
+  }
+}

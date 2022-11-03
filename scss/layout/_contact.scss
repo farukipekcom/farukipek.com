@@ -1,0 +1,60 @@
+.contact {
+  margin-top: 120px;
+  .container {
+    width: 1080px;
+    position: relative;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 80px;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      &-label {
+        @include menu;
+      }
+      &-input {
+        width: 640px;
+        height: 48px;
+        background-color: $dark;
+        border: 1px solid $gray;
+        border-radius: $border;
+        padding-left: 16px;
+        margin-top: 6px;
+        color: #fff;
+        @include text;
+        &::placeholder {
+          color: $gray;
+        }
+        &:focus {
+          outline: none;
+          border: 1px solid white;
+        }
+      }
+      &-textarea {
+        @include text;
+        line-height: 1.5em;
+        padding: 16px;
+        height: 140px;
+      }
+      &-button {
+        background-color: white;
+        color: $dark;
+        width: max-content;
+        border-radius: $border;
+        padding: 16px 32px;
+        border: 1px solid white;
+        cursor: pointer;
+        @include link;
+        transition: background-color 0.4s, color 0.4s;
+        &:hover {
+          background-color: $dark;
+          color: #fff;
+          transition: background-color 0.4s, color 0.4s;
+        }
+      }
+    }
+  }
+}

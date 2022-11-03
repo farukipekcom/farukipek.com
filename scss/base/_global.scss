@@ -59,5 +59,9 @@ body {
     @include heading3;
     margin-top: 16px;
     width: 640px;
+    &-link {
+      color: $blue;
+      font-weight: 600;
+    }
   }
 }

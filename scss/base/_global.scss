@@ -10,34 +10,63 @@ body {
 }
 .container {
   max-width: $max-width;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include mq("tablet") {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include mq("desktop") {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include mq("large") {
+    width: 1080px;
+    padding-left: unset;
+    padding-right: unset;
+  }
 }
 .background {
   .container {
     width: 1200px;
   }
   &-line {
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  fill='black' viewBox='0 0 600 200'%3E%3Cpath d='M10 10h123v123H10z'/%3E%3C/svg%3E");
-    background-size: 190px 1px;
-    background-position: center;
-    width: 1200px;
-    height: 100vh;
-    margin: 0 auto;
-    position: fixed;
-    z-index: -1;
+    @include mq("tablet") {
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  fill='black' viewBox='0 0 600 200'%3E%3Cpath d='M10 10h123v123H10z'/%3E%3C/svg%3E");
+      background-size: 190px 1px;
+      background-position: center;
+      width: 1200px;
+      height: 100vh;
+      margin: 0 auto;
+      position: fixed;
+      z-index: -1;
+      color: #24282e;
+    }
   }
 }
 
 .shadow {
-  font-size: 80px;
-  font-weight: 700;
   color: #24282e;
   position: absolute;
   text-transform: uppercase;
-  left: -70px;
-  top: -90px;
   z-index: -1;
+  left: -10px;
+  top: -60px;
+  @include mobileShadowTitle2;
+  @include mq("tablet") {
+    left: -20px;
+    top: -70px;
+    @include shadowTitle2;
+  }
+  @include mq("desktop") {
+  }
+  @include mq("large") {
+    left: -70px;
+    top: -90px;
+  }
 }
 
 .hero {
@@ -53,12 +82,31 @@ body {
     z-index: -1;
   }
   &-title {
-    @include heading1;
+    @include mobileHeading1;
+    @include mq("tablet") {
+      font-size: 3em;
+    }
+    @include mq("desktop") {
+      font-size: 3.5em;
+    }
+    @include mq("large") {
+      @include heading1;
+    }
   }
   &-details {
-    @include heading3;
-    margin-top: 16px;
-    width: 640px;
+    width: 100%;
+    margin-top: 24px;
+    @include mobileHeading3;
+    @include mq("tablet") {
+      font-size: 1.5em;
+    }
+    @include mq("desktop") {
+      margin-top: 16px;
+      width: 800px;
+    }
+    @include mq("large") {
+      @include heading3;
+    }
     &-link {
       color: $blue;
       font-weight: 600;

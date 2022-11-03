@@ -67,7 +67,7 @@
 @mixin mobileHeading1 {
   font-size: 1.75em;
   font-weight: 600;
-  line-height: 2.25em;
+  line-height: 1.375em;
 }
 @mixin mobileHeading2 {
   font-size: 1.25em;
@@ -77,7 +77,7 @@
   font-size: 1.25em;
   font-weight: 500;
 }
-@mixin shadowTitle2 {
+@mixin mobileShadowTitle2 {
   font-size: 3em;
   font-weight: 700;
   line-height: 1.25em;

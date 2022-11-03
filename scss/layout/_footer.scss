@@ -1,20 +1,27 @@
 .footer {
   background: linear-gradient(180deg, rgba($background, 0) 0%, $dark 100%);
-  height: 480px;
   margin-top: 120px;
-  .container {
-    width: 1080px;
+  @include mq("tablet") {
     height: 100%;
+  }
+  .container {
     display: flex;
     flex-direction: column;
     position: relative;
   }
   &-top {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    gap: 48px;
+    @include mq("desktop") {
+      gap: unset;
+      flex-direction: row;
+      align-items: center;
+    }
   }
   &-bottom {
     display: flex;
@@ -23,10 +30,14 @@
   &-left {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 24px;
     &-heading {
-      @include footer;
-      width: 400px;
+      @include mobileFooter;
+      @include mq("desktop") {
+        @include footer;
+        gap: 48px;
+        width: 400px;
+      }
     }
     &-link {
       @include heading2;
@@ -43,7 +54,10 @@
   &-right {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 32px;
+    @include mq("tablet") {
+      gap: 48px;
+    }
     &-menu {
       display: flex;
       flex-direction: column;
@@ -54,6 +68,7 @@
       }
       &-list {
         display: flex;
+        flex-wrap: wrap;
         gap: 24px;
         &-item {
           @include menu;
@@ -64,5 +79,10 @@
   &-copyright {
     @include menu;
     color: $gray;
+    margin-top: 32px;
+    @include mq("tablet") {
+      padding-top: unset;
+      padding-bottom: unset;
+    }
   }
 }

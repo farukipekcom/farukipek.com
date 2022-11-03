@@ -399,6 +399,7 @@ body {
 
 .container {
   max-width: 1440px;
+  position: relative;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -470,15 +471,28 @@ body {
 }
 
 .hero-page-title {
-  font-size: 120px;
+  font-size: 64px;
   font-weight: 700;
   line-height: 1;
   position: absolute;
-  top: -60px;
-  left: -70px;
+  top: -40px;
+  left: 5px;
   color: #24282e;
   text-transform: uppercase;
   z-index: -1;
+}
+@media (min-width: 768px) {
+  .hero-page-title {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1;
+    position: absolute;
+    top: -60px;
+    left: -70px;
+    color: #24282e;
+    text-transform: uppercase;
+    z-index: -1;
+  }
 }
 .hero-title {
   font-size: 1.75em;
@@ -876,38 +890,79 @@ body {
 }
 
 .about {
-  margin-top: 120px;
+  margin-top: 60px;
 }
-.about .container {
-  width: 1080px;
-  position: relative;
+@media (min-width: 768px) {
+  .about {
+    margin-top: 120px;
+  }
 }
 .about-details {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin-top: 120px;
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  .about-details {
+    margin-top: 120px;
+    flex-direction: row;
+    gap: 32px;
+  }
 }
 .about-details-left {
-  width: 500px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .about-details-left {
+    width: 500px;
+  }
 }
 .about-details-left-text {
-  font-size: 1.5em;
-  font-weight: 500;
-}
-.about-details-left img {
-  margin-top: 80px;
-  border-radius: 8px;
-}
-.about-details-right {
-  width: 500px;
-}
-.about-details-right-text {
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 400;
 }
-.about-details-right img {
-  margin-top: 80px;
+@media (min-width: 768px) {
+  .about-details-left-text {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+}
+.about-details-left img {
+  margin-top: 32px;
+  margin-bottom: 32px;
   border-radius: 8px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .about-details-left img {
+    margin-top: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .about-details-right {
+    width: 500px;
+  }
+}
+.about-details-right-text {
+  font-size: 1em;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .about-details-right-text {
+    font-size: 1.125em;
+    font-weight: 400;
+  }
+}
+.about-details-right img {
+  margin-top: 32px;
+  border-radius: 8px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .about-details-right img {
+    margin-top: 80px;
+  }
 }
 
 .blog {

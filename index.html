@@ -15,10 +15,23 @@
 			<div class="background-line"></div>
 		</div>
 	</div>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="header-background"></div>
 		<div class="container">
 			<a href="/" class="header-logo">Faruk Ipek</a>
+			<button class="header-switch" id="toggle2">
+				<svg width="598" height="464" viewBox="0 0 598 464" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M37.3333 0.866699C16.7133 0.866699 0 17.58 0 38.2C0 58.82 16.7133 75.5334 37.3333 75.5334H560C580.62 75.5334 597.333 58.82 597.333 38.2C597.333 17.58 580.62 0.866699 560 0.866699H37.3333ZM37.3333 195C16.7133 195 0 211.713 0 232.333C0 252.953 16.7133 269.667 37.3333 269.667H560C580.62 269.667 597.333 252.953 597.333 232.333C597.333 211.713 580.62 195 560 195H37.3333ZM37.3333 389.133C16.7133 389.133 0 405.847 0 426.467C0 447.087 16.7133 463.8 37.3333 463.8H560C580.62 463.8 597.333 447.087 597.333 426.467C597.333 405.847 580.62 389.133 560 389.133H37.3333Z" />
+				</svg>
+			</button>
+			<button class="header-switch header-switch2" id="toggle3">
+				<svg width="722" height="722" viewBox="0 0 722 722" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M430.48 361.507L706.933 85.08C726.283 65.7307 726.163 34.7254 706.933 15.4654C687.668 -3.88396 656.668 -3.6493 637.433 15.4654L361.007 291.892L84.58 15.4654C65.2306 -3.88396 34.2253 -3.7693 15.0853 15.4654C-4.26937 34.8454 -4.14937 65.82 15.0853 85.08L291.539 361.507L15.0853 637.813C-4.26937 657.163 -4.14937 688.168 15.0853 707.397C34.3453 726.777 65.3453 726.663 84.58 707.397L361.007 430.971L637.433 707.397C656.788 726.777 687.788 726.663 706.933 707.397C726.283 688.048 726.163 657.043 706.933 637.813L430.48 361.507Z" />
+				</svg>
+
+			</button>
 			<nav class="header-menu" id="myTopnav">
 				<a href="about.html" class="header-menu-item">About</a>
 				<a href="blog.html" class="header-menu-item">Blog</a>
@@ -156,7 +169,6 @@
 			</div>
 		</div>
 	</div>
-
 	<footer class="footer">
 		<div class="container">
 			<div class="footer-top">
@@ -201,6 +213,25 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+		const toggle2 = document.getElementById("toggle2");
+		const toggle3 = document.getElementById("toggle3");
+		const toggle2Box = document.getElementById("header");
+		const varmi = () =>
+			toggle2Box.classList.contains("mobile-menu");
+		toggle2.addEventListener("click", function () {
+			if (varmi()) {
+				toggle2Box.classList.remove("mobile-menu")
+			} else {
+				toggle2Box.classList.add("mobile-menu")
+			}
+		}); toggle3.addEventListener("click", function () {
+			if (varmi()) {
+				toggle2Box.classList.remove("mobile-menu")
+			} else {
+				toggle2Box.classList.add("mobile-menu")
+			}
+		});</script>
 </body>
 
 </html>

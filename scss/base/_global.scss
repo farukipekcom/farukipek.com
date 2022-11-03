@@ -82,6 +82,19 @@ body {
     text-transform: uppercase;
     z-index: -1;
     @include mq("tablet") {
+      font-size: 96px;
+      font-weight: 700;
+      line-height: 1;
+      position: absolute;
+      top: -60px;
+      left: 10px;
+      color: #24282e;
+      text-transform: uppercase;
+      z-index: -1;
+    }
+    @include mq("desktop") {
+    }
+    @include mq("large") {
       font-size: 120px;
       font-weight: 700;
       line-height: 1;

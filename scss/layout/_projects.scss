@@ -1,0 +1,58 @@
+.projects {
+  margin-top: 120px;
+  .container {
+    width: 1080px;
+    position: relative;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    &-item {
+      width: calc(50% - 20px);
+      margin-top: 80px;
+      &-image {
+        width: 100%;
+        max-height: 360px;
+        border-radius: $border;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        height: auto;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: #e5e5e5;
+          opacity: 0;
+          transition: 0.5s ease all;
+          border-radius: 8px;
+        }
+        img {
+          border-radius: 8px;
+          transition: 0.5s ease all;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+          border-radius: 8px;
+        }
+      }
+
+      &-title {
+        @include heading2;
+        margin-top: 16px;
+      }
+      &-category {
+        @include link;
+        margin-top: 8px;
+      }
+    }
+  }
+}

@@ -1,16 +1,23 @@
 .projects {
-  margin-top: 120px;
-  .container {
-    width: 1080px;
-    position: relative;
+  margin-top: 60px;
+  @include mq("tablet") {
+    margin-top: 120px;
   }
   &-list {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 40px;
+    @include mq("tablet") {
+      flex-direction: row;
+    }
     &-item {
-      width: calc(50% - 20px);
-      margin-top: 80px;
+      width: 100%;
+      margin-top: 32px;
+      @include mq("tablet") {
+        width: calc(50% - 20px);
+        margin-top: 80px;
+      }
       &-image {
         width: 100%;
         max-height: 360px;
@@ -46,12 +53,23 @@
       }
 
       &-title {
-        @include heading2;
         margin-top: 16px;
+        @include mobileHeading2;
+        @include mq("tablet") {
+          font-size: 1.375em;
+        }
+        @include mq("desktop") {
+          @include heading2;
+        }
       }
       &-category {
-        @include link;
+        color: $gray;
         margin-top: 8px;
+        display: block;
+        @include subtitle;
+        @include mq("tablet") {
+          @include link;
+        }
       }
     }
   }

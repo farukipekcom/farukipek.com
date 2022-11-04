@@ -568,6 +568,13 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media (min-width: 1440px) {
+  .header .container {
+    width: 1440px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 .header-logo {
   font-size: 36px;
   font-weight: 700;
@@ -657,7 +664,8 @@ body {
   line-height: 1;
   width: 100%;
   z-index: 999;
-  padding-bottom: 32px;
+  padding-bottom: 12px;
+  gap: 12px;
 }
 @media (min-width: 768px) {
   .mobile-menu .header-menu {
@@ -718,6 +726,69 @@ body {
   .mobile-menu .header-menu svg {
     display: block;
   }
+}
+
+#toggle1 {
+  background-color: transparent;
+  cursor: pointer;
+}
+#toggle1 svg {
+  fill: #fff !important;
+}
+
+.social-modal {
+  position: absolute;
+  right: 0px;
+  top: 36px;
+  width: 210px;
+  background-color: #24282e;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 2s steps();
+  padding: 12px;
+  z-index: 99;
+}
+.social-modal-item {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  gap: 8px;
+  z-index: 9;
+  transform: translateX(0px);
+  height: 32px;
+}
+.social-modal-item-arrow {
+  opacity: 0;
+  transition: transform 0.2s;
+}
+.social-modal-item:hover {
+  text-decoration: underline;
+}
+.social-modal-item:hover .social-modal-item-arrow {
+  opacity: 1;
+  rotate: -45deg;
+  transition: transform 0.2s;
+  transform: translateX(2px);
+}
+.social-modal-item svg {
+  fill: #fff;
+}
+.social-modal-item-divider {
+  height: 1px;
+  background-color: #5d616a;
+}
+
+.social-modal--hidden {
+  opacity: 1;
 }
 
 .homepage {

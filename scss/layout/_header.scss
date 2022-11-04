@@ -158,20 +158,22 @@
   }
 }
 .social-modal {
-  // display: none;
-  position: absolute;
-  right: 0px;
-  top: 36px;
-  width: 210px;
-  background-color: #24282e;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 2s steps();
-  padding: 12px;
-  z-index: 99;
+  display: none;
+  @include mq("tablet") {
+    position: absolute;
+    right: 0px;
+    top: 36px;
+    width: 210px;
+    background-color: #24282e;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 2s steps();
+    padding: 12px;
+    z-index: 99;
+  }
   &-item {
     display: flex;
     font-size: 14px;

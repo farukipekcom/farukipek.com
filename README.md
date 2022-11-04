@@ -3,7 +3,7 @@ I'm Faruk, a front-end developer based in Charlotte, USA.
 </h2>
 <p>I've been building stuff on the web for the last 6 years. I've worked with clients in various countries and industries.</p>
 
-### ✨ [Demo](https://farukipek.com/)
+### ✨ [Demo](https://farukipek.vercel.app/)
 
 ## Author
 

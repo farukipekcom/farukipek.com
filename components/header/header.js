@@ -32,16 +32,16 @@ const Header = () => {
           </svg>
         </button>
         <nav className="header-menu" id="myTopnav">
-          <a href="about.html" className="header-menu-item">
+          <a href="about" className="header-menu-item">
             About
           </a>
-          <a href="blog.html" className="header-menu-item">
+          <a href="blog" className="header-menu-item">
             Blog
           </a>
-          <a href="projects.html" className="header-menu-item">
+          <a href="projects" className="header-menu-item">
             Projects
           </a>
-          <a href="contact.html" className="header-menu-item">
+          <a href="contact" className="header-menu-item">
             Contact
           </a>
           <span className="header-menu-item header-menu-divider"></span>

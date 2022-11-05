@@ -10,7 +10,7 @@ const Footer = () => {
               <div class="footer-left-heading">
                 Feeling good about a project?
               </div>
-              <Link href="contact.html" class="footer-left-link">
+              <Link href="contact" class="footer-left-link">
                 Let`s talk about it!
               </Link>
             </div>
@@ -18,22 +18,19 @@ const Footer = () => {
               <div class="footer-right-menu">
                 <div class="footer-right-menu-heading">Explore</div>
                 <div class="footer-right-menu-list">
-                  <Link href="home.html" class="footer-right-menu-list-item">
+                  <Link href="home" class="footer-right-menu-list-item">
                     Home
                   </Link>
-                  <Link href="about.html" class="footer-right-menu-list-item">
+                  <Link href="about" class="footer-right-menu-list-item">
                     About
                   </Link>
-                  <Link href="blog.html" class="footer-right-menu-list-item">
+                  <Link href="blog" class="footer-right-menu-list-item">
                     Blog
                   </Link>
-                  <Link
-                    href="projects.html"
-                    class="footer-right-menu-list-item"
-                  >
+                  <Link href="projects" class="footer-right-menu-list-item">
                     Projects
                   </Link>
-                  <Link href="contact.html" class="footer-right-menu-list-item">
+                  <Link href="contact" class="footer-right-menu-list-item">
                     Contact
                   </Link>
                 </div>

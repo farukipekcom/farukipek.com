@@ -3,7 +3,7 @@ const Header = () => {
     <header class="header" id="header">
       <div class="header-background"></div>
       <div class="container">
-        <a href="/" class="header-logo">
+        <a href="" class="header-logo">
           Faruk Ipek
         </a>
         <button class="header-switch" id="toggle2">

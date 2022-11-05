@@ -1,75 +1,76 @@
 import Script from "next/script";
 import Link from "next/link";
+import styles from "./footer.module.scss";
 const Footer = () => {
   return (
     <>
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-top">
-            <div class="footer-left">
-              <div class="footer-left-heading">
+      <footer className={styles.footer}>
+        <div className={styles.container}>
+          <div className={styles.top}>
+            <div className={styles.left}>
+              <div className={styles.heading}>
                 Feeling good about a project?
               </div>
-              <Link href="contact" class="footer-left-link">
+              <Link href="contact" className={styles.link}>
                 Let`s talk about it!
               </Link>
             </div>
-            <div class="footer-right">
-              <div class="footer-right-menu">
-                <div class="footer-right-menu-heading">Explore</div>
-                <div class="footer-right-menu-list">
-                  <Link href="home" class="footer-right-menu-list-item">
+            <div className={styles.right}>
+              <div className={styles.menu}>
+                <div className={styles.heading}>Explore</div>
+                <div className={styles.list}>
+                  <Link href="home" className={styles.item}>
                     Home
                   </Link>
-                  <Link href="about" class="footer-right-menu-list-item">
+                  <Link href="about" className={styles.item}>
                     About
                   </Link>
-                  <Link href="blog" class="footer-right-menu-list-item">
+                  <Link href="blog" className={styles.item}>
                     Blog
                   </Link>
-                  <Link href="projects" class="footer-right-menu-list-item">
+                  <Link href="projects" className={styles.item}>
                     Projects
                   </Link>
-                  <Link href="contact" class="footer-right-menu-list-item">
+                  <Link href="contact" className={styles.item}>
                     Contact
                   </Link>
                 </div>
               </div>
-              <div class="footer-right-menu">
-                <div class="footer-right-menu-heading">Social</div>
-                <div class="footer-right-menu-list">
+              <div className={styles.menu}>
+                <div className={styles.heading}>Social</div>
+                <div className={styles.list}>
                   <Link
                     href="https://www.linkedin.com/in/farukipekcom/"
-                    class="footer-right-menu-list-item"
+                    className={styles.item}
                   >
                     Linkedin
                   </Link>
                   <Link
                     href="https://github.com/farukipekcom"
-                    class="footer-right-menu-list-item"
+                    className={styles.item}
                   >
                     Github
                   </Link>
                   <Link
                     href="https://twitter.com/farukipekcom"
-                    class="footer-right-menu-list-item"
+                    className={styles.item}
                   >
                     Twitter
                   </Link>
                   <Link
                     href="https://www.instagram.com/farukipekcom/"
-                    class="footer-right-menu-list-item"
+                    className={styles.item}
                   >
                     Instagram
                   </Link>
                 </div>
               </div>
-              <div class="footer-right-menu">
-                <div class="footer-right-menu-heading">Get in touch</div>
-                <div class="footer-right-menu-list">
+              <div className={styles.menu}>
+                <div className={styles.heading}>Get in touch</div>
+                <div className={styles.list}>
                   <Link
                     href="mailto:faruk@farukipek.com"
-                    class="footer-right-menu-list-item"
+                    className={styles.item}
                   >
                     faruk@farukipek.com
                   </Link>
@@ -77,8 +78,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div class="footer-bottom">
-            <div class="footer-copyright">© 2022 Faruk İpek</div>
+          <div className={styles.bottom}>
+            <div className={styles.copyright}>© 2022 Faruk İpek</div>
           </div>
         </div>
       </footer>

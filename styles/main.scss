@@ -9,16 +9,14 @@
 
 // Layout
 @import "layout/_header";
-@import "layout/_homepage";
-@import "layout/_about";
-@import "layout/_blog";
-@import "layout/_projects";
-@import "layout/_contact";
-@import "layout/_post";
-// @import "layout/_footer";
 
 // Pages
-@import "pages/_home";
+@import "pages/_homepage";
+@import "pages/_about";
+@import "pages/_blog";
+@import "pages/_projects";
+@import "pages/_contact";
+@import "pages/_post";
 
 :root {
   --max-width: 1440px;

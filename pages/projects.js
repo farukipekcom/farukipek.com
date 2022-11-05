@@ -1,6 +1,36 @@
 import Title from "../components/title/title";
-import Project from '../components/project/project'
+import Project from "../components/project/project";
 const Projects = () => {
+  const projects = [
+    {
+      id: 1,
+      title: "Quisque congue",
+      image: "placeholder.jpg",
+      category: "WEB DESIGN + UI DESIGN",
+      url: "https://farukipek.com/",
+    },
+    {
+      id: 2,
+      title: "Integer feugiat metus",
+      image: "placeholder.jpg",
+      category: "FRONT-END DEVELOPMENT + UI DESIGN",
+      url: "https://farukipek.com/",
+    },
+    {
+      id: 3,
+      title: "Sed eget libero eu tellus",
+      image: "placeholder.jpg",
+      category: "WEB DESIGN + UI DESIGN",
+      url: "https://farukipek.com/",
+    },
+    {
+      id: 4,
+      title: "Curabitur blandit",
+      image: "placeholder.jpg",
+      category: "FRONT-END DEVELOPMENT + UI DESIGN",
+      url: "https://farukipek.com/",
+    },
+  ];
   return (
     <div class="projects">
       <div class="container">
@@ -14,12 +44,19 @@ const Projects = () => {
           }
         />
         <div class="projects-list">
-          <Project title={"Quisque congue"} img={"placeholder.jpg"} category={"WEB DESIGN + UI DESIGN"} />
-          <Project title={"Integer feugiat metus"} img={"placeholder.jpg"} category={"FRONT-END DEVELOPMENT + UI DESIGN"} />
-          <Project title={"Sed eget libero eu tellus"} img={"placeholder.jpg"} category={"WEB DESIGN + UI DESIGN"} />
-          <Project title={"Curabitur blandit"} img={"placeholder.jpg"} category={"WEB DESIGN + UI DESIGN"} />
-          <Project title={"Vehicula iaculis erna"} img={"placeholder.jpg"} category={"FRONT-END DEVELOPMENT + UI DESIGN"} />
-          <Project title={"Nisl pharetra ullamcorper"} img={"placeholder.jpg"} category={"FRONT-END DEVELOPMENT + UI DESIGN"} />
+          {projects.map((item) => {
+            return (
+              <>
+                <Project
+                  id={item.id}
+                  title={item.title}
+                  img={item.image}
+                  category={item.category}
+                  url={item.url}
+                />
+              </>
+            );
+          })}
         </div>
       </div>
     </div>

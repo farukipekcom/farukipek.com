@@ -3,7 +3,7 @@ const Header = () => {
     <header class="header" id="header">
       <div class="header-background"></div>
       <div class="container">
-        <a href="" class="header-logo">
+        <a href="/" class="header-logo">
           Faruk Ipek
         </a>
         <button class="header-switch" id="toggle2">
@@ -31,16 +31,16 @@ const Header = () => {
           </svg>
         </button>
         <nav class="header-menu" id="myTopnav">
-          <a href="about.html" class="header-menu-item">
+          <a href="about" class="header-menu-item">
             About
           </a>
-          <a href="blog.html" class="header-menu-item">
+          <a href="blog" class="header-menu-item">
             Blog
           </a>
-          <a href="projects.html" class="header-menu-item">
+          <a href="projects" class="header-menu-item">
             Projects
           </a>
-          <a href="contact.html" class="header-menu-item">
+          <a href="contact" class="header-menu-item">
             Contact
           </a>
           <span class="header-menu-item header-menu-divider"></span>

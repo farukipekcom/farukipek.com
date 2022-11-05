@@ -1,0 +1,57 @@
+.about {
+  margin-top: 60px;
+  @include mq("tablet") {
+    margin-top: 120px;
+  }
+  &-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 32px;
+    @include mq("tablet") {
+      margin-top: 120px;
+      flex-direction: row;
+      gap: 32px;
+    }
+    &-left {
+      width: 100%;
+      @include mq("tablet") {
+        width: 500px;
+      }
+      &-text {
+        @include mobileText;
+        @include mq("tablet") {
+          @include heading3;
+        }
+      }
+      img {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        border-radius: $border;
+        width: 100%;
+        @include mq("tablet") {
+          margin-top: 80px;
+        }
+      }
+    }
+    &-right {
+      @include mq("tablet") {
+        width: 500px;
+      }
+      &-text {
+        @include mobileText;
+        @include mq("tablet") {
+          @include text;
+        }
+      }
+      img {
+        margin-top: 32px;
+        border-radius: $border;
+        width: 100%;
+        @include mq("tablet") {
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+}

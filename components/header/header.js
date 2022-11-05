@@ -1,14 +1,13 @@
 import Link from "next/link";
-
 const Header = () => {
   return (
-    <header class="header" id="header">
-      <div class="header-background"></div>
-      <div class="container">
+    <header className="header" id="header">
+      <div className="header-background"></div>
+      <div className="container">
         <Link href="/" className="header-logo">
           Faruk Ipek
         </Link>
-        <button class="header-switch" id="toggle2">
+        <button className="header-switch" id="toggle2">
           <svg
             width="598"
             height="464"
@@ -18,7 +17,7 @@ const Header = () => {
             <path d="M37.3333 0.866699C16.7133 0.866699 0 17.58 0 38.2C0 58.82 16.7133 75.5334 37.3333 75.5334H560C580.62 75.5334 597.333 58.82 597.333 38.2C597.333 17.58 580.62 0.866699 560 0.866699H37.3333ZM37.3333 195C16.7133 195 0 211.713 0 232.333C0 252.953 16.7133 269.667 37.3333 269.667H560C580.62 269.667 597.333 252.953 597.333 232.333C597.333 211.713 580.62 195 560 195H37.3333ZM37.3333 389.133C16.7133 389.133 0 405.847 0 426.467C0 447.087 16.7133 463.8 37.3333 463.8H560C580.62 463.8 597.333 447.087 597.333 426.467C597.333 405.847 580.62 389.133 560 389.133H37.3333Z" />
           </svg>
         </button>
-        <button class="header-switch header-switch2" id="toggle3">
+        <button className="header-switch header-switch2" id="toggle3">
           <svg
             width="722"
             height="722"
@@ -32,21 +31,21 @@ const Header = () => {
             />
           </svg>
         </button>
-        <nav class="header-menu" id="myTopnav">
-          <Link href="about" class="header-menu-item">
+        <nav className="header-menu" id="myTopnav">
+          <a href="about.html" className="header-menu-item">
             About
-          </Link>
-          <Link href="blog" class="header-menu-item">
+          </a>
+          <a href="blog.html" className="header-menu-item">
             Blog
-          </Link>
-          <Link href="projects" class="header-menu-item">
+          </a>
+          <a href="projects.html" className="header-menu-item">
             Projects
-          </Link>
-          <Link href="contact" class="header-menu-item">
+          </a>
+          <a href="contact.html" className="header-menu-item">
             Contact
-          </Link>
-          <span class="header-menu-item header-menu-divider"></span>
-          <button id="toggle1" class="header-menu-social">
+          </a>
+          <span className="header-menu-item header-menu-divider"></span>
+          <button id="toggle1" className="header-menu-social">
             <svg
               width="16"
               height="10"
@@ -57,8 +56,8 @@ const Header = () => {
             </svg>
           </button>
 
-          <div class="social-modal" id="social-modal">
-            <Link href="" class="social-modal-item">
+          <div className="social-modal" id="social-modal">
+            <a href="" className="social-modal-item">
               <svg
                 width="17"
                 height="15"
@@ -68,68 +67,68 @@ const Header = () => {
                 <path d="M5.316 13.033V11.0675H2.02384C1.46675 11.0675 0.960576 10.8465 0.593936 10.4903C0.22745 10.1341 0 9.64198 0 9.1005L0 1.96701C0 1.42556 0.227432 0.9336 0.593936 0.577256C0.960422 0.221063 1.46672 0 2.02384 0H9.36345C9.92055 0 10.4267 0.221513 10.7934 0.577256C11.1598 0.933451 11.3873 1.42553 11.3873 1.96701V3.93249H14.6795C15.2366 3.93249 15.7427 4.15353 16.1094 4.50975C16.4758 4.86594 16.7033 5.35802 16.7033 5.8995V13.033C16.7033 13.5744 16.4759 14.0664 16.1094 14.4227C15.7429 14.7789 15.2366 15 14.6795 15H7.33985C6.78275 15 6.27658 14.779 5.90994 14.4227C5.54345 14.0665 5.316 13.5745 5.316 13.033ZM5.316 9.96814L5.316 5.8995C5.316 5.35805 5.54344 4.86609 5.90994 4.50975C6.27643 4.15355 6.78272 3.93249 7.33985 3.93249H10.2561V1.96701C10.2561 1.72884 10.1554 1.51191 9.99345 1.35491C9.83144 1.19746 9.60823 1.09961 9.36366 1.09961H2.02406C1.77901 1.09961 1.55581 1.19746 1.39378 1.35491C1.23178 1.51237 1.1311 1.72931 1.1311 1.96701L1.1311 9.1005C1.1311 9.33867 1.23178 9.5556 1.39378 9.71308C1.55579 9.87053 1.779 9.96838 2.02406 9.96838H5.31622L5.316 9.96814ZM6.44735 10.5151V13.0337C6.44735 13.2719 6.54803 13.4888 6.71003 13.6458C6.87204 13.8032 7.09525 13.9011 7.34031 13.9011H14.6799C14.925 13.9011 15.1482 13.8032 15.3102 13.6458C15.4722 13.4883 15.5729 13.2714 15.5729 13.0332V5.89971C15.5729 5.66154 15.4722 5.44461 15.3102 5.28713C15.1482 5.12968 14.925 5.03183 14.6799 5.03183H7.34031C7.09526 5.03183 6.87206 5.12968 6.71003 5.28713C6.54803 5.44458 6.44735 5.66153 6.44735 5.89971L6.44735 10.5153V10.5151Z" />
               </svg>
               <span>faruk@farukipek.com</span>
-            </Link>
-            <div class="social-modal-item-divider"></div>
-            <Link href="" class="social-modal-item">
+            </a>
+            <div className="social-modal-item-divider"></div>
+            <a href="" className="social-modal-item">
               Twitter
               <svg
                 width="15"
                 height="11"
                 viewBox="0 0 15 11"
                 xmlns="http://www.w3.org/2000/svg"
-                class="social-modal-item-arrow"
+                className="social-modal-item-arrow"
               >
                 <path d="M14.1759 4.89909L9.85794 0.864664C9.46002 0.492866 8.79688 0.492866 8.39896 0.864664C8.00104 1.23646 8.00104 1.85606 8.39896 2.22786L10.9485 4.62368L1.51691 4.62368C0.942169 4.62368 0.485352 5.0505 0.485352 5.58751C0.485352 6.12451 0.942169 6.55134 1.51691 6.55134L10.9485 6.55134L8.39896 8.93342C8.00104 9.30521 8.00104 9.92481 8.39896 10.2966C8.60527 10.4894 8.87059 10.5858 9.13581 10.5858C9.40102 10.5858 9.66633 10.4894 9.87265 10.2966L14.1758 6.27595C14.3674 6.09692 14.4854 5.84913 14.4854 5.58748C14.4854 5.32584 14.3821 5.07804 14.1758 4.89902L14.1759 4.89909Z" />
               </svg>
-            </Link>
-            <Link href="" class="social-modal-item">
+            </a>
+            <a href="" className="social-modal-item">
               Linkedin
               <svg
                 width="15"
                 height="11"
                 viewBox="0 0 15 11"
                 xmlns="http://www.w3.org/2000/svg"
-                class="social-modal-item-arrow"
+                className="social-modal-item-arrow"
               >
                 <path d="M14.1759 4.89909L9.85794 0.864664C9.46002 0.492866 8.79688 0.492866 8.39896 0.864664C8.00104 1.23646 8.00104 1.85606 8.39896 2.22786L10.9485 4.62368L1.51691 4.62368C0.942169 4.62368 0.485352 5.0505 0.485352 5.58751C0.485352 6.12451 0.942169 6.55134 1.51691 6.55134L10.9485 6.55134L8.39896 8.93342C8.00104 9.30521 8.00104 9.92481 8.39896 10.2966C8.60527 10.4894 8.87059 10.5858 9.13581 10.5858C9.40102 10.5858 9.66633 10.4894 9.87265 10.2966L14.1758 6.27595C14.3674 6.09692 14.4854 5.84913 14.4854 5.58748C14.4854 5.32584 14.3821 5.07804 14.1758 4.89902L14.1759 4.89909Z" />
               </svg>
-            </Link>
-            <Link href="" class="social-modal-item">
+            </a>
+            <a href="" className="social-modal-item">
               Github
               <svg
                 width="15"
                 height="11"
                 viewBox="0 0 15 11"
                 xmlns="http://www.w3.org/2000/svg"
-                class="social-modal-item-arrow"
+                className="social-modal-item-arrow"
               >
                 <path d="M14.1759 4.89909L9.85794 0.864664C9.46002 0.492866 8.79688 0.492866 8.39896 0.864664C8.00104 1.23646 8.00104 1.85606 8.39896 2.22786L10.9485 4.62368L1.51691 4.62368C0.942169 4.62368 0.485352 5.0505 0.485352 5.58751C0.485352 6.12451 0.942169 6.55134 1.51691 6.55134L10.9485 6.55134L8.39896 8.93342C8.00104 9.30521 8.00104 9.92481 8.39896 10.2966C8.60527 10.4894 8.87059 10.5858 9.13581 10.5858C9.40102 10.5858 9.66633 10.4894 9.87265 10.2966L14.1758 6.27595C14.3674 6.09692 14.4854 5.84913 14.4854 5.58748C14.4854 5.32584 14.3821 5.07804 14.1758 4.89902L14.1759 4.89909Z" />
               </svg>
-            </Link>
-            <Link href="" class="social-modal-item">
+            </a>
+            <a href="" className="social-modal-item">
               Codepen
               <svg
                 width="15"
                 height="11"
                 viewBox="0 0 15 11"
                 xmlns="http://www.w3.org/2000/svg"
-                class="social-modal-item-arrow"
+                className="social-modal-item-arrow"
               >
                 <path d="M14.1759 4.89909L9.85794 0.864664C9.46002 0.492866 8.79688 0.492866 8.39896 0.864664C8.00104 1.23646 8.00104 1.85606 8.39896 2.22786L10.9485 4.62368L1.51691 4.62368C0.942169 4.62368 0.485352 5.0505 0.485352 5.58751C0.485352 6.12451 0.942169 6.55134 1.51691 6.55134L10.9485 6.55134L8.39896 8.93342C8.00104 9.30521 8.00104 9.92481 8.39896 10.2966C8.60527 10.4894 8.87059 10.5858 9.13581 10.5858C9.40102 10.5858 9.66633 10.4894 9.87265 10.2966L14.1758 6.27595C14.3674 6.09692 14.4854 5.84913 14.4854 5.58748C14.4854 5.32584 14.3821 5.07804 14.1758 4.89902L14.1759 4.89909Z" />
               </svg>
-            </Link>
-            <Link href="" class="social-modal-item">
+            </a>
+            <a href="" className="social-modal-item">
               Instagram
               <svg
                 width="15"
                 height="11"
                 viewBox="0 0 15 11"
                 xmlns="http://www.w3.org/2000/svg"
-                class="social-modal-item-arrow"
+                className="social-modal-item-arrow"
               >
                 <path d="M14.1759 4.89909L9.85794 0.864664C9.46002 0.492866 8.79688 0.492866 8.39896 0.864664C8.00104 1.23646 8.00104 1.85606 8.39896 2.22786L10.9485 4.62368L1.51691 4.62368C0.942169 4.62368 0.485352 5.0505 0.485352 5.58751C0.485352 6.12451 0.942169 6.55134 1.51691 6.55134L10.9485 6.55134L8.39896 8.93342C8.00104 9.30521 8.00104 9.92481 8.39896 10.2966C8.60527 10.4894 8.87059 10.5858 9.13581 10.5858C9.40102 10.5858 9.66633 10.4894 9.87265 10.2966L14.1758 6.27595C14.3674 6.09692 14.4854 5.84913 14.4854 5.58748C14.4854 5.32584 14.3821 5.07804 14.1758 4.89902L14.1759 4.89909Z" />
               </svg>
-            </Link>
+            </a>
           </div>
         </nav>
       </div>

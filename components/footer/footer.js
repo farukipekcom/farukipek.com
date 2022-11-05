@@ -1,3 +1,4 @@
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer class="footer">
@@ -5,69 +6,69 @@ const Footer = () => {
         <div class="footer-top">
           <div class="footer-left">
             <div class="footer-left-heading">Feeling good about a project?</div>
-            <a href="contact.html" class="footer-left-link">
+            <Link href="contact.html" class="footer-left-link">
               Let`s talk about it!
-            </a>
+            </Link>
           </div>
           <div class="footer-right">
             <div class="footer-right-menu">
               <div class="footer-right-menu-heading">Explore</div>
               <div class="footer-right-menu-list">
-                <a href="home.html" class="footer-right-menu-list-item">
+                <Link href="home.html" class="footer-right-menu-list-item">
                   Home
-                </a>
-                <a href="about.html" class="footer-right-menu-list-item">
+                </Link>
+                <Link href="about.html" class="footer-right-menu-list-item">
                   About
-                </a>
-                <a href="blog.html" class="footer-right-menu-list-item">
+                </Link>
+                <Link href="blog.html" class="footer-right-menu-list-item">
                   Blog
-                </a>
-                <a href="projects.html" class="footer-right-menu-list-item">
+                </Link>
+                <Link href="projects.html" class="footer-right-menu-list-item">
                   Projects
-                </a>
-                <a href="contact.html" class="footer-right-menu-list-item">
+                </Link>
+                <Link href="contact.html" class="footer-right-menu-list-item">
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
             <div class="footer-right-menu">
               <div class="footer-right-menu-heading">Social</div>
               <div class="footer-right-menu-list">
-                <a
+                <Link
                   href="https://www.linkedin.com/in/farukipekcom/"
                   class="footer-right-menu-list-item"
                 >
                   Linkedin
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://github.com/farukipekcom"
                   class="footer-right-menu-list-item"
                 >
                   Github
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://twitter.com/farukipekcom"
                   class="footer-right-menu-list-item"
                 >
                   Twitter
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.instagram.com/farukipekcom/"
                   class="footer-right-menu-list-item"
                 >
                   Instagram
-                </a>
+                </Link>
               </div>
             </div>
             <div class="footer-right-menu">
               <div class="footer-right-menu-heading">Get in touch</div>
               <div class="footer-right-menu-list">
-                <a
+                <Link
                   href="mailto:faruk@farukipek.com"
                   class="footer-right-menu-list-item"
                 >
                   faruk@farukipek.com
-                </a>
+                </Link>
               </div>
             </div>
           </div>

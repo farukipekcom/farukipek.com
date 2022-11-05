@@ -31,7 +31,7 @@ const Blog = () => {
           </div>
         </div>
         <div class="blog-list">
-          <a href="post.html" class="blog-list-post">
+          <a href="post" class="blog-list-post">
             <h3 class="blog-list-post-title">
               Quisque congue felis id dictum posuere.
             </h3>
@@ -45,7 +45,7 @@ const Blog = () => {
             </svg>
             <span class="blog-list-post-date">September 2, 2022</span>
           </a>
-          <a href="post.html" class="blog-list-post">
+          <a href="post" class="blog-list-post">
             <h3 class="blog-list-post-title">
               Integer feugiat metus nec nisl pharetra ullamcorper.
             </h3>
@@ -59,7 +59,7 @@ const Blog = () => {
             </svg>
             <span class="blog-list-post-date">June 24, 2022</span>
           </a>
-          <a href="post.html" class="blog-list-post">
+          <a href="post" class="blog-list-post">
             <h3 class="blog-list-post-title">
               Sed eget libero eu tellus consectetur cursus a eu ante.
             </h3>
@@ -73,7 +73,7 @@ const Blog = () => {
             </svg>
             <span class="blog-list-post-date">May 11, 2022</span>
           </a>
-          <a href="post.html" class="blog-list-post">
+          <a href="post" class="blog-list-post">
             <h3 class="blog-list-post-title">
               Curabitur blandit tortor vel urna vehicula iaculis.
             </h3>

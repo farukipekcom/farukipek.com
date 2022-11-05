@@ -13,7 +13,7 @@ export default function Home() {
               I've been building stuff on the web for the last 6 years. I've
               worked with clients in various countries and industries.
             </p>
-            <a href="contact.html" className="homepage-hireme">
+            <a href="contact" className="homepage-hireme">
               <span>Hire Me</span>
               <svg
                 width="15"
@@ -28,7 +28,7 @@ export default function Home() {
           <div className="homepage-blog">
             <h2 className="shadow">BLOG</h2>
             <p className="homepage-heading">Check out my latest articles</p>
-            <a href="blog.html" className="homepage-link">
+            <a href="blog" className="homepage-link">
               Browse all blog posts
               <svg
                 width="15"
@@ -40,7 +40,7 @@ export default function Home() {
               </svg>
             </a>
             <div className="homepage-blog-list">
-              <a href="post.html" className="homepage-blog-list-post">
+              <a href="post" className="homepage-blog-list-post">
                 <h3 className="homepage-blog-list-post-title">
                   Quisque congue felis id dictum posuere.
                 </h3>
@@ -56,7 +56,7 @@ export default function Home() {
                   September 2, 2022
                 </span>
               </a>
-              <a href="post.html" className="homepage-blog-list-post">
+              <a href="post" className="homepage-blog-list-post">
                 <h3 className="homepage-blog-list-post-title">
                   Integer feugiat metus nec nisl pharetra ullamcorper.
                 </h3>
@@ -72,7 +72,7 @@ export default function Home() {
                   June 24, 2022
                 </span>
               </a>
-              <a href="post.html" className="homepage-blog-list-post">
+              <a href="post" className="homepage-blog-list-post">
                 <h3 className="homepage-blog-list-post-title">
                   Sed eget libero eu tellus consectetur cursus a eu ante.
                 </h3>
@@ -88,7 +88,7 @@ export default function Home() {
                   May 11, 2022
                 </span>
               </a>
-              <a href="post.html" className="homepage-blog-list-post">
+              <a href="post" className="homepage-blog-list-post">
                 <h3 className="homepage-blog-list-post-title">
                   Curabitur blandit tortor vel urna vehicula iaculis.
                 </h3>
@@ -111,7 +111,7 @@ export default function Home() {
             <p className="homepage-heading">
               Take a look at the latest projects
             </p>
-            <a href="projects.html" className="homepage-link">
+            <a href="projects" className="homepage-link">
               Browse all projects
               <svg
                 width="15"

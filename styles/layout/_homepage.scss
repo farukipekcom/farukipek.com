@@ -55,29 +55,6 @@
       flex-wrap: wrap;
       gap: 24px;
       margin-top: 24px;
-      &-item {
-        background-color: $background;
-        padding: 16px;
-        border-radius: $border;
-        border: 2px solid $gray;
-        transition: background-color 0.4s;
-        width: 100%;
-        @include mq("tablet") {
-          width: calc(50% - 12px);
-        }
-        &:hover {
-          background-color: $dark;
-          transition: background-color 0.4s;
-        }
-        &-title {
-          @include heading3;
-        }
-        &-category {
-          margin-top: 8px;
-          color: $gray;
-          @include subtitle;
-        }
-      }
     }
   }
   &-heading {

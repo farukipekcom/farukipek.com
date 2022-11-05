@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Title from "../components/title/title";
 import Post from '../components/post/post';
+import ProjectCard from "../components/project-card/project-card";
 export default function Home() {
   return (
     <>
@@ -53,38 +54,10 @@ export default function Home() {
               </svg>
             </a>
             <div className="homepage-projects-list">
-              <a href="" className="homepage-projects-list-item">
-                <h3 className="homepage-projects-list-item-title">
-                  Quisque congue
-                </h3>
-                <span className="homepage-projects-list-item-category">
-                  WEB DESIGN + UI DESIGN + SEO
-                </span>
-              </a>
-              <a href="" className="homepage-projects-list-item">
-                <h3 className="homepage-projects-list-item-title">
-                  Integer feugiat metus
-                </h3>
-                <span className="homepage-projects-list-item-category">
-                  WEB DESIGN + UI DESIGN + SEO
-                </span>
-              </a>
-              <a href="" className="homepage-projects-list-item">
-                <h3 className="homepage-projects-list-item-title">
-                  Sed eget libero
-                </h3>
-                <span className="homepage-projects-list-item-category">
-                  WEB DESIGN + UI DESIGN + SEO
-                </span>
-              </a>
-              <a href="" className="homepage-projects-list-item">
-                <h3 className="homepage-projects-list-item-title">
-                  Curabitur blandit
-                </h3>
-                <span className="homepage-projects-list-item-category">
-                  WEB DESIGN + UI DESIGN + SEO
-                </span>
-              </a>
+              <ProjectCard title={"Quisque congue"} category={"WEB DESIGN + UI DESIGN + SEO"}/>
+              <ProjectCard title={"Integer feugiat metus"} category={"WEB DESIGN + UI DESIGN + SEO"}/>
+              <ProjectCard title={"Sed eget libero"} category={"WEB DESIGN + UI DESIGN + SEO"}/>
+              <ProjectCard title={" Curabitur blandit"} category={"WEB DESIGN + UI DESIGN + SEO"}/>
             </div>
           </div>
         </div>

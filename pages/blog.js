@@ -1,14 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
+import Title from "../components/title/title";
 const Blog = () => {
   return (
     <div class="blog">
       <div class="container">
-        <div class="hero">
-          <div class="hero-page-title">Blog</div>
-          <h1 class="hero-title">
-            I enjoy share about how I work, design and live.
-          </h1>
-        </div>
+        <Title
+          pagetitle={"Blog"}
+          title={"I enjoy share about how I work, design and live."}
+        />
         <div class="blog-search">
           <p class="blog-search-text">
             I've written 4 articles on my blog. Use the search below to filter

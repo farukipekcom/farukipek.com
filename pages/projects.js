@@ -1,21 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-
+import Title from "../components/title/title";
 const Projects = () => {
   return (
     <div class="projects">
       <div class="container">
-        <div class="hero">
-          <div class="hero-page-title">Projects</div>
-          <h1 class="hero-title">
-            Check out my projects. <br />
-            Send me a message and talk about the new project.
-          </h1>
-          <p class="hero-details">
-            Check out my professional portfolio. I work remotely and work on
-            freelance projects.
-          </p>
-        </div>
+        <Title
+          pagetitle={"Projects"}
+          title={
+            "Check out my projects. Send me a message and talk about the new project."
+          }
+          details={
+            "Check out my professional portfolio. I work remotely and work on freelance projects."
+          }
+        />
 
         <div class="projects-list">
           <a href="" class="projects-list-item">

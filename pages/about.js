@@ -1,18 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-
+import Title from "../components/title/title";
 export default function About() {
   return (
     <>
       <div class="about">
         <div class="container">
-          <div class="hero">
-            <div class="hero-page-title">About</div>
-            <h1 class="hero-title">
-              I'm Faruk Ipek, a freelancer front-end developer from Charlotte,
-              USA. I build things for the web.
-            </h1>
-          </div>
+          <Title
+            pagetitle={"About"}
+            title={
+              "I'm Faruk Ipek, a freelancer front-end developer from Charlotte USA. I build things for the web."
+            }
+          />
           <div class="about-details">
             <div class="about-details-left">
               <h2 class="about-details-left-text">

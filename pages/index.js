@@ -1,18 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
+import Title from "../components/title/title";
 export default function Home() {
   return (
     <>
       <div className="homepage">
         <div className="container">
+          <Title
+            title={
+              "Hey! I'm Faruk, a front-end developer based in Charlotte, USA."
+            }
+            details={
+              "I've been building stuff on the web for the last 6 years. I've worked with clients in various countries and industries."
+            }
+          />
           <div className="hero">
-            <h1 className="hero-title">
-              Hey! <br />
-              I'm Faruk, a front-end developer based in Charlotte, USA.
-            </h1>
-            <p className="hero-details">
-              I've been building stuff on the web for the last 6 years. I've
-              worked with clients in various countries and industries.
-            </p>
             <a href="contact" className="homepage-hireme">
               <span>Hire Me</span>
               <svg

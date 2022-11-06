@@ -32,8 +32,8 @@ const Projects = () => {
     },
   ];
   return (
-    <div class="projects">
-      <div class="container">
+    <div className="projects">
+      <div className="container">
         <Title
           pagetitle={"Projects"}
           title={
@@ -43,7 +43,7 @@ const Projects = () => {
             "Check out my professional portfolio. I work remotely and work on freelance projects."
           }
         />
-        <div class="projects-list">
+        <div className="projects-list">
           {projects.map((item) => {
             return (
               <>

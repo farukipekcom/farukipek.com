@@ -1,20 +1,20 @@
 import Image from "next/image";
-import Twitter from '../components/icons/twitter';
-import Copy from '../components/icons/copy';
+import Twitter from "../components/icons/twitter";
+import Copy from "../components/icons/copy";
 const Post = () => {
   return (
-    <div class="post">
-      <div class="container">
-        <div class="post-heading">
-          <h1 class="post-heading-title">
+    <div className="post">
+      <div className="container">
+        <div className="post-heading">
+          <h1 className="post-heading-title">
             Quisque congue felis id dictum posuere.
           </h1>
-          <div class="post-heading-info">
-            <span class="post-heading-info-date">November 1, 2022</span>
-            <span class="post-heading-info-readingtime">4 min read</span>
+          <div className="post-heading-info">
+            <span className="post-heading-info-date">November 1, 2022</span>
+            <span className="post-heading-info-readingtime">4 min read</span>
           </div>
         </div>
-        <div class="post-article">
+        <div className="post-article">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget
             porttitor urna. In gravida, orci vel pretium lobortis, lorem purus
@@ -42,12 +42,12 @@ const Post = () => {
             Cras non leo at ipsum fringilla ullamcorper.
           </p>
         </div>
-        <div class="post-share">
-          <a href="" class="post-share-item">
+        <div className="post-share">
+          <a href="" className="post-share-item">
             <Twitter size={15} />
             Twitter
           </a>
-          <a href="" class="post-share-item">
+          <a href="" className="post-share-item">
             <Copy size={15} />
             Share
           </a>

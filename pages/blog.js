@@ -30,14 +30,14 @@ const Blog = () => {
     },
   ];
   return (
-    <div class="blog">
-      <div class="container">
+    <div className="blog">
+      <div className="container">
         <Title
           pagetitle={"Blog"}
           title={"I enjoy share about how I work, design and live."}
         />
         <Search />
-        <div class="blog-list">
+        <div className="blog-list">
           {blog.map((item) => {
             return (
               <>

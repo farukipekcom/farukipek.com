@@ -4,17 +4,17 @@ import Title from "../components/title/title";
 export default function About() {
   return (
     <>
-      <div class="about">
-        <div class="container">
+      <div className="about">
+        <div className="container">
           <Title
             pagetitle={"About"}
             title={
               "I'm Faruk Ipek, a freelancer front-end developer from Charlotte USA. I build things for the web."
             }
           />
-          <div class="about-details">
-            <div class="about-details-left">
-              <h2 class="about-details-left-text">
+          <div className="about-details">
+            <div className="about-details-left">
+              <h2 className="about-details-left-text">
                 My interest in web development started in 2013 when I started my
                 own website. I learned a lot about HTML & CSS after discovering
                 Wordpress. <br />
@@ -28,8 +28,8 @@ export default function About() {
                 height={600}
               />
             </div>
-            <div class="about-details-right">
-              <p class="about-details-right-text">
+            <div className="about-details-right">
+              <p className="about-details-right-text">
                 Outside of programming, I love designing, cycling and traveling.
                 Some of photos can be found on Instagram. <br />
                 <br />

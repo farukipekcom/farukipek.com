@@ -1,5 +1,5 @@
 import styles from "./title.module.scss";
-import Button from '../button/button'
+import Button from "../button/button";
 const Title = ({ pagetitle, title, details, hireme }) => {
   return (
     <>

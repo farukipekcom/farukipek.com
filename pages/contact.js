@@ -1,9 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
+import styles from "./contact.module.scss";
 import Title from "../components/title/title";
 const Contact = () => {
   return (
-    <div className="contact">
-      <div className="container">
+    <div className={styles.contact}>
+      <div className={styles.container}>
         <Title
           pagetitle={"Contact"}
           title={"Let's make great products together!"}
@@ -11,34 +11,34 @@ const Contact = () => {
             "Reach out filling the form below or send me an email at faruk@farukipek.com"
           }
         />
-        <form className="contact-form">
-          <div className="contact-form-item">
-            <span className="contact-form-item-label">Name</span>
+        <form className={styles.form}>
+          <div className={styles.item}>
+            <span className={styles.label}>Name</span>
             <input
               type="text"
               placeholder="Your name"
-              className="contact-form-item-input"
+              className={styles.input}
             />
           </div>
-          <div className="contact-form-item">
-            <span className="contact-form-item-label">Email</span>
+          <div className={styles.item}>
+            <span className={styles.label}>Email</span>
             <input
               type="text"
               placeholder="you@company.com"
-              className="contact-form-item-input"
+              className={styles.input}
             />
           </div>
-          <div className="contact-form-item">
-            <span className="contact-form-item-label">Message</span>
+          <div className={styles.item}>
+            <span className={styles.label}>Message</span>
             <textarea
               name=""
               id=""
               placeholder="Tell me about your site project requirements and when you'd like to start."
-              className="contact-form-item-input contact-form-item-textarea"
+              className={`${styles.input} ${styles.textarea}`}
             ></textarea>
           </div>
-          <div className="contact-form-item">
-            <button className="contact-form-item-button">Send Message</button>
+          <div className={styles.item}>
+            <button className={styles.button}>Send Message</button>
           </div>
         </form>
       </div>

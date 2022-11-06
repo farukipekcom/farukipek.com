@@ -1,20 +1,21 @@
 import Image from "next/image";
 import Twitter from "../components/icons/twitter";
 import Copy from "../components/icons/copy";
+import styles from "./post.module.scss";
 const Post = () => {
   return (
-    <div className="post">
-      <div className="container">
-        <div className="post-heading">
-          <h1 className="post-heading-title">
+    <div className={styles.post}>
+      <div className={styles.container}>
+        <div className={styles.heading}>
+          <h1 className={styles.title}>
             Quisque congue felis id dictum posuere.
           </h1>
-          <div className="post-heading-info">
-            <span className="post-heading-info-date">November 1, 2022</span>
-            <span className="post-heading-info-readingtime">4 min read</span>
+          <div className={styles.info}>
+            <span className={styles.date}>November 1, 2022</span>
+            <span className={styles.readingtime}>4 min read</span>
           </div>
         </div>
-        <div className="post-article">
+        <div className={styles.article}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget
             porttitor urna. In gravida, orci vel pretium lobortis, lorem purus
@@ -29,8 +30,14 @@ const Post = () => {
             neque. Morbi a odio vehicula, iaculis ligula ut, consectetur orci.
             Etiam accumsan consequat tellus ut feugiat.
           </p>
-          <Image src="/post.jpg" alt="Post Name" width={800} height={440} />
-          <h2>Condimentum vitae sapien mi quis</h2>
+          <Image
+            src="/post.jpg"
+            alt="Post Name"
+            width={800}
+            height={440}
+            className={styles.image}
+          />
+          <h2 className={styles.heading2}>Condimentum vitae sapien mi quis</h2>
           <p>
             Maecenas quam nunc, sagittis non condimentum at, rutrum sit amet
             eros. Fusce rutrum, lectus in blandit sagittis, mi tortor
@@ -42,12 +49,12 @@ const Post = () => {
             Cras non leo at ipsum fringilla ullamcorper.
           </p>
         </div>
-        <div className="post-share">
-          <a href="" className="post-share-item">
+        <div className={styles.share}>
+          <a href="" className={styles.item}>
             <Twitter size={15} />
             Twitter
           </a>
-          <a href="" className="post-share-item">
+          <a href="" className={styles.item}>
             <Copy size={15} />
             Share
           </a>

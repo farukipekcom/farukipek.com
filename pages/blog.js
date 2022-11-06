@@ -1,7 +1,7 @@
-/* eslint-disable react/no-unescaped-entities */
 import Title from "../components/title/title";
 import Post from "../components/post/post";
 import Search from "../components/search/search";
+import styles from "./blog.module.scss";
 const Blog = () => {
   const blog = [
     {
@@ -30,14 +30,14 @@ const Blog = () => {
     },
   ];
   return (
-    <div className="blog">
-      <div className="container">
+    <div className={styles.blog}>
+      <div className={styles.container}>
         <Title
           pagetitle={"Blog"}
           title={"I enjoy share about how I work, design and live."}
         />
         <Search />
-        <div className="blog-list">
+        <div className={styles.list}>
           {blog.map((item) => {
             return (
               <>

@@ -1,20 +1,21 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import Title from "../components/title/title";
+import styles from "./about.module.scss";
 export default function About() {
   return (
     <>
-      <div className="about">
-        <div className="container">
+      <div className={styles.about}>
+        <div className={styles.container}>
           <Title
             pagetitle={"About"}
             title={
               "I'm Faruk Ipek, a freelancer front-end developer from Charlotte USA. I build things for the web."
             }
           />
-          <div className="about-details">
-            <div className="about-details-left">
-              <h2 className="about-details-left-text">
+          <div className={styles.details}>
+            <div className={styles.left}>
+              <h2 className={styles.heading2}>
                 My interest in web development started in 2013 when I started my
                 own website. I learned a lot about HTML & CSS after discovering
                 Wordpress. <br />
@@ -26,10 +27,11 @@ export default function About() {
                 alt="Faruk İpek"
                 width={500}
                 height={600}
+                className={styles.image}
               />
             </div>
-            <div className="about-details-right">
-              <p className="about-details-right-text">
+            <div className={styles.right}>
+              <p className={styles.text}>
                 Outside of programming, I love designing, cycling and traveling.
                 Some of photos can be found on Instagram. <br />
                 <br />
@@ -42,6 +44,7 @@ export default function About() {
                 alt="Faruk İpek"
                 width={500}
                 height={600}
+                className={styles.image}
               />
             </div>
           </div>

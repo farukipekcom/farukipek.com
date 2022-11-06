@@ -1,5 +1,6 @@
 import Title from "../components/title/title";
 import Project from "../components/project/project";
+import styles from "./projects.module.scss";
 const Projects = () => {
   const projects = [
     {
@@ -32,8 +33,8 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="projects">
-      <div className="container">
+    <div className={styles.projects}>
+      <div className={styles.container}>
         <Title
           pagetitle={"Projects"}
           title={
@@ -43,7 +44,7 @@ const Projects = () => {
             "Check out my professional portfolio. I work remotely and work on freelance projects."
           }
         />
-        <div className="projects-list">
+        <div className={styles.list}>
           {projects.map((item) => {
             return (
               <>

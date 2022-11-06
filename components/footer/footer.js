@@ -87,32 +87,32 @@ const Footer = () => {
       <Script id="js">
         {` 
         const toggle1 = document.getElementById("toggle1");
-const toggle1Box = document.getElementById("social-modal");
-const isHidden = () => toggle1Box.classList.contains("social-modal--hidden");
+const toggle1Box = document.getElementById("socialModal");
+const isHidden = () => toggle1Box.classList.contains("socialModal--hidden");
 toggle1.addEventListener("click", function () {
   if (isHidden()) {
     toggle1Box.style.removeProperty("display");
-    setTimeout(() => toggle1Box.classList.remove("social-modal--hidden"), 0);
+    setTimeout(() => toggle1Box.classList.remove("socialModal--hidden"), 0);
   } else {
-    toggle1Box.classList.add("social-modal--hidden");
+    toggle1Box.classList.add("socialModal--hidden");
   }
 });
 const toggle2 = document.getElementById("toggle2");
 const toggle3 = document.getElementById("toggle3");
 const toggle2Box = document.getElementById("header");
-const varmi = () => toggle2Box.classList.contains("mobile-menu");
+const varmi = () => toggle2Box.classList.contains("mobileMenu");
 toggle2.addEventListener("click", function () {
   if (varmi()) {
-    toggle2Box.classList.remove("mobile-menu");
+    toggle2Box.classList.remove("mobileMenu");
   } else {
-    toggle2Box.classList.add("mobile-menu");
+    toggle2Box.classList.add("mobileMenu");
   }
 });
 toggle3.addEventListener("click", function () {
   if (varmi()) {
-    toggle2Box.classList.remove("mobile-menu");
+    toggle2Box.classList.remove("mobileMenu");
   } else {
-    toggle2Box.classList.add("mobile-menu");
+    toggle2Box.classList.add("mobileMenu");
   }
 });
 `}

@@ -52,3 +52,13 @@ const Blog = () => {
 };
 
 export default Blog;
+
+// export async function getStaticProps() {
+//   const res = await fetch("http://localhost:3000/blogs");
+//   const posts = await res.json();
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }

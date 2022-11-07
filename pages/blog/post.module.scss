@@ -45,6 +45,17 @@
     margin-top: 32px;
     @include text;
   }
+  p {
+    display: flex;
+  }
+  p img {
+    border-radius: $border;
+    margin: 0 auto;
+    width: 100%;
+    @include mq("desktop") {
+      width: 800px;
+    }
+  }
 }
 .heading2 {
   @include mobileHeading2;
@@ -55,14 +66,7 @@
 .heading2 + p {
   margin-top: -24px;
 }
-.image {
-  border-radius: $border;
-  margin: 0 auto;
-  width: 100%;
-  @include mq("desktop") {
-    width: 800px;
-  }
-}
+
 .share {
   margin-top: 80px;
   display: flex;

@@ -2,33 +2,7 @@ import Title from "../components/title/title";
 import Post from "../components/post/post";
 import Search from "../components/search/search";
 import styles from "./blog.module.scss";
-const Blog = () => {
-  const blog = [
-    {
-      id: 1,
-      title: "Quisque congue felis id dictum posuere.",
-      date: "September 2, 2022",
-      url: "post",
-    },
-    {
-      id: 2,
-      title: "Integer feugiat metus nec nisl pharetra ullamcorper.",
-      date: "June 24, 2022",
-      url: "post",
-    },
-    {
-      id: 3,
-      title: "Sed eget libero eu tellus consectetur cursus a eu ante.",
-      date: "May 11, 2022",
-      url: "post",
-    },
-    {
-      id: 4,
-      title: "Curabitur blandit tortor vel urna vehicula iaculis.",
-      date: "April 3, 2022",
-      url: "post",
-    },
-  ];
+const Blog = ({ post }) => {
   return (
     <div className={styles.blog}>
       <div className={styles.container}>
@@ -38,10 +12,10 @@ const Blog = () => {
         />
         <Search />
         <div className={styles.list}>
-          {blog.map((item) => {
+          {post.nodes.map((item) => {
             return (
               <>
-                <Post title={item.title} date={item.date} url={item.url} />
+                <Post title={item.title} date={item.date} url={item.slug} />
               </>
             );
           })}
@@ -53,12 +27,26 @@ const Blog = () => {
 
 export default Blog;
 
-// export async function getStaticProps() {
-//   const res = await fetch("http://localhost:3000/blogs");
-//   const posts = await res.json();
-//   return {
-//     props: {
-//       posts,
-//     },
-//   };
-// }
+export async function getStaticProps() {
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      query: `query NewQuery {
+        posts {
+          nodes {
+            slug
+            title
+          }
+        }
+      }`,
+    }),
+  });
+  const json = await res.json();
+  return {
+    props: {
+      post: json.data.posts,
+    },
+    revalidate: 10,
+  };
+}

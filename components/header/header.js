@@ -19,18 +19,18 @@ const Header = () => {
           <Close size={15} />
         </button>
         <nav className={styles.menu} id="myTopnav">
-          <a href="about" className={styles.item}>
+          <Link href="/about" className={styles.item}>
             About
-          </a>
-          <a href="blog" className={styles.item}>
+          </Link>
+          <Link href="/blog" className={styles.item}>
             Blog
-          </a>
-          <a href="projects" className={styles.item}>
+          </Link>
+          <Link href="/projects" className={styles.item}>
             Projects
-          </a>
-          <a href="contact" className={styles.item}>
+          </Link>
+          <Link href="/contact" className={styles.item}>
             Contact
-          </a>
+          </Link>
           <span className={`${styles.item} ${styles.divider}`}></span>
           <button id="toggle1" className={styles.social}>
             <ArrowDown size={15} gonder="svg" />

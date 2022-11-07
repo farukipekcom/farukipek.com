@@ -11,7 +11,7 @@ const Footer = () => {
               <div className={styles.heading}>
                 Feeling good about a project?
               </div>
-              <Link href="contact" className={styles.link}>
+              <Link href="/contact" className={styles.link}>
                 Let`s talk about it!
               </Link>
             </div>
@@ -19,19 +19,19 @@ const Footer = () => {
               <div className={styles.menu}>
                 <div className={styles.heading}>Explore</div>
                 <div className={styles.list}>
-                  <Link href="home" className={styles.item}>
+                  <Link href="/home" className={styles.item}>
                     Home
                   </Link>
-                  <Link href="about" className={styles.item}>
+                  <Link href="/about" className={styles.item}>
                     About
                   </Link>
-                  <Link href="blog" className={styles.item}>
+                  <Link href="/blog" className={styles.item}>
                     Blog
                   </Link>
-                  <Link href="projects" className={styles.item}>
+                  <Link href="/projects" className={styles.item}>
                     Projects
                   </Link>
-                  <Link href="contact" className={styles.item}>
+                  <Link href="/contact" className={styles.item}>
                     Contact
                   </Link>
                 </div>

@@ -7,7 +7,16 @@ const Project = ({ title, img, category, url }) => {
         <Image src={img} alt={title} width={520} height={360} />
       </div>
       <h3 className={styles.title}>{title}</h3>
-      <span className={styles.category}>{category}</span>
+
+      <span className={styles.category}>
+        {category.map((item) => {
+          return (
+            <>
+              <span>{item.node.name}</span>
+            </>
+          );
+        })}
+      </span>
     </a>
   );
 };

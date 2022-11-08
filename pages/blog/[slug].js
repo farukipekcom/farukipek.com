@@ -2,10 +2,25 @@ import Twitter from "../../components/icons/twitter";
 import Copy from "../../components/icons/copy";
 import styles from "./post.module.scss";
 import { format, parseISO } from "date-fns";
+import { useRouter } from "next/router";
+import { useState } from "react";
+
 export default function Post(data) {
   const post = data.post;
   const text = <div dangerouslySetInnerHTML={{ __html: post.content }}></div>;
   const content = text.props.dangerouslySetInnerHTML.__html;
+  const router = useRouter();
+  console.log(router.query.slug); //yields: "https://stacksnippets.net/js"
+  const [yazi, setYazi] = useState(0);
+  const deneme = () => {
+    navigator.clipboard.writeText(
+      `${"http://localhost:3000/blog/" + router.query.slug}`
+    );
+    setYazi(1);
+    setInterval(() => {
+      setYazi(0);
+    }, 2000);
+  };
   return (
     <div className={styles.post}>
       <div className={styles.container}>
@@ -26,16 +41,16 @@ export default function Post(data) {
           className={styles.article}
           dangerouslySetInnerHTML={{ __html: post.content }}
         ></div>
-        <div className={styles.share}>
-          <a href="" className={styles.item}>
+        {/* <div className={styles.share}>
+          <button className={styles.item}>
             <Twitter size={15} />
             Twitter
-          </a>
-          <a href="" className={styles.item}>
+          </button>
+          <button className={styles.item}>
             <Copy size={15} />
             Share
-          </a>
-        </div>
+          </button>
+        </div> */}
       </div>
     </div>
   );

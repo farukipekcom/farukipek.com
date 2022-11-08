@@ -9,18 +9,7 @@ export default function Post(data) {
   const post = data.post;
   const text = <div dangerouslySetInnerHTML={{ __html: post.content }}></div>;
   const content = text.props.dangerouslySetInnerHTML.__html;
-  const router = useRouter();
-  console.log(router.query.slug); //yields: "https://stacksnippets.net/js"
-  const [yazi, setYazi] = useState(0);
-  const deneme = () => {
-    navigator.clipboard.writeText(
-      `${"http://localhost:3000/blog/" + router.query.slug}`
-    );
-    setYazi(1);
-    setInterval(() => {
-      setYazi(0);
-    }, 2000);
-  };
+
   return (
     <div className={styles.post}>
       <div className={styles.container}>

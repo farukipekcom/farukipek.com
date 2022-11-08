@@ -3,7 +3,7 @@ import Post from "../components/post/post";
 import ProjectCard from "../components/project-card/project-card";
 import ArrowRight from "../components/icons/arrow-right";
 import styles from "./index.module.scss";
-export default function Home() {
+export default function Home({ post, project }) {
   return (
     <>
       <div className={styles.homepage}>
@@ -25,28 +25,13 @@ export default function Home() {
               <ArrowRight size={15} />
             </a>
             <div className={styles.blogList}>
-              <Post
-                title={"Quisque congue felis id dictum posuere."}
-                date={"September 2, 2022"}
-                url={"post"}
-              />
-              <Post
-                title={"Integer feugiat metus nec nisl pharetra ullamcorper."}
-                date={"June 24, 2022"}
-                url={"post"}
-              />
-              <Post
-                title={
-                  "Sed eget libero eu tellus consectetur cursus a eu ante."
-                }
-                date={"May 11, 2022"}
-                url={"post"}
-              />
-              <Post
-                title={"Curabitur blandit tortor vel urna vehicula iaculis."}
-                date={"April 3, 2022"}
-                url={"post"}
-              />
+              {post.nodes.map((item) => {
+                return (
+                  <div key={item.postId}>
+                    <Post title={item.title} date={item.date} url={item.slug} />
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div className={styles.projects}>
@@ -57,26 +42,71 @@ export default function Home() {
               <ArrowRight size={15} />
             </a>
             <div className={styles.projectsList}>
-              <ProjectCard
-                title={"Quisque congue"}
-                category={"WEB DESIGN + UI DESIGN + SEO"}
-              />
-              <ProjectCard
-                title={"Integer feugiat metus"}
-                category={"WEB DESIGN + UI DESIGN + SEO"}
-              />
-              <ProjectCard
-                title={"Sed eget libero"}
-                category={"WEB DESIGN + UI DESIGN + SEO"}
-              />
-              <ProjectCard
-                title={" Curabitur blandit"}
-                category={"WEB DESIGN + UI DESIGN + SEO"}
-              />
+              {project.nodes.map((item) => {
+                return (
+                  <div className={styles.item} key={item.projectId}>
+                    <ProjectCard
+                      title={item.title}
+                      category={item.terms.edges}
+                      url={item.projects.projectsLink}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
     </>
   );
+}
+export async function getStaticProps() {
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      query: `query NewQuery {
+        posts {
+          nodes {
+            postId
+            slug
+            title
+            date
+          }
+        }
+        projects {
+          nodes {
+            title
+            slug
+            projectId
+            projects {
+              projectsLink
+            }
+            terms {
+              edges {
+                node {
+                  slug
+                  name
+                }
+              }
+            }
+            featuredImage {
+              node {
+                mediaItemUrl
+              }
+            }
+          }
+        }
+      },
+      `,
+    }),
+  });
+  const json = await res.json();
+  return {
+    props: {
+      post: json.data.posts,
+      project: json.data.projects,
+    },
+    revalidate: 10,
+  };
 }

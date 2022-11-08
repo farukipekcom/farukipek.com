@@ -3,7 +3,6 @@ import Post from "../components/post/post";
 import Search from "../components/search/search";
 import styles from "./blog.module.scss";
 const Blog = ({ post }) => {
-  console.log(post);
   return (
     <div className={styles.blog}>
       <div className={styles.container}>
@@ -11,7 +10,7 @@ const Blog = ({ post }) => {
           pagetitle={"Blog"}
           title={"I enjoy share about how I work, design and live."}
         />
-        <Search />
+        <Search length={post.nodes.length} />
         <div className={styles.list}>
           {post.nodes.map((item) => {
             return (

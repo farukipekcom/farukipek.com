@@ -3,6 +3,7 @@ import Post from "../components/post/post";
 import Search from "../components/search/search";
 import styles from "./blog.module.scss";
 const Blog = ({ post }) => {
+  console.log(post);
   return (
     <div className={styles.blog}>
       <div className={styles.container}>
@@ -14,9 +15,9 @@ const Blog = ({ post }) => {
         <div className={styles.list}>
           {post.nodes.map((item) => {
             return (
-              <>
+              <div key={item.postId}>
                 <Post title={item.title} date={item.date} url={item.slug} />
-              </>
+              </div>
             );
           })}
         </div>
@@ -35,8 +36,10 @@ export async function getStaticProps() {
       query: `query NewQuery {
         posts {
           nodes {
+            postId
             slug
             title
+            date
           }
         }
       }`,

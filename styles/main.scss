@@ -7,9 +7,6 @@
 @import "base/_normalize";
 @import "base/_global";
 
-// Layout
-// @import "layout/_header";
-
 :root {
   --max-width: 1440px;
   --background: #1b1f25;
@@ -54,12 +51,7 @@
       display: none;
     }
   }
-  .containers {
-    // padding-left: 0px;
-  }
-  .logo {
-    // padding-left: 20px;
-  }
+
   .menu {
     display: flex;
     flex-direction: column;
@@ -91,8 +83,8 @@
       gap: 32px;
     }
     .item {
-      // margin-left: 20px;
-      // margin-right: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -104,8 +96,8 @@
         transition: border 0.2s;
       }
       @include mq("tablet") {
-        margin-left: unset;
-        margin-right: unset;
+        padding-left: unset;
+        padding-right: unset;
         background-color: unset;
         border: unset;
         width: unset;
@@ -146,42 +138,14 @@
     padding: 12px;
     z-index: 9999;
   }
-}
-.item2 {
-  display: flex;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  padding-bottom: 4px;
-  padding-top: 4px;
-  gap: 8px;
-  z-index: 9;
-  transform: translateX(0px);
-  height: 32px;
-  .arrow {
-    opacity: 0;
-    transition: transform 0.2s;
-  }
-  &:hover {
-    text-decoration: underline;
-    .socialModal-item-arrow {
-      opacity: 1;
-      rotate: -45deg;
-      transition: transform 0.2s;
-      transform: translateX(2px);
-    }
+  svg {
+    fill: white;
   }
 }
-// svg {
-//   fill: #fff;
-// }
-.divider2 {
-  height: 1px;
-  background-color: $gray;
-}
+
 .socialModal--hidden {
   opacity: 1 !important;
+  @include mq("tablet") {
+    display: flex !important;
+  }
 }

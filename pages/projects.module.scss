@@ -17,3 +17,17 @@
     flex-direction: row;
   }
 }
+.item {
+  width: 100%;
+  margin-top: 32px;
+  @include mq("tablet") {
+    width: calc(50% - 20px);
+    margin-top: 80px;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+      border-radius: 8px;
+    }
+  }
+}

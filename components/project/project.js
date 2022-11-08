@@ -9,11 +9,9 @@ const Project = ({ title, img, category, url }) => {
       <h3 className={styles.title}>{title}</h3>
 
       <span className={styles.category}>
-        {category.map((item) => {
+        {category.map((item, index) => {
           return (
-            <>
-              <span>{item.node.name}</span>
-            </>
+              <span key={index}>{item.node.name}</span>
           );
         })}
       </span>

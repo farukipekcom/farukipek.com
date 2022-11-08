@@ -18,14 +18,14 @@ const Projects = ({ allProject }) => {
         <div className={styles.list}>
           {projects.map((item) => {
             return (
-              <>
+              <div className={styles.item} key={item.projectId}>
                 <Project
                   title={item.title}
                   img={item.featuredImage.node.mediaItemUrl}
                   category={item.terms.edges}
                   url={item.projects.projectsLink}
                 />
-              </>
+              </div>
             );
           })}
         </div>
@@ -46,6 +46,7 @@ export async function getStaticProps() {
           nodes {
             title
             slug
+            projectId
             projects {
               projectsLink
             }

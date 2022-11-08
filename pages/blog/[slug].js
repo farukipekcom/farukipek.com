@@ -4,6 +4,8 @@ import styles from "./post.module.scss";
 import { format, parseISO } from "date-fns";
 export default function Post(data) {
   const post = data.post;
+  const text = <div dangerouslySetInnerHTML={{ __html: post.content }}></div>;
+  const content = text.props.dangerouslySetInnerHTML.__html;
   return (
     <div className={styles.post}>
       <div className={styles.container}>
@@ -15,7 +17,9 @@ export default function Post(data) {
                 {format(parseISO(post.date), "d LLLL yyyy")}
               </time>
             </span>
-            <span className={styles.readingtime}>4 min read</span>
+            <span className={styles.readingtime}>
+              {Math.ceil(content.trim().split(/\s+/).length / 200) + 1} min read
+            </span>
           </div>
         </div>
         <div

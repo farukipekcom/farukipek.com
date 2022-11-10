@@ -38,8 +38,10 @@
 }
 
 .right {
+  margin-top: 32px;
   @include mq("tablet") {
     width: 500px;
+    margin-top: 0px;
   }
 }
 .text {
@@ -51,7 +53,10 @@
 .image {
   margin-top: 32px;
   border-radius: $border;
-  width: 100%;
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
   @include mq("tablet") {
     margin-top: 80px;
   }

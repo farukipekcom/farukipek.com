@@ -5,20 +5,43 @@ import Copy from "../icons/copy";
 import ArrowRight from "../icons/arrow-right";
 import ArrowDown from "../icons/arrow-down";
 import styles from "./header.module.scss";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+
 const Header = () => {
+  const [active, setActive] = useState(false);
+  const router = useRouter();
+  const MobileMenu = () => {
+    setActive(!active);
+  };
+  useEffect(() => {
+    setActive(false);
+  }, [router.pathname]);
   return (
-    <header className={styles.header} id="header">
+    <header
+      className={`${
+        active === false ? styles.header : styles.header + " mobileMenu"
+      }`}
+      id="header"
+    >
       <div className={styles.background}></div>
       <div className={styles.containers}>
         <Link href="/" className={styles.logo}>
           Faruk Ipek
         </Link>
-        <button className={styles.switch} id="toggle2">
-          <Menu size={15} />
-        </button>
-        <button className={`${styles.switch} ${styles.switch2}`} id="toggle3">
-          <Close size={15} />
-        </button>
+        {active === false ? (
+          <button onClick={MobileMenu} className={styles.switch}>
+            <Menu size={15} />
+          </button>
+        ) : (
+          <button
+            onClick={MobileMenu}
+            className={`${styles.switch} ${styles.switch2}`}
+          >
+            <Close size={15} />
+          </button>
+        )}
+
         <nav className={styles.menu} id="myTopnav">
           <Link href="/about" className={styles.item}>
             About
@@ -36,7 +59,6 @@ const Header = () => {
           <button id="toggle1" className={styles.social}>
             <ArrowDown size={15} />
           </button>
-
           <div className={styles.socialModal} id="socialModal">
             <a href="" className={`${styles.socialModalItem} ${styles.copy}`}>
               <Copy size={15} />

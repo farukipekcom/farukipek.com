@@ -7,7 +7,10 @@ import Page from "../components/page/page";
 export default function Home({ post, project }) {
   return (
     <>
-      <Page>
+      <Page
+        title="Faruk Ipek"
+        desc="Hey! I'm Faruk Ipek, a front-end developer based in Charlotte, USA. I've been building stuff on the web for the since 2016."
+      >
         <div className={styles.homepage}>
           <div className={styles.container}>
             <Title

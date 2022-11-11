@@ -5,7 +5,10 @@ import Page from "../components/page/page";
 const Projects = ({ allProject }) => {
   const projects = allProject.nodes;
   return (
-    <Page>
+    <Page
+      title="Projects - Faruk Ipek"
+      desc="I'm Faruk Ipek, a freelancer front-end developer from Charlotte USA. Check out my projects. Send me a message and talk about the new project."
+    >
       <div className={styles.projects}>
         <div className={styles.container}>
           <Title

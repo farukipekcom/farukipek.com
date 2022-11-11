@@ -19,7 +19,10 @@ const Contact = () => {
     setMessage(1);
   }
   return (
-    <Page>
+    <Page
+      title="Contact - Faruk Ipek"
+      desc="I'm Faruk Ipek, a freelancer front-end developer from Charlotte USA. Let's make great products together! Send me a message with contact form."
+    >
       <div className={styles.contact}>
         <div className={styles.container}>
           <Title

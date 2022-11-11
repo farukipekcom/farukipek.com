@@ -3,23 +3,19 @@
 import styles from "./post.module.scss";
 import { useRouter } from "next/router";
 import { format, parseISO } from "date-fns";
-import Meta from "../../lib/meta";
 import Page from "../../components/page/page";
 export default function Post(data) {
-  const router = useRouter();
   const post = data.post;
   const seo = data.post.seo;
   const text = <div dangerouslySetInnerHTML={{ __html: post.content }}></div>;
   const content = text.props.dangerouslySetInnerHTML.__html;
   return (
-    <Page>
+    <Page
+      title={seo.title}
+      desc={seo.metaDesc}
+      image={post.featuredImage.node.mediaItemUrl}
+    >
       <div className={styles.post}>
-        <Meta
-          title={seo.title}
-          desc={seo.metaDesc}
-          url={"https://farukipek.com" + router.asPath}
-          image={post.featuredImage.node.mediaItemUrl}
-        />
         <div className={styles.container}>
           <div className={styles.heading}>
             <h1 className={styles.title}>{post.title}</h1>

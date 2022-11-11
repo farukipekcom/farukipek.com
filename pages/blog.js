@@ -5,7 +5,10 @@ import styles from "./blog.module.scss";
 import Page from "../components/page/page";
 const Blog = ({ post }) => {
   return (
-    <Page>
+    <Page
+      title="Blog - Faruk Ipek"
+      desc="I'm Faruk Ipek, a freelancer front-end developer from Charlotte USA. I enjoy share about how I work, design and live."
+    >
       <div className={styles.blog}>
         <div className={styles.container}>
           <Title

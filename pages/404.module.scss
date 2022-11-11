@@ -1,0 +1,30 @@
+@import "../styles/abstracts/";
+.error {
+  margin-top: 60px;
+  @include mq("tablet") {
+    margin-top: 120px;
+  }
+}
+
+.container {
+  composes: container from global;
+}
+
+.icon {
+  width: max-content;
+  margin-top: 32px;
+  @include mq("tablet") {
+  }
+  @include mq("desktop") {
+    margin-left: auto;
+    margin-top: -280px;
+    svg {
+      width: 400px;
+    }
+  }
+  @include mq("large") {
+    svg {
+      width: unset;
+    }
+  }
+}

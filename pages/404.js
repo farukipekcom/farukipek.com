@@ -2,7 +2,7 @@ import styles from "./404.module.scss";
 import Page from "../components/page/page";
 import Title from "../components/title/title";
 import Button from "../components/button/button";
-import NotFound from "../components/icons/NotFound";
+import NotFound from "../components/icons/notfound";
 const Error404 = () => {
   return (
     <Page>

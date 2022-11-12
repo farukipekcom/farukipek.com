@@ -79,13 +79,28 @@
 }
 .social {
   display: none;
+  &:hover {
+    .socialModal {
+      display: flex;
+    }
+  }
   @include mq("tablet") {
-    margin-right: 30px;
     background-color: transparent;
     cursor: pointer;
     padding: 4px;
+    height: 30px;
+    width: 30px;
+    margin-left: -12px;
     display: flex;
-    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: fill 0.2s;
+    &:hover {
+      svg {
+        fill: $gray !important;
+        transition: fill 0.2s;
+      }
+    }
   }
   @include mq("desktop") {
     margin-right: 40px;
@@ -103,18 +118,18 @@
 }
 .socialModal {
   display: none;
-  composes: socialModal from global;
+  opacity: 0;
   @include mq("tablet") {
     position: absolute;
     right: 30px;
-    top: 40px;
+    top: 30px;
     width: 210px;
     background-color: #24282e;
     display: flex;
     flex-direction: column;
     gap: 4px;
     border-radius: 8px;
-    opacity: 0;
+    opacity: 1;
     display: none;
     transition: opacity 0.2s;
     padding: 12px;
@@ -136,9 +151,22 @@
     }
   }
 }
+.copied {
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $blue;
+  color: $dark;
+  border-radius: $border;
+  width: max-content;
+  padding: 8px 16px;
+  z-index: 9999;
+  @include link;
+}
+
 .socialModalItem {
   display: flex;
-  composes: socialModalItem from global;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.2px;
@@ -147,10 +175,12 @@
   height: auto;
   padding-bottom: 4px;
   padding-top: 4px;
+  position: relative;
   gap: 8px;
   z-index: 9;
   transform: translateX(0px);
   height: 32px;
+  color: #fff;
   svg {
     fill: #fff;
     opacity: 0;

@@ -121,31 +121,3 @@
     }
   }
 }
-.socialModal {
-  display: none;
-  @include mq("tablet") {
-    position: absolute;
-    right: 0px;
-    top: 36px;
-    width: 210px;
-    background-color: #24282e;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 0.2s;
-    padding: 12px;
-    z-index: 9999;
-  }
-  svg {
-    fill: white;
-  }
-}
-
-.socialModal--hidden {
-  opacity: 1 !important;
-  @include mq("tablet") {
-    display: flex !important;
-  }
-}

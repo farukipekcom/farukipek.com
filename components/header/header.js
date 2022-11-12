@@ -10,9 +10,17 @@ import { useRouter } from "next/router";
 
 const Header = () => {
   const [active, setActive] = useState(false);
+  const [toolkit, setToolkit] = useState(false);
   const router = useRouter();
   const MobileMenu = () => {
     setActive(!active);
+  };
+  const copy = () => {
+    navigator.clipboard.writeText("faruk@farukipek.com");
+    setToolkit(true);
+    setTimeout(() => {
+      setToolkit(false);
+    }, 2000);
   };
   useEffect(() => {
     setActive(false);
@@ -56,42 +64,60 @@ const Header = () => {
             Contact
           </Link>
           <span className={`${styles.item} ${styles.divider}`}></span>
-          <button id="toggle1" className={styles.social}>
+          <div className={styles.social}>
             <ArrowDown size={15} />
-          </button>
-          <div className={styles.socialModal} id="socialModal">
-            <a href="" className={`${styles.socialModalItem} ${styles.copy}`}>
-              <Copy size={15} />
-              <span>faruk@farukipek.com</span>
-            </a>
-            <div className={styles.divider2}></div>
-            <a
-              href="https://twitter.com/farukipekcom"
-              className={styles.socialModalItem}
-            >
-              Twitter <ArrowRight size={15} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/farukipekcom/"
-              className={styles.socialModalItem}
-            >
-              Linkedin <ArrowRight size={15} />
-            </a>
-            <a
-              href="https://github.com/farukipekcom"
-              className={styles.socialModalItem}
-            >
-              Github <ArrowRight size={15} />
-            </a>
-            <a
-              href="https://www.instagram.com/farukipekcom/"
-              className={styles.socialModalItem}
-            >
-              Instagram <ArrowRight size={15} />
-            </a>
+            <div className={styles.socialModal}>
+              <div
+                href=""
+                className={`${styles.socialModalItem} ${styles.copy}`}
+              >
+                <Copy size={15} />
+                <div onClick={copy} className={styles.copy}>
+                  faruk@farukipek.com
+                </div>
+              </div>
+              <div className={styles.divider2}></div>
+              <a
+                href="https://twitter.com/farukipekcom"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.socialModalItem}
+              >
+                Twitter <ArrowRight size={15} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/farukipekcom/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.socialModalItem}
+              >
+                Linkedin <ArrowRight size={15} />
+              </a>
+              <a
+                href="https://github.com/farukipekcom"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.socialModalItem}
+              >
+                Github <ArrowRight size={15} />
+              </a>
+              <a
+                href="https://www.instagram.com/farukipekcom/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.socialModalItem}
+              >
+                Instagram <ArrowRight size={15} />
+              </a>
+            </div>
           </div>
         </nav>
-      </div>
+      </div>{" "}
+      {toolkit === true ? (
+        <div className={styles.copied}>Copied to clipboard!</div>
+      ) : (
+        ""
+      )}
     </header>
   );
 };

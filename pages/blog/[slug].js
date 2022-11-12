@@ -15,27 +15,24 @@ export default function Post(data) {
       desc={seo.metaDesc}
       image={post.featuredImage.node.mediaItemUrl}
     >
-      <div className={styles.post}>
-        <div className={styles.container}>
-          <div className={styles.heading}>
-            <h1 className={styles.title}>{post.title}</h1>
-            <div className={styles.info}>
-              <span className={styles.date}>
-                <time dateTime={post.date}>
-                  {format(parseISO(post.date), "d LLLL yyyy")}
-                </time>
-              </span>
-              <span className={styles.readingtime}>
-                {Math.ceil(content.trim().split(/\s+/).length / 200) + 1} min
-                read
-              </span>
-            </div>
-          </div>
-          <div
-            className={styles.article}
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          ></div>
-          {/* <div className={styles.share}>
+      <div className={styles.heading}>
+        <h1 className={styles.title}>{post.title}</h1>
+        <div className={styles.info}>
+          <span className={styles.date}>
+            <time dateTime={post.date}>
+              {format(parseISO(post.date), "d LLLL yyyy")}
+            </time>
+          </span>
+          <span className={styles.readingtime}>
+            {Math.ceil(content.trim().split(/\s+/).length / 200) + 1} min read
+          </span>
+        </div>
+      </div>
+      <div
+        className={styles.article}
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      ></div>
+      {/* <div className={styles.share}>
         <button className={styles.item}>
           <Twitter size={15} />
           Twitter
@@ -45,8 +42,6 @@ export default function Post(data) {
           Share
         </button>
       </div> */}
-        </div>
-      </div>
     </Page>
   );
 }

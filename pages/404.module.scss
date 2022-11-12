@@ -1,15 +1,4 @@
 @import "../styles/abstracts/";
-.error {
-  margin-top: 60px;
-  @include mq("tablet") {
-    margin-top: 120px;
-  }
-}
-
-.container {
-  composes: container from global;
-}
-
 .icon {
   width: max-content;
   margin-top: 32px;

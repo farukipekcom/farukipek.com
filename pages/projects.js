@@ -9,32 +9,28 @@ const Projects = ({ allProject }) => {
       title="Projects - Faruk Ipek"
       desc="I'm Faruk Ipek, a freelancer front-end developer from Charlotte USA. Check out my projects. Send me a message and talk about the new project."
     >
-      <div className={styles.projects}>
-        <div className={styles.container}>
-          <Title
-            pagetitle={"Projects"}
-            title={
-              "Check out my projects. Send me a message and talk about the new project."
-            }
-            details={
-              "Check out my professional portfolio. I work remotely and work on freelance projects."
-            }
-          />
-          <div className={styles.list}>
-            {projects.map((item) => {
-              return (
-                <div className={styles.item} key={item.projectId}>
-                  <Project
-                    title={item.title}
-                    img={item.featuredImage.node.mediaItemUrl}
-                    category={item.terms.edges}
-                    url={item.projects.projectsLink}
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </div>
+      <Title
+        pagetitle={"Projects"}
+        title={
+          "Check out my projects. Send me a message and talk about the new project."
+        }
+        details={
+          "Check out my professional portfolio. I work remotely and work on freelance projects."
+        }
+      />
+      <div className={styles.list}>
+        {projects.map((item) => {
+          return (
+            <div className={styles.item} key={item.projectId}>
+              <Project
+                title={item.title}
+                img={item.featuredImage.node.mediaItemUrl}
+                category={item.terms.edges}
+                url={item.projects.projectsLink}
+              />
+            </div>
+          );
+        })}
       </div>
     </Page>
   );

@@ -6,18 +6,14 @@ import NotFound from "../components/icons/notfound";
 const Error404 = () => {
   return (
     <Page>
-      <div className={styles.error}>
-        <div className={styles.container}>
-          <Title
-            pagetitle={"404"}
-            title={"404! Not Found!"}
-            details={"The page you are looking  for does not exist!"}
-          />
-          <Button text={"Back to Home"} url="/" />
-          <div className={styles.icon}>
-            <NotFound />
-          </div>
-        </div>
+      <Title
+        pagetitle={"404"}
+        title={"404! Not Found!"}
+        details={"The page you are looking  for does not exist!"}
+      />
+      <Button text={"Back to Home"} url="/" />
+      <div className={styles.icon}>
+        <NotFound />
       </div>
     </Page>
   );

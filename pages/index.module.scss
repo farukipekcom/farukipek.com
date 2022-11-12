@@ -1,10 +1,4 @@
 @import "../styles/abstracts/";
-.homepage {
-  padding-top: 120px;
-}
-.container {
-  composes: container from global;
-}
 .blog {
   margin-top: 200px;
   position: relative;

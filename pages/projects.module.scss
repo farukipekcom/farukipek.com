@@ -1,13 +1,4 @@
 @import "../styles/abstracts/";
-.projects {
-  margin-top: 60px;
-  @include mq("tablet") {
-    margin-top: 120px;
-  }
-}
-.container {
-  composes: container from global;
-}
 .list {
   display: flex;
   flex-direction: column;

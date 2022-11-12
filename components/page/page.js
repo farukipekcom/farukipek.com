@@ -1,5 +1,6 @@
 import Header from "../header/header";
 import Footer from "../footer/footer";
+import styles from "./page.module.scss";
 import { useRouter } from "next/router";
 import Head from "next/head";
 const Page = ({ children, ...tag }) => {
@@ -67,7 +68,9 @@ const Page = ({ children, ...tag }) => {
         </div>
       </div>
       <Header />
-      {children}
+      <div className={styles.wrapper}>
+        <div className={styles.container}>{children}</div>
+      </div>
       <Footer />
     </>
   );

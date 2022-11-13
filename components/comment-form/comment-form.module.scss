@@ -1,0 +1,71 @@
+@import "../../styles/abstracts/_index.scss";
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+  width: 100%;
+  padding: 32px;
+  background-color: $dark;
+  border-radius: $border;
+  @include mq("tablet") {
+    margin-top: 80px;
+    width: 720px;
+  }
+}
+.row {
+  display: flex;
+  gap: 32px;
+}
+.input {
+  height: 48px;
+  background-color: $dark;
+  border: 1px solid $gray;
+  border-radius: $border;
+  padding-left: 16px;
+  margin-top: 6px;
+  color: #fff;
+  flex: 1;
+  @include mobileText;
+  &::placeholder {
+    color: $gray;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid white;
+  }
+}
+.textarea {
+  line-height: 1.5em;
+  padding: 16px;
+  height: 140px;
+  background-color: $dark;
+  border: 1px solid $gray;
+  border-radius: $border;
+  margin-top: 6px;
+  color: #fff;
+  @include mobileText;
+  &::placeholder {
+    color: $gray;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid white;
+  }
+}
+.button {
+  background-color: white;
+  color: $dark;
+  width: max-content;
+  border-radius: $border;
+  padding: 16px 32px;
+  border: 1px solid white;
+  cursor: pointer;
+  @include link;
+  transition: background-color 0.4s, color 0.4s;
+  &:hover {
+    background-color: $dark;
+    color: #fff;
+    transition: background-color 0.4s, color 0.4s;
+  }
+}

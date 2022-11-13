@@ -4,6 +4,7 @@ import styles from "./post.module.scss";
 import { useRouter } from "next/router";
 import { format, parseISO } from "date-fns";
 import Page from "../../components/page/page";
+import CommentForm from "../../components/comment-form/comment-form";
 export default function Post(data) {
   const post = data.post;
   const seo = data.post.seo;
@@ -32,6 +33,7 @@ export default function Post(data) {
         className={styles.article}
         dangerouslySetInnerHTML={{ __html: post.content }}
       ></div>
+      <CommentForm />
       {/* <div className={styles.share}>
         <button className={styles.item}>
           <Twitter size={15} />

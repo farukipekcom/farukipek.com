@@ -33,7 +33,7 @@ export default function Post(data) {
         className={styles.article}
         dangerouslySetInnerHTML={{ __html: post.content }}
       ></div>
-      <CommentForm />
+      <CommentForm postId={post.postId} />
       {/* <div className={styles.share}>
         <button className={styles.item}>
           <Twitter size={15} />
@@ -60,6 +60,7 @@ export async function getStaticProps(context) {
                         slug
                         content
                         date
+                        postId
                         seo {
                           metaDesc
                           title
@@ -100,6 +101,7 @@ export async function getStaticPaths() {
                     content
                     title
                     date
+                    postId
                     seo {
                       metaDesc
                       title

@@ -66,6 +66,7 @@ const CommentForm = ({ postId }) => {
           className={styles.input}
           onChange={onChange}
           value={form.author_name}
+          required
         />
         <input
           type="email"
@@ -74,6 +75,7 @@ const CommentForm = ({ postId }) => {
           onChange={onChange}
           className={styles.input}
           value={form.author_email}
+          required
         />
       </div>
       <textarea
@@ -82,6 +84,7 @@ const CommentForm = ({ postId }) => {
         onChange={onChange}
         className={styles.textarea}
         value={form.content}
+        required
       ></textarea>
       <button
         type="submit"

@@ -14,7 +14,9 @@ const Contact = () => {
     });
     await fetch("/api/mail", {
       method: "POST",
-      body: JSON.stringify(formData),
+      body: JSON.stringify(),
+    }).then(function (response) {
+      console.log(response);
     });
     setMessage(1);
   }

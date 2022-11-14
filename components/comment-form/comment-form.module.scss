@@ -62,10 +62,25 @@
   border: 1px solid white;
   cursor: pointer;
   @include link;
-  transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s, border;
   &:hover {
     background-color: $dark;
     color: #fff;
-    transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.4s, color 0.4s, border;
   }
+}
+.blue {
+  background-color: #3057e1;
+  color: white;
+  border-color: #3057e1;
+}
+.green {
+  background-color: #30e181;
+  color: black;
+  border-color: #30e181;
+}
+.red {
+  background-color: #e13b30;
+  color: white;
+  border-color: #e13b30;
 }

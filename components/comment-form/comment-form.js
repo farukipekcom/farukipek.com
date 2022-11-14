@@ -4,6 +4,8 @@ import styles from "./comment-form.module.scss";
 import { useRouter } from "next/router";
 const CommentForm = ({ postId }) => {
   const router = useRouter();
+  const [ad, setAd] = useState("Submit");
+  const [status, setStatus] = useState(0);
   const [form, setForm] = useState({
     author_name: "",
     author_email: "",
@@ -21,18 +23,36 @@ const CommentForm = ({ postId }) => {
       author_name: "",
       author_email: "",
       content: "",
+      post: postId,
     });
   };
   const handleSubmit = async (e) => {
+    setStatus(1);
+    setAd("Sending...");
     e.preventDefault();
     try {
       const res = await Axios.post(process.env.NEXT_PUBLIC_COMMENTS_API, form);
       console.log(res);
+      clear();
+      router.push(router.pathname, router.asPath, {
+        scroll: false,
+        ad,
+      });
+      setAd("Submitted!");
+      setStatus(2);
+      setTimeout(() => {
+        setAd("Submit");
+        setStatus(0);
+      }, 2000);
     } catch (ex) {
       console.log(ex);
+      setStatus(3);
+      setAd("Not Submitted!");
+      setTimeout(() => {
+        setAd("Submit");
+        setStatus(0);
+      }, 2000);
     }
-    clear();
-    router.push(router.pathname, router.asPath, { scroll: false });
   };
 
   return (
@@ -63,8 +83,21 @@ const CommentForm = ({ postId }) => {
         className={styles.textarea}
         value={form.content}
       ></textarea>
-      <button type="submit" className={styles.button}>
-        Submit
+      <button
+        type="submit"
+        className={`${styles.button} ${
+          status === 0
+            ? styles.button
+            : status === 1
+            ? styles.blue
+            : status === 2
+            ? styles.green
+            : status === 3
+            ? styles.red
+            : ""
+        }`}
+      >
+        {ad}
       </button>
     </form>
   );

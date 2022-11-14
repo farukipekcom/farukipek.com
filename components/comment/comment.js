@@ -2,7 +2,6 @@ import styles from "./comment.module.scss";
 import { format, parseISO } from "date-fns";
 const Comment = ({ comment }) => {
   const authorName = comment.author.node.name;
-  console.log(authorName);
   return (
     <div className={styles.comment}>
       <div className={styles.top}>

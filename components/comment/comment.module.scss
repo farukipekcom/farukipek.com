@@ -1,1 +1,45 @@
 @import "../../styles/abstracts/_index.scss";
+.comment {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba($gray, 0.5);
+  &:first-child {
+    padding-top: 0px;
+  }
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+}
+.top {
+  display: flex;
+}
+.image {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $dark;
+  @include menu;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-left: 16px;
+}
+.name {
+  font-size: 18px;
+  font-weight: 600;
+}
+.date {
+  @include subtitle;
+  font-weight: 600;
+}
+.text {
+  margin-top: 16px;
+  font-size: 15px;
+}

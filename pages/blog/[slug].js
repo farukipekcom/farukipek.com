@@ -5,8 +5,10 @@ import { useRouter } from "next/router";
 import { format, parseISO } from "date-fns";
 import Page from "../../components/page/page";
 import CommentForm from "../../components/comment-form/comment-form";
+import Comment from "../../components/comment/comment";
 export default function Post(data) {
   const post = data.post;
+  const comments = post.comments.nodes;
   const seo = data.post.seo;
   const text = <div dangerouslySetInnerHTML={{ __html: post.content }}></div>;
   const content = text.props.dangerouslySetInnerHTML.__html;
@@ -34,6 +36,20 @@ export default function Post(data) {
         dangerouslySetInnerHTML={{ __html: post.content }}
       ></div>
       <CommentForm postId={post.postId} />
+      {comments.length > 0 ? (
+        <div className={styles.comment}>
+          {comments.map((item) => {
+            return (
+              <>
+                <Comment comment={item} />
+              </>
+            );
+          })}
+        </div>
+      ) : (
+        ""
+      )}
+
       {/* <div className={styles.share}>
         <button className={styles.item}>
           <Twitter size={15} />
@@ -69,6 +85,17 @@ export async function getStaticProps(context) {
                         featuredImage {
                           node {
                             mediaItemUrl
+                          }
+                        }
+                        comments(first: 100) {
+                          nodes {
+                            content
+                            author {
+                              node {
+                                name
+                              }
+                            }
+                            date
                           }
                         }
                     }
@@ -110,6 +137,17 @@ export async function getStaticPaths() {
                     featuredImage {
                       node {
                         mediaItemUrl
+                      }
+                    }
+                    comments(first: 100) {
+                      nodes {
+                        content
+                        author {
+                          node {
+                            name
+                          }
+                        }
+                        date
                       }
                     }
                 }

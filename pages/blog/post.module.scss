@@ -40,6 +40,8 @@
     border-radius: $border;
     margin: 0 auto;
     width: 100%;
+    position: relative;
+    height: unset;
     @include mq("desktop") {
       width: 800px;
     }

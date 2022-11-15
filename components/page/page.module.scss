@@ -27,3 +27,23 @@
     padding-right: unset;
   }
 }
+
+.background {
+  .backgroundContainer {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .backgroundLine {
+    @include mq("tablet") {
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  fill='black' viewBox='0 0 600 200'%3E%3Cpath d='M10 10h123v123H10z'/%3E%3C/svg%3E");
+      background-size: 190px 1px;
+      background-position: center;
+      width: 1200px;
+      height: 100vh;
+      margin: 0 auto;
+      position: fixed;
+      z-index: -1;
+      color: #24282e;
+    }
+  }
+}

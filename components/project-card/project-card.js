@@ -1,7 +1,7 @@
 import styles from "./project-card.module.scss";
 const ProjectCard = ({ title, category, url }) => {
   return (
-    <a href={url} className={styles.item}>
+    <a href={url} className={styles.item} target="_blank" rel="noreferrer">
       <h3 className={styles.title}>{title}</h3>
       <span className={styles.category}>
         {category.map((item, index) => {

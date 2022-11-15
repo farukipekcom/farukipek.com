@@ -72,7 +72,7 @@ export async function getStaticProps() {
             date
           }
         }
-        projects {
+        projects(first: 6) {
           nodes {
             title
             slug

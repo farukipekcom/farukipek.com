@@ -4,13 +4,13 @@ import styles from "./comment-form.module.scss";
 import { useRouter } from "next/router";
 const CommentForm = ({ postId }) => {
   const router = useRouter();
-  const [ad, setAd] = useState("Submit");
-  const [status, setStatus] = useState(0);
+  const [message, setMessage] = useState();
   const [form, setForm] = useState({
     author_name: "",
     author_email: "",
     content: "",
     post: postId,
+    captcha: "",
   });
   const onChange = (e) => {
     setForm({
@@ -24,34 +24,33 @@ const CommentForm = ({ postId }) => {
       author_email: "",
       content: "",
       post: postId,
+      captcha: "",
     });
   };
+  const change = () => {
+    setTimeout(() => {
+      setMessage(0);
+    }, 3000);
+  };
   const handleSubmit = async (e) => {
-    setStatus(1);
-    setAd("Sending...");
     e.preventDefault();
+    form.captcha = grecaptcha.getResponse();
     try {
-      const res = await Axios.post(process.env.NEXT_PUBLIC_COMMENTS_API, form);
+      const res = await Axios.post("/api/comments", form);
       console.log(res);
       clear();
       router.push(router.pathname, router.asPath, {
         scroll: false,
-        ad,
       });
-      setAd("Submitted!");
-      setStatus(2);
-      setTimeout(() => {
-        setAd("Submit");
-        setStatus(0);
-      }, 2000);
+      if (res.status === 200) {
+        setMessage(1);
+        change();
+      }
     } catch (ex) {
       console.log(ex);
-      setStatus(3);
-      setAd("Not Submitted!");
-      setTimeout(() => {
-        setAd("Submit");
-        setStatus(0);
-      }, 2000);
+      if (ex.response?.data?.success === false) {
+        setMessage(2);
+      }
     }
   };
 
@@ -86,22 +85,22 @@ const CommentForm = ({ postId }) => {
         value={form.content}
         required
       ></textarea>
-      <button
-        type="submit"
-        className={`${styles.button} ${
-          status === 0
-            ? styles.button
-            : status === 1
-            ? styles.blue
-            : status === 2
-            ? styles.green
-            : status === 3
-            ? styles.red
-            : ""
-        }`}
-      >
-        {ad}
+      <div
+        className="g-recaptcha"
+        data-sitekey={process.env.GOOGLE_RECAPTCHA_SITEKEY}
+      ></div>
+      <button type="submit" className={styles.button}>
+        Submit
       </button>
+      {message === 1 ? (
+        <div className={`${styles.message} ${styles.green}`}>Sent</div>
+      ) : message === 2 ? (
+        <div className={`${styles.message} ${styles.red}`}>
+          reCAPTCHA is required.
+        </div>
+      ) : (
+        ""
+      )}
     </form>
   );
 };

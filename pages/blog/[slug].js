@@ -1,11 +1,11 @@
 // import Twitter from "../../components/icons/twitter";
 // import Copy from "../../components/icons/copy";
 import styles from "./post.module.scss";
-import { useRouter } from "next/router";
 import { format, parseISO } from "date-fns";
 import Page from "../../components/page/page";
 import CommentForm from "../../components/comment-form/comment-form";
 import Comment from "../../components/comment/comment";
+import Script from "next/script";
 export default function Post(data) {
   const post = data.post;
   const comments = post.comments.nodes;
@@ -18,6 +18,7 @@ export default function Post(data) {
       desc={seo.metaDesc}
       image={post.featuredImage.node.mediaItemUrl}
     >
+      <Script src="https://www.google.com/recaptcha/api.js" async defer />
       <div className={styles.heading}>
         <h1 className={styles.title}>{post.title}</h1>
         <div className={styles.info}>

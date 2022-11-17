@@ -38,9 +38,11 @@ const CommentForm = ({ postId }) => {
     try {
       const res = await Axios.post("/api/comments", form);
       clear();
-      router.push(router.pathname, router.asPath, {
-        scroll: false,
-      });
+      setTimeout(() => {
+        router.push(router.pathname, router.asPath, {
+          scroll: false,
+        });
+      }, 1500);
       if (res.status === 200) {
         setMessage(1);
         change();

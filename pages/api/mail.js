@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 const mail = require("@sendgrid/mail");
 mail.setApiKey(process.env.SENDGRID_API_KEY);
-export default (req, res) => {
+export default async (req, res) => {
   const body = JSON.parse(req.body);
   const message = `
     Name: ${body.name}\r\n
@@ -17,8 +17,8 @@ export default (req, res) => {
     html: message.replace(/\r\n/g, "<br>"),
   };
   try {
-    mail.sendMultiple(data);
-    console.log("SUCCESS!", mail);
+    await mail.sendMultiple(data);
+    console.log("SUCCESS!", res);
   } catch (error) {
     console.log("ERROR!", error);
   }

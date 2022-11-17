@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import Axios from "axios";
 export default async (req, res) => {
-  let googleUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRETKEY}&response=${req.body.captcha}`;
+  let googleUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.GOOGLE_RECAPTCHA_SECRETKEY}&response=${req.body.captcha}`;
   let captchaResponse = await Axios({
     url: googleUrl,
   });

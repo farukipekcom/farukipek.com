@@ -37,7 +37,6 @@ const CommentForm = ({ postId }) => {
     form.captcha = grecaptcha.getResponse();
     try {
       const res = await Axios.post("/api/comments", form);
-      console.log(res);
       clear();
       router.push(router.pathname, router.asPath, {
         scroll: false,
@@ -47,7 +46,6 @@ const CommentForm = ({ postId }) => {
         change();
       }
     } catch (ex) {
-      console.log(ex);
       if (ex.response?.data?.success === false) {
         setMessage(2);
       }

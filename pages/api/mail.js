@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 const mail = require("@sendgrid/mail");
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 export default (req, res) => {
@@ -15,6 +16,11 @@ export default (req, res) => {
     text: message,
     html: message.replace(/\r\n/g, "<br>"),
   };
-  mail.sendMultiple(data);
+  try {
+    mail.sendMultiple(data);
+    console.log("SUCCESS!", mail);
+  } catch (error) {
+    console.log("ERROR!", error);
+  }
   res.status(200).json({ status: "Ok" });
 };

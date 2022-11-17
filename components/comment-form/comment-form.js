@@ -27,25 +27,15 @@ const CommentForm = ({ postId }) => {
       captcha: "",
     });
   };
-  const change = () => {
-    setTimeout(() => {
-      setMessage(0);
-    }, 3000);
-  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     form.captcha = grecaptcha.getResponse();
     try {
       const res = await Axios.post("/api/comments", form);
       clear();
-      setTimeout(() => {
-        router.push(router.pathname, router.asPath, {
-          scroll: false,
-        });
-      }, 1500);
       if (res.status === 200) {
         setMessage(1);
-        change();
       }
     } catch (ex) {
       if (ex.response?.data?.success === false) {
@@ -53,7 +43,6 @@ const CommentForm = ({ postId }) => {
       }
     }
   };
-
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <h2>Add a Comment</h2>
@@ -93,7 +82,9 @@ const CommentForm = ({ postId }) => {
         Submit
       </button>
       {message === 1 ? (
-        <div className={`${styles.message} ${styles.green}`}>Sent</div>
+        <div className={`${styles.message} ${styles.green}`}>
+          Comment posted. Waiting for approval.
+        </div>
       ) : message === 2 ? (
         <div className={`${styles.message} ${styles.red}`}>
           reCAPTCHA is required.

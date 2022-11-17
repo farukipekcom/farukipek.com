@@ -87,7 +87,7 @@ const CommentForm = ({ postId }) => {
       ></textarea>
       <div
         className="g-recaptcha"
-        data-sitekey={process.env.GOOGLE_RECAPTCHA_SITEKEY}
+        data-sitekey={process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITEKEY}
       ></div>
       <button type="submit" className={styles.button}>
         Submit

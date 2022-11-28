@@ -16,7 +16,7 @@ export default function Post(data) {
     <Page
       title={seo.title}
       desc={seo.metaDesc}
-      image={post.featuredImage.node.mediaItemUrl}
+      image={post.featuredImage?.node.mediaItemUrl}
     >
       <Script src="https://www.google.com/recaptcha/api.js" async defer />
       <div className={styles.heading}>

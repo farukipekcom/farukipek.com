@@ -12,7 +12,7 @@ export default function About() {
       <Title
         pagetitle={"About"}
         title={
-          "I'm Faruk Ipek, a freelancer front-end developer from Charlotte USA. I build things for the web."
+          "I'm Faruk Ipek, a freelancer front-end developer from Charlotte, USA. I build things for the web."
         }
       />
       <div className={styles.details}>
@@ -22,7 +22,7 @@ export default function About() {
             website. I learned a lot about HTML & CSS after discovering
             Wordpress. <br />
             <br />
-            I've been building stuff on the web for the last 6 years
+            I've been building stuff on the web since 2016.
           </h2>
           <Image
             src="/faruk-ipek.jpg"

@@ -13,7 +13,7 @@ export default function Home({ post, project }) {
       <Title
         title={"Hey! I'm Faruk, a front-end developer based in Charlotte, USA."}
         details={
-          "I've been building stuff on the web for the last 6 years. I've worked with clients in various countries and industries."
+          "I've been building stuff on the web since 2016. I've worked with clients in various countries and industries."
         }
         hireme={1}
       />

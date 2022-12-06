@@ -35,7 +35,7 @@ const Header = () => {
       <div className={styles.background}></div>
       <div className={styles.containers}>
         <Link href="/" className={styles.logo}>
-          Faruk Ipek
+          Faruk İpek
         </Link>
         {active === false ? (
           <button onClick={MobileMenu} className={styles.switch}>

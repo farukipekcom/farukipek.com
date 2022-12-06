@@ -4,7 +4,7 @@ const Search = ({ length }) => {
   return (
     <div className={styles.search}>
       <p className={styles.text}>
-        I`ve written {length} articles on my blog. Use the search below to
+        I've written {length} articles on my blog. Use the search below to
         filter by title.
       </p>
       <div className={styles.input}>

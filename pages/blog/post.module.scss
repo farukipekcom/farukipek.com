@@ -89,9 +89,12 @@
   }
 }
 .comment {
-  width: 720px;
+  width: 100%;
   margin-top: 40px;
   background-color: $dark;
   padding: 32px;
   border-radius: $border;
+  @include mq("tablet") {
+    width: 720px;
+  }
 }

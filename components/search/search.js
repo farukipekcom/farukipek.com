@@ -1,6 +1,6 @@
 import styles from "./search.module.scss";
 import SearchIcon from "../icons/search";
-const Search = ({ length }) => {
+const Search = ({ length, onChange, value }) => {
   return (
     <div className={styles.search}>
       <p className={styles.text}>
@@ -8,7 +8,12 @@ const Search = ({ length }) => {
         filter by title.
       </p>
       <div className={styles.input}>
-        <input type="text" placeholder="Search articles" />
+        <input
+          type="text"
+          placeholder="Search articles"
+          value={value}
+          onChange={onChange}
+        />
         <SearchIcon size={15} />
       </div>
     </div>

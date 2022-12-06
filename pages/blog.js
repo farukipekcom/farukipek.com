@@ -3,7 +3,12 @@ import Post from "../components/post/post";
 import Search from "../components/search/search";
 import styles from "./blog.module.scss";
 import Page from "../components/page/page";
+import { useState } from "react";
 const Blog = ({ post }) => {
+  const [query, setQuery] = useState("");
+  const onChange = (e) => {
+    setQuery(e.target.value);
+  };
   return (
     <Page
       title="Blog - Faruk Ipek"
@@ -13,15 +18,17 @@ const Blog = ({ post }) => {
         pagetitle={"Blog"}
         title={"I enjoy share about how I work, design and live."}
       />
-      <Search length={post.nodes.length} />
+      <Search length={post.nodes.length} onChange={onChange} value={query} />
       <div className={styles.list}>
-        {post.nodes.map((item) => {
-          return (
-            <div key={item.postId}>
-              <Post title={item.title} date={item.date} url={item.slug} />
-            </div>
-          );
-        })}
+        {post.nodes
+          .filter((item) => item.title.toLowerCase().includes(query))
+          .map((item) => {
+            return (
+              <div key={item.postId}>
+                <Post title={item.title} date={item.date} url={item.slug} />
+              </div>
+            );
+          })}
       </div>
     </Page>
   );

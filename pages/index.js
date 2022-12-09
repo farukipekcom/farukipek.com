@@ -7,7 +7,7 @@ import Page from "../components/page/page";
 export default function Home({ post, project }) {
   return (
     <Page
-      title="Faruk Ipek"
+      title="Faruk Ipek | Front-end Developer"
       desc="Hey! I'm Faruk Ipek, a front-end developer based in Charlotte, USA. I've been building stuff on the web for the since 2016."
     >
       <Title

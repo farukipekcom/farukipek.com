@@ -38,16 +38,16 @@ const Header = () => {
           Faruk İpek
         </Link>
         {active === false ? (
-          <button onClick={MobileMenu} className={styles.switch}>
+          <div onClick={MobileMenu} className={styles.switch}>
             <Menu size={15} />
-          </button>
+          </div>
         ) : (
-          <button
+          <div
             onClick={MobileMenu}
             className={`${styles.switch} ${styles.switch2}`}
           >
             <Close size={15} />
-          </button>
+          </div>
         )}
 
         <nav className={styles.menu} id="myTopnav">

@@ -60,12 +60,14 @@
       gap: 32px;
     }
     .item {
-      padding-left: 20px;
-      padding-right: 20px;
+      // padding-left: 20px;
+      // padding-right: 20px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       width: calc(100% - 40px);
+      margin-left: 20px;
+      margin-right: 20px;
       height: 48px;
       border-bottom: 1px solid rgba($gray, 0.3);
       &:hover {
@@ -73,8 +75,8 @@
         transition: border 0.2s;
       }
       @include mq("tablet") {
-        padding-left: unset;
-        padding-right: unset;
+        margin-left: unset;
+        margin-right: unset;
         background-color: unset;
         border: unset;
         width: unset;

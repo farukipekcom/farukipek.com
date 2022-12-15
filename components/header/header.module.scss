@@ -60,6 +60,7 @@
   @include mq("tablet") {
     display: flex;
     align-items: center;
+    margin-right: 30px;
   }
 }
 .item {
@@ -103,7 +104,7 @@
     }
   }
   @include mq("desktop") {
-    margin-right: 40px;
+    // margin-right: 40px;
   }
   svg {
     fill: #fff !important;

@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
           </div>
           <div className={styles.bottom}>
-            <div className={styles.copyright}>© 2022 Faruk İpek</div>
+            <div className={styles.copyright}>© 2023 Faruk İpek</div>
           </div>
         </div>
       </footer>

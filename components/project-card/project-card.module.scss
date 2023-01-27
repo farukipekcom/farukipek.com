@@ -1,4 +1,8 @@
 @import "../../styles/abstracts/";
+.item {
+  padding: 16px;
+  display: block;
+}
 .title {
   @include heading3;
 }

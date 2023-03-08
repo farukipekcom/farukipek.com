@@ -44,7 +44,7 @@ export async function getStaticProps() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       query: `query NewQuery {
-        projects {
+        projects(first: 100) {
           nodes {
             title
             slug

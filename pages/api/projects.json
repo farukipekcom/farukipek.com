@@ -2,9 +2,41 @@
   {
     "name": "Skyair",
     "year": 2021,
-    "image1": "/skyair-white.svg",
-    "image2": "/skyair.svg",
+    "image1": "/projects/skyair-white.svg",
+    "image2": "/projects/skyair.svg",
     "link": "https://skyair.com.tr/",
+    "keywords": ["SEO", "Web Design", "UI Design"]
+  },
+  {
+    "name": "TSE Lojistik",
+    "year": 2018,
+    "image1": "/projects/tse-lojistik-white.svg",
+    "image2": "/projects/tse-lojistik.svg",
+    "link": "https://tselojistik.com/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Özaks Group",
+    "year": 2020,
+    "image1": "/projects/ozaks-group-white.svg",
+    "image2": "/projects/ozaks-group.svg",
+    "link": "https://ozaksgroup.com/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Akdeniz Volkswagen",
+    "year": 2021,
+    "image1": "/projects/akdeniz-volkswagen-white.svg",
+    "image2": "/projects/akdeniz-volkswagen.svg",
+    "link": "https://akdenizvolkswagen.com/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Aslan Gayrimenkul",
+    "year": 2020,
+    "image1": "/projects/aslan-gayrimenkul-white.svg",
+    "image2": "/projects/aslan-gayrimenkul.svg",
+    "link": "http://aslansgayrimenkul.com/",
     "keywords": ["SEO", "Web Design"]
   }
 ]

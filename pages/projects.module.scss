@@ -4,21 +4,18 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 40px;
+  margin-top: 40px;
+  position: relative;
   @include mq("tablet") {
     flex-direction: row;
   }
-}
-.item {
-  width: 100%;
-  margin-top: 32px;
-  @include mq("tablet") {
+  .item {
     width: calc(50% - 20px);
-    margin-top: 80px;
-  }
-  &:hover {
-    img {
-      transform: scale(1.1);
-      border-radius: 8px;
-    }
+    height: 400px;
+    margin-top: 0px;
+    background-color: $dark;
+    overflow: hidden;
+    position: relative;
+    border-radius: $border;
   }
 }

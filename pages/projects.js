@@ -2,8 +2,8 @@ import Title from "../components/title/title";
 import Project from "../components/project/project";
 import styles from "./projects.module.scss";
 import Page from "../components/page/page";
-const Projects = ({ allProject }) => {
-  const projects = allProject.nodes;
+import projects from "./api/projects.json";
+const Projects = () => {
   return (
     <Page
       title="Projects - Faruk Ipek"
@@ -19,15 +19,10 @@ const Projects = ({ allProject }) => {
         }
       />
       <div className={styles.list}>
-        {projects.map((item) => {
+        {projects.map((item, id) => {
           return (
-            <div className={styles.item} key={item.projectId}>
-              <Project
-                title={item.title}
-                img={item.featuredImage.node.mediaItemUrl}
-                category={item.terms.edges}
-                url={item.projects.projectsLink}
-              />
+            <div key={id} className={styles.item}>
+              <Project item={item} />
             </div>
           );
         })}
@@ -35,46 +30,4 @@ const Projects = ({ allProject }) => {
     </Page>
   );
 };
-
 export default Projects;
-
-export async function getStaticProps() {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      query: `query NewQuery {
-        projects(first: 100) {
-          nodes {
-            title
-            slug
-            projectId
-            projects {
-              projectsLink
-            }
-            terms {
-              edges {
-                node {
-                  slug
-                  name
-                }
-              }
-            }
-            featuredImage {
-              node {
-                mediaItemUrl
-              }
-            }
-          }
-        }
-      }`,
-    }),
-  });
-  const json = await res.json();
-  return {
-    props: {
-      allProject: json.data.projects,
-    },
-    revalidate: 10,
-  };
-}

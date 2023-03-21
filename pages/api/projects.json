@@ -36,7 +36,103 @@
     "year": 2020,
     "image1": "/projects/aslan-gayrimenkul-white.svg",
     "image2": "/projects/aslan-gayrimenkul.svg",
-    "link": "http://aslansgayrimenkul.com/",
+    "link": "https://aslansgayrimenkul.com/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Skyair Shop",
+    "year": 2020,
+    "image1": "/projects/skyair-shop-white.svg",
+    "image2": "/projects/skyair-shop.svg",
+    "link": "https://skyairshop.com/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Ateş Akü Antalya",
+    "year": 2020,
+    "image1": "/projects/ates-aku-antalya-white.svg",
+    "image2": "/projects/ates-aku-antalya.svg",
+    "link": "https://atesakuantalya.com/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Recommercer",
+    "year": 2020,
+    "image1": "/projects/recommercer-white.svg",
+    "image2": "/projects/recommercer.svg",
+    "link": "https://recommercer.com/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Star Aviation Services",
+    "year": 2020,
+    "image1": "/projects/star-aviation-services-white.svg",
+    "image2": "/projects/star-aviation-services.svg",
+    "link": "https://staraircharter.com/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Sayram LTD",
+    "year": 2020,
+    "image1": "/projects/sayram-white.svg",
+    "image2": "/projects/sayram.svg",
+    "link": "https://sayramltd.com/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "KARSU Su Arıtma Sistemleri",
+    "year": 2020,
+    "image1": "/projects/karsu-white.svg",
+    "image2": "/projects/karsu.svg",
+    "link": "https://karabuksuaritma.com/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Webflow Clone",
+    "year": 2020,
+    "image1": "/projects/webflow-white.svg",
+    "image2": "/projects/webflow.svg",
+    "link": "https://webflow-clone-farukipekcom.vercel.app/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Airbnb Clone",
+    "year": 2020,
+    "image1": "/projects/airbnb-white.svg",
+    "image2": "/projects/airbnb.svg",
+    "link": "https://airbnb-clone-farukipekcom.vercel.app/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Facebook Clone",
+    "year": 2020,
+    "image1": "/projects/facebook-white.svg",
+    "image2": "/projects/facebook.svg",
+    "link": "https://farukipek.com/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "MENTÖRBUL",
+    "year": 2020,
+    "image1": "/projects/mentorbul-white.svg",
+    "image2": "/projects/mentorbul.svg",
+    "link": "https://mentor-bul-farukipekcom.vercel.app/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "Sky Logistics",
+    "year": 2020,
+    "image1": "/projects/sky-logistics-white.svg",
+    "image2": "/projects/sky-logistics.svg",
+    "link": "https://skylogistics.com.tr/",
+    "keywords": ["SEO", "Web Design"]
+  },
+  {
+    "name": "PremiumAnt",
+    "year": 2020,
+    "image1": "/projects/premium-ant-white.svg",
+    "image2": "/projects/premium-ant.svg",
+    "link": "https://premiumant.com/",
     "keywords": ["SEO", "Web Design"]
   }
 ]

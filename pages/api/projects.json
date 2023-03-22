@@ -1,7 +1,7 @@
 [
   {
     "name": "Skyair",
-    "year": 2021,
+    "year": 2023,
     "image1": "/projects/skyair-white.svg",
     "image2": "/projects/skyair.svg",
     "link": "https://skyair.com.tr/",
@@ -9,7 +9,7 @@
   },
   {
     "name": "TSE Lojistik",
-    "year": 2018,
+    "year": 2017,
     "image1": "/projects/tse-lojistik-white.svg",
     "image2": "/projects/tse-lojistik.svg",
     "link": "https://tselojistik.com/",
@@ -33,7 +33,7 @@
   },
   {
     "name": "Aslan Gayrimenkul",
-    "year": 2020,
+    "year": 2021,
     "image1": "/projects/aslan-gayrimenkul-white.svg",
     "image2": "/projects/aslan-gayrimenkul.svg",
     "link": "https://aslansgayrimenkul.com/",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Skyair Shop",
-    "year": 2020,
+    "year": 2017,
     "image1": "/projects/skyair-shop-white.svg",
     "image2": "/projects/skyair-shop.svg",
     "link": "https://skyairshop.com/",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Recommercer",
-    "year": 2020,
+    "year": 2019,
     "image1": "/projects/recommercer-white.svg",
     "image2": "/projects/recommercer.svg",
     "link": "https://recommercer.com/",
@@ -65,7 +65,7 @@
   },
   {
     "name": "Star Aviation Services",
-    "year": 2020,
+    "year": 2018,
     "image1": "/projects/star-aviation-services-white.svg",
     "image2": "/projects/star-aviation-services.svg",
     "link": "https://staraircharter.com/",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Sayram LTD",
-    "year": 2020,
+    "year": 2022,
     "image1": "/projects/sayram-white.svg",
     "image2": "/projects/sayram.svg",
     "link": "https://sayramltd.com/",
@@ -89,7 +89,7 @@
   },
   {
     "name": "Webflow Clone",
-    "year": 2020,
+    "year": 2021,
     "image1": "/projects/webflow-white.svg",
     "image2": "/projects/webflow.svg",
     "link": "https://webflow-clone-farukipekcom.vercel.app/",
@@ -97,7 +97,7 @@
   },
   {
     "name": "Airbnb Clone",
-    "year": 2020,
+    "year": 2021,
     "image1": "/projects/airbnb-white.svg",
     "image2": "/projects/airbnb.svg",
     "link": "https://airbnb-clone-farukipekcom.vercel.app/",
@@ -105,7 +105,7 @@
   },
   {
     "name": "Facebook Clone",
-    "year": 2020,
+    "year": 2021,
     "image1": "/projects/facebook-white.svg",
     "image2": "/projects/facebook.svg",
     "link": "https://farukipek.com/",
@@ -113,7 +113,7 @@
   },
   {
     "name": "MENTÖRBUL",
-    "year": 2020,
+    "year": 2022,
     "image1": "/projects/mentorbul-white.svg",
     "image2": "/projects/mentorbul.svg",
     "link": "https://mentor-bul-farukipekcom.vercel.app/",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Sky Logistics",
-    "year": 2020,
+    "year": 2021,
     "image1": "/projects/sky-logistics-white.svg",
     "image2": "/projects/sky-logistics.svg",
     "link": "https://skylogistics.com.tr/",

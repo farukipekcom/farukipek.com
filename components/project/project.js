@@ -18,7 +18,7 @@ const Project = ({ item }) => {
         </div>
         <div className={styles.secondDetail}>
           <div className={styles.keywords}>{item.keywords.join(", ")}</div>
-          <a href={item.link} className={styles.view}>
+          <a href={item.link} className={styles.view} target="_blank">
             View
             <Image
               src="/right-arrow.svg"

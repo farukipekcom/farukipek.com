@@ -128,6 +128,22 @@
     "keywords": ["UI/UX Design", "Front-end Development", "React"]
   },
   {
+    "name": "Meta Tags Generator",
+    "year": 2022,
+    "image1": "/projects/meta-tags-generator-white.svg",
+    "image2": "/projects/meta-tags-generator.svg",
+    "link": "https://meta-tag-farukipekcom.vercel.app",
+    "keywords": ["UI/UX Design", "Front-end Development", "Next.js"]
+  },
+  {
+    "name": "Landify Clone",
+    "year": 2023,
+    "image1": "/projects/landify-white.svg",
+    "image2": "/projects/landify.svg",
+    "link": "https://landify-task.vercel.app/",
+    "keywords": ["Front-end Development", "HTML/CSS"]
+  },
+  {
     "name": "Skyair",
     "year": 2023,
     "image1": "/projects/skyair-white.svg",

@@ -144,6 +144,14 @@
     "keywords": ["Front-end Development", "HTML/CSS"]
   },
   {
+    "name": "Weather",
+    "year": 2023,
+    "image1": "/projects/weather-white.svg",
+    "image2": "/projects/weather.svg",
+    "link": "https://weather-app-farukipekcom.vercel.app/",
+    "keywords": ["UI/UX Design", "Front-end Development", "Next"]
+  },
+  {
     "name": "Skyair",
     "year": 2023,
     "image1": "/projects/skyair-white.svg",

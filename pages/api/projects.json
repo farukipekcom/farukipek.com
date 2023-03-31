@@ -5,7 +5,8 @@
     "image1": "/projects/skyair-shop-white.svg",
     "image2": "/projects/skyair-shop.svg",
     "link": "https://skyairshop.com/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "TSE Lojistik",
@@ -13,7 +14,8 @@
     "image1": "/projects/tse-lojistik-white.svg",
     "image2": "/projects/tse-lojistik.svg",
     "link": "https://tselojistik.com/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "Star Aviation Services",
@@ -21,7 +23,8 @@
     "image1": "/projects/star-aviation-services-white.svg",
     "image2": "/projects/star-aviation-services.svg",
     "link": "https://staraircharter.com/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "Recommercer",
@@ -29,7 +32,8 @@
     "image1": "/projects/recommercer-white.svg",
     "image2": "/projects/recommercer.svg",
     "link": "https://recommercer.com/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "Ateş Akü Antalya",
@@ -37,7 +41,8 @@
     "image1": "/projects/ates-aku-antalya-white.svg",
     "image2": "/projects/ates-aku-antalya.svg",
     "link": "https://atesakuantalya.com/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "Özaks Group",
@@ -45,7 +50,8 @@
     "image1": "/projects/ozaks-group-white.svg",
     "image2": "/projects/ozaks-group.svg",
     "link": "https://ozaksgroup.com/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "KARSU Su Arıtma Sistemleri",
@@ -53,7 +59,8 @@
     "image1": "/projects/karsu-white.svg",
     "image2": "/projects/karsu.svg",
     "link": "https://karabuksuaritma.com/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "PremiumAnt",
@@ -61,7 +68,8 @@
     "image1": "/projects/premium-ant-white.svg",
     "image2": "/projects/premium-ant.svg",
     "link": "https://premiumant.com/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "Facebook Clone",
@@ -69,7 +77,8 @@
     "image1": "/projects/facebook-white.svg",
     "image2": "/projects/facebook.svg",
     "link": "https://farukipek.com/",
-    "keywords": ["Front-end Development", "HTML/CSS"]
+    "keywords": ["Front-end Development", "HTML/CSS"],
+    "category": "side-projects"
   },
   {
     "name": "Akdeniz Volkswagen",
@@ -77,7 +86,8 @@
     "image1": "/projects/akdeniz-volkswagen-white.svg",
     "image2": "/projects/akdeniz-volkswagen.svg",
     "link": "https://akdenizvolkswagen.com/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "Aslan Gayrimenkul",
@@ -85,7 +95,8 @@
     "image1": "/projects/aslan-gayrimenkul-white.svg",
     "image2": "/projects/aslan-gayrimenkul.svg",
     "link": "https://aslansgayrimenkul.com/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "Sky Logistics",
@@ -93,7 +104,8 @@
     "image1": "/projects/sky-logistics-white.svg",
     "image2": "/projects/sky-logistics.svg",
     "link": "https://skylogistics.com.tr/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "Webflow Clone",
@@ -101,7 +113,8 @@
     "image1": "/projects/webflow-white.svg",
     "image2": "/projects/webflow.svg",
     "link": "https://webflow-clone-farukipekcom.vercel.app/",
-    "keywords": ["Front-end Development", "HTML/CSS"]
+    "keywords": ["Front-end Development", "HTML/CSS"],
+    "category": "side-projects"
   },
   {
     "name": "Airbnb Clone",
@@ -109,7 +122,8 @@
     "image1": "/projects/airbnb-white.svg",
     "image2": "/projects/airbnb.svg",
     "link": "https://airbnb-clone-farukipekcom.vercel.app/",
-    "keywords": ["Front-end Development", "HTML/CSS"]
+    "keywords": ["Front-end Development", "HTML/CSS"],
+    "category": "side-projects"
   },
   {
     "name": "Sayram LTD",
@@ -117,7 +131,8 @@
     "image1": "/projects/sayram-white.svg",
     "image2": "/projects/sayram.svg",
     "link": "https://sayramltd.com/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   },
   {
     "name": "Mentörbul",
@@ -125,7 +140,8 @@
     "image1": "/projects/mentorbul-white.svg",
     "image2": "/projects/mentorbul.svg",
     "link": "https://mentor-bul-farukipekcom.vercel.app/",
-    "keywords": ["UI/UX Design", "Front-end Development", "React"]
+    "keywords": ["UI/UX Design", "Front-end Development", "React"],
+    "category": "side-projects"
   },
   {
     "name": "Meta Tags Generator",
@@ -133,7 +149,8 @@
     "image1": "/projects/meta-tags-generator-white.svg",
     "image2": "/projects/meta-tags-generator.svg",
     "link": "https://meta-tag-farukipekcom.vercel.app",
-    "keywords": ["UI/UX Design", "Front-end Development", "Next"]
+    "keywords": ["UI/UX Design", "Front-end Development", "Next"],
+    "category": "side-projects"
   },
   {
     "name": "Landify Clone",
@@ -141,7 +158,8 @@
     "image1": "/projects/landify-white.svg",
     "image2": "/projects/landify.svg",
     "link": "https://landify-task.vercel.app/",
-    "keywords": ["Front-end Development", "HTML/CSS"]
+    "keywords": ["Front-end Development", "HTML/CSS"],
+    "category": "side-projects"
   },
   {
     "name": "Weather",
@@ -149,7 +167,8 @@
     "image1": "/projects/weather-white.svg",
     "image2": "/projects/weather.svg",
     "link": "https://weather-app-farukipekcom.vercel.app/",
-    "keywords": ["UI/UX Design", "Front-end Development", "Next"]
+    "keywords": ["UI/UX Design", "Front-end Development", "Next"],
+    "category": "side-projects"
   },
   {
     "name": "Skyair",
@@ -157,6 +176,7 @@
     "image1": "/projects/skyair-white.svg",
     "image2": "/projects/skyair.svg",
     "link": "https://skyair.com.tr/",
-    "keywords": ["Front-end Development", "SEO"]
+    "keywords": ["Front-end Development", "SEO"],
+    "category": "works"
   }
 ]

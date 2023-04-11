@@ -13,8 +13,8 @@
     width: calc(100%);
     height: 320px;
     margin-top: 0px;
-    background-color: $dark;
-    overflow: hidden;
+    // background-color: $dark;
+    // overflow: hidden;
     position: relative;
     border-radius: $border;
     @include mq("tablet") {
@@ -94,4 +94,26 @@
   background-color: white !important;
   color: $dark !important;
   border: 1px solid #fff !important;
+}
+
+.motionItem {
+  width: calc(100%);
+  height: 400px;
+  position: relative;
+  margin: 0;
+  font-size: 20;
+  font-weight: 700;
+  border-radius: 21px;
+  cursor: pointer;
+  background-color: $dark;
+}
+
+.selection {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 21px;
+  top: 0px;
+  left: 0px;
+  background-color: $shadow;
 }

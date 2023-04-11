@@ -1,15 +1,15 @@
 @import "../../styles/abstracts/";
 .item {
-  &:hover {
-    .first {
-      transform: translateY(-264px);
-      transition: transform 0.7s;
-      border-radius: $border;
-      @include mq("tablet") {
-        transform: translateY(-344px);
-      }
-    }
-  }
+  // &:hover {
+  //   .first {
+  //     transform: translateY(-264px);
+  //     transition: transform 0.7s;
+  //     border-radius: $border;
+  //     @include mq("tablet") {
+  //       transform: translateY(-344px);
+  //     }
+  //   }
+  // }
 }
 .first {
   border-radius: $border;
@@ -17,7 +17,7 @@
   height: 320px;
   position: relative;
   display: flex;
-  background-color: $dark;
+  // background-color: $dark;
   justify-content: center;
   align-items: center;
   border-radius: $border;

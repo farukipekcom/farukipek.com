@@ -12,7 +12,7 @@ const Project = ({ item }) => {
           <span className={styles.year}>{item.year}</span>
         </div>
       </div>
-      <div className={styles.second}>
+      {/* <div className={styles.second}>
         <div className={styles.logo}>
           <Image src={item.image2} alt={item.name} width={240} height={120} />
         </div>
@@ -28,7 +28,7 @@ const Project = ({ item }) => {
             />
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

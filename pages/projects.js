@@ -4,16 +4,11 @@ import styles from "./projects.module.scss";
 import Page from "../components/page/page";
 import projects from "./api/projects.json";
 import { useState } from "react";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-const duration = 0.3;
-
 const Projects = () => {
   const [category, setCategory] = useState("all");
   function setFilter(e) {
     setCategory(e);
   }
-  const [selected, setSelected] = useState(0);
-
   return (
     <Page
       title="Projects - Faruk Ipek"
@@ -67,26 +62,7 @@ const Projects = () => {
               : (item) => item.category === category
           )
           .map((item, id) => {
-            return (
-              <div key={id} className={styles.item}>
-                <motion.div
-                  className={styles.motionItem}
-                  key={id}
-                  whileHover={() => {
-                    setSelected(id);
-                  }}
-                >
-                  <Project item={item} />
-                  {id === selected && (
-                    <motion.div
-                      className={styles.selection}
-                      layoutId="selected"
-                      transition={{ type: "spring", duration: 1 }}
-                    />
-                  )}
-                </motion.div>{" "}
-              </div>
-            );
+            return <Project key={id} id={id} item={item} />;
           })}
       </div>
     </Page>

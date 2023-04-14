@@ -1,34 +1,61 @@
-import Image from "next/image";
+import { useState } from "react";
 import styles from "./project.module.scss";
-const Project = ({ item }) => {
+import { motion } from "framer-motion";
+
+const Project = ({ item, id }) => {
+  const [startHover, setStartHover] = useState(false);
+  const [selected, setSelected] = useState();
   return (
     <div className={styles.item}>
-      <div className={styles.first}>
-        <Image src={item.image1} alt={item.name} width={240} height={120} />
-        <div className={styles.firstDetail}>
-          <span>
-            Project / <span className={styles.title}>{item.name}</span>
-          </span>
-          <span className={styles.year}>{item.year}</span>
-        </div>
-      </div>
-      {/* <div className={styles.second}>
-        <div className={styles.logo}>
-          <Image src={item.image2} alt={item.name} width={240} height={120} />
-        </div>
-        <div className={styles.secondDetail}>
-          <div className={styles.keywords}>{item.keywords.join(", ")}</div>
-          <a href={item.link} className={styles.view} target="_blank">
-            View
-            <Image
-              src="/right-arrow.svg"
-              alt="Right Arrow"
-              width={12}
-              height={9}
-            />
-          </a>
-        </div>
-      </div> */}
+      <motion.div
+        onHoverStart={() => {
+          setSelected(id);
+          setStartHover({
+            opacity: 1,
+            y: -8,
+          });
+        }}
+        onHoverEnd={() => {
+          setStartHover({
+            opacity: 0,
+            y: 0,
+          });
+          setSelected(undefined);
+        }}
+      >
+        <a href={item.link} target="_blank">
+          <div className={styles.itemInner}>
+            <div className={styles.title}>{item.name}</div>
+            <motion.div
+              className={styles.category}
+              initial={{ opacity: 0 }}
+              animate={startHover}
+              transition={{
+                duration: 0.3,
+                delay: 0.15,
+              }}
+            >
+              {item.category === "works"
+                ? "Work"
+                : item.category === "side-projects"
+                ? "Side Project"
+                : ""}
+            </motion.div>
+            <div className={styles.right}>
+              <div className={styles.tag}>{item.keywords.join(", ")}</div>
+
+              <div className={styles.year}>{item.year}</div>
+            </div>
+          </div>
+        </a>
+      </motion.div>
+      {id === selected && (
+        <motion.div
+          className={styles.selection}
+          layoutId="selected"
+          transition={{ type: "spring", duration: 0.6 }}
+        />
+      )}
     </div>
   );
 };

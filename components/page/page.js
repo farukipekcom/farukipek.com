@@ -62,11 +62,6 @@ const Page = ({ children, ...tag }) => {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <div className={styles.background}>
-        <div className={styles.backgroundContainer}>
-          <div className={styles.backgroundLine}></div>
-        </div>
-      </div>
       <Header />
       <div className={styles.wrapper}>
         <div className={styles.container}>{children}</div>

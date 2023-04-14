@@ -1,10 +1,12 @@
 import Title from "../components/title/title";
 import Post from "../components/post/post";
-import ProjectCard from "../components/project-card/project-card";
 import ArrowRight from "../components/icons/arrow-right";
 import styles from "./index.module.scss";
 import Page from "../components/page/page";
-export default function Home({ post, project }) {
+import projects from "./api/projects.json";
+import Project from "../components/project/project";
+export default function Home({ post }) {
+  console.log(projects);
   return (
     <Page
       title="Faruk Ipek | Front-end Developer"
@@ -42,17 +44,12 @@ export default function Home({ post, project }) {
           <ArrowRight size={15} />
         </a>
         <div className={styles.projectsList}>
-          {project.nodes.map((item) => {
-            return (
-              <div className={styles.item} key={item.projectId}>
-                <ProjectCard
-                  title={item.title}
-                  category={item.terms.edges}
-                  url={item.projects.projectsLink}
-                />
-              </div>
-            );
-          })}
+          {projects
+            .sort((a, b) => (a.year > b.year ? -1 : 1))
+            .slice(0, 6)
+            .map((item, id) => {
+              return <Project key={id} id={id} item={item} />;
+            })}
         </div>
       </div>
     </Page>
@@ -72,29 +69,6 @@ export async function getStaticProps() {
             date
           }
         }
-        projects(first: 6) {
-          nodes {
-            title
-            slug
-            projectId
-            projects {
-              projectsLink
-            }
-            terms {
-              edges {
-                node {
-                  slug
-                  name
-                }
-              }
-            }
-            featuredImage {
-              node {
-                mediaItemUrl
-              }
-            }
-          }
-        }
       },
       `,
     }),
@@ -103,7 +77,6 @@ export async function getStaticProps() {
   return {
     props: {
       post: json.data.posts,
-      project: json.data.projects,
     },
     revalidate: 10,
   };

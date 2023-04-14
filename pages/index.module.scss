@@ -38,9 +38,17 @@
 }
 .projectsList {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 24px;
+  flex-direction: column;
+  width: calc(100% + 40px);
+  gap: 32px;
+  margin-left: -20px;
+  margin-top: 40px;
+  @include mq("tablet") {
+    width: calc(100% + 40px);
+    gap: unset;
+  }
+  @include mq("desktop") {
+  }
 }
 .item {
   background-color: $background;

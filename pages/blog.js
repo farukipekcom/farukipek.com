@@ -22,11 +22,15 @@ const Blog = ({ post }) => {
       <div className={styles.list}>
         {post.nodes
           .filter((item) => item.title.toLowerCase().includes(query))
-          .map((item) => {
+          .map((item, id) => {
             return (
-              <div key={item.postId}>
-                <Post title={item.title} date={item.date} url={item.slug} />
-              </div>
+              <Post
+                key={item.postId}
+                id={id}
+                title={item.title}
+                date={item.date}
+                url={item.slug}
+              />
             );
           })}
       </div>

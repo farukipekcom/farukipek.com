@@ -1,61 +1,50 @@
-@import '../../styles/abstracts/';
-
-.post {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-radius: $border;
-    transition: background-color 0.4s, border 0.4s;
-    border: 1px solid $gray;
-    padding: 16px;
-    @include mq("tablet") {
-      flex-direction: row;
-      align-items: center;
-      border: 1px solid transparent;
-      margin-left: -16px;
-      width: calc(100% + 32px);
-      padding-left: 16px;
-      padding-right: 16px;
-      height: 56px;
-    }
-    &:hover {
-      background-color: $dark;
-      border: 1px solid $gray;
-      transition: background-color 0.4s, border 0.4s;
-      svg {
-        opacity: 1;
-        fill: white;
-        margin-left: 8px;
-        rotate: -45deg;
-        transition: opacity 0.4s;
-      }
-    }
-    svg {
-      transition: opacity 0.4s;
-      opacity: 0;
-      display: none;
-      @include mq("tablet") {
-        display: block;
-      }
-    }
-    .title {
-      @include mobileHeading3;
-      padding-bottom: 2px;
-      border: none;
-      @include mq("tablet") {
-        border-bottom: 1px solid $gray;
-        @include link;
-      }
-    }
-
-    .date {
-      @include subtitle;
-      margin-top: 8px;
-      color: $gray;
-      @include mq("tablet") {
-        margin-top: unset;
-        margin-left: auto;
-        color: unset;
-      }
-    }
+@import "../../styles/abstracts/";
+.item {
+  position: relative;
+  cursor: pointer;
+}
+.itemInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  z-index: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 80px;
+  @include mq("tablet") {
+    height: 80px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
+}
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: #fff;
+  width: max-content;
+  display: flex;
+  @include mq("tablet") {
+    border-bottom: 1px solid #2f3039;
+  }
+}
+.year {
+  font-size: 12px;
+  color: $gray;
+  font-weight: 500;
+  @include mq("tablet") {
+    justify-content: flex-end;
+  }
+}
+.selection {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 8px;
+  top: 0px;
+  left: 0px;
+  background-color: #2f3039;
+  z-index: -9;
+}

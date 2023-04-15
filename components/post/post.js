@@ -1,15 +1,39 @@
 import styles from "./post.module.scss";
-import ArrowRight from "../icons/arrow-right";
 import { format, parseISO } from "date-fns";
-const Post = ({ title, date, url }) => {
+import { motion } from "framer-motion";
+import { useState } from "react";
+
+const Post = ({ id, title, date, url }) => {
+  const [selected, setSelected] = useState();
   return (
-    <a href={"blog/" + url} className={styles.post}>
-      <h3 className={styles.title}>{title}</h3>
-      <ArrowRight size={15} />
-      <span className={styles.date}>
-        <time dateTime={date}>{format(parseISO(date), "LLLL d, yyyy")}</time>
-      </span>
-    </a>
+    <div className={styles.item}>
+      <motion.div
+        onHoverStart={() => {
+          setSelected(id);
+        }}
+        onHoverEnd={() => {
+          setSelected(undefined);
+        }}
+      >
+        <a href={"blog/" + url} target="_blank">
+          <div className={styles.itemInner}>
+            <div className={styles.title}>{title}</div>
+            <div className={styles.year}>
+              <time dateTime={date}>
+                {format(parseISO(date), "LLLL d, yyyy")}
+              </time>
+            </div>
+          </div>
+        </a>
+      </motion.div>
+      {id === selected && (
+        <motion.div
+          className={styles.selection}
+          layoutId="selected"
+          transition={{ type: "spring", duration: 0.6 }}
+        />
+      )}
+    </div>
   );
 };
 

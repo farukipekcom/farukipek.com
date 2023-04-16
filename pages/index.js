@@ -27,10 +27,15 @@ export default function Home({ post }) {
           <ArrowRight size={15} />
         </a>
         <div className={styles.blogList}>
-          {post.nodes.map((item) => {
+          {post.nodes.map((item, id) => {
             return (
               <div key={item.postId}>
-                <Post title={item.title} date={item.date} url={item.slug} />
+                <Post
+                  id={id}
+                  title={item.title}
+                  date={item.date}
+                  url={item.slug}
+                />
               </div>
             );
           })}

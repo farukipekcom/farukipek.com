@@ -15,7 +15,7 @@ const Post = ({ id, title, date, url }) => {
           setSelected(undefined);
         }}
       >
-        <a href={"blog/" + url} target="_blank">
+        <a href={"blog/" + url}>
           <div className={styles.itemInner}>
             <div className={styles.title}>{title}</div>
             <div className={styles.year}>

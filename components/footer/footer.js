@@ -1,4 +1,3 @@
-import Script from "next/script";
 import Link from "next/link";
 import styles from "./footer.module.scss";
 const Footer = () => {
@@ -83,12 +82,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <Script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
-        strategy="lazyOnload"
-      ></Script>
     </>
   );
 };

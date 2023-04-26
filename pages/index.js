@@ -6,7 +6,6 @@ import Page from "../components/page/page";
 import projects from "./api/projects.json";
 import Project from "../components/project/project";
 export default function Home({ post }) {
-  console.log(projects);
   return (
     <Page
       title="Faruk Ipek | Front-end Developer"

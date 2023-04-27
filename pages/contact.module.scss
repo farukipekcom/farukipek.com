@@ -68,3 +68,10 @@
   align-items: center;
   @include link;
 }
+
+.email {
+  @include mobileHeading3;
+  @include mq("large") {
+    @include heading3;
+  }
+}

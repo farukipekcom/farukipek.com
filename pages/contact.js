@@ -29,7 +29,7 @@ const Contact = () => {
         pagetitle={"Contact"}
         title={"Let's make great products together!"}
         details={
-          "Reach out filling the form below or send me an email at faruk@farukipek.com"
+          "Feel free to contact me regarding any kind of projects, collaborations, or if you just want to say hello."
         }
       />
       <form className={styles.form} onSubmit={handleOnSubmit}>

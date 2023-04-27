@@ -15,9 +15,7 @@ const Contact = () => {
     await fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify(formData),
-    }).then(function (response) {
-      console.log(response);
-    });
+    }).then(function (response) {});
     setMessage(1);
   }
   return (
@@ -69,7 +67,7 @@ const Contact = () => {
           <button className={styles.button}>Send Message</button>
         </div>
         {message === 1 ? (
-          <div className={styles.message}>Mesaj başarıyla gönderildi</div>
+          <div className={styles.message}>Message sent successfully!</div>
         ) : (
           ""
         )}

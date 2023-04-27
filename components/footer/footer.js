@@ -78,7 +78,9 @@ const Footer = () => {
             </div>
           </div>
           <div className={styles.bottom}>
-            <div className={styles.copyright}>© 2023 Faruk İpek</div>
+            <div className={styles.copyright}>
+              © 2023 Made with ❤️ and ☕ in Charlotte.
+            </div>
           </div>
         </div>
       </footer>

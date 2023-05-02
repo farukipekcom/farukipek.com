@@ -1,0 +1,31 @@
+@import "../styles/abstracts/";
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 32px;
+  margin-top: 40px;
+  a {
+    width: 100%;
+    @include mq("tablet") {
+      width: calc(50% - 16px);
+    }
+    @include mq("desktop") {
+      width: calc(33% - 19px);
+    }
+    img {
+      width: 100%;
+      border-radius: $border;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      transition: all 0.5s;
+      &:hover {
+        filter: unset;
+        -webkit-filter: unset;
+        -moz-filter: unset;
+        transition: all 0.5s;
+      }
+    }
+  }
+}

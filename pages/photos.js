@@ -16,7 +16,7 @@ const Photos = ({ photos }) => {
       <Title
         pagetitle={"Photos"}
         title={
-          "I love taking pictures of the world around me, capturing moments and emotions as they happen. "
+          "I love taking photos of the world around me, capturing moments and emotions as they happen. "
         }
       />
 

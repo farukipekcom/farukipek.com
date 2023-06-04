@@ -1,15 +1,15 @@
 import Header from "../header/header";
 import Footer from "../footer/footer";
 import styles from "./page.module.scss";
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
 import Head from "next/head";
-const Page = ({ children, ...tag }) => {
+const Page = ({children, ...tag}) => {
   const router = useRouter();
   const meta = {
     title: tag?.title,
     description: tag?.desc,
     url: "https://farukipek.com" + router.asPath,
-    image: tag?.image ? tag.image : "https://farukipek.com/img/faruk-ipek.jpg",
+    image: tag?.image ? tag.image : "https://farukipek.com/faruk-ipek-cover.jpg",
     ...tag,
   };
   // https://github.com/ademilter/homepage/blob/master/components/page-transition.tsx
@@ -17,7 +17,7 @@ const Page = ({ children, ...tag }) => {
     <>
       <Head>
         <title>{meta.title}</title>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="robots" content="follow, index" />
         <meta name="title" content={meta.title} />
         <meta name="description" content={meta.description} />
@@ -36,29 +36,11 @@ const Page = ({ children, ...tag }) => {
         <meta name="twitter:site" content="@farukipekcom" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={meta.url} />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon/favicon-16x16.png"
-        />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link
-          rel="mask-icon"
-          href="/favicon/safari-pinned-tab.svg"
-          color="#5bbad5"
-        />
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>

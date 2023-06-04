@@ -5,17 +5,14 @@ import styles from "./index.module.scss";
 import Page from "../components/page/page";
 import projects from "./api/projects.json";
 import Project from "../components/project/project";
-export default function Home({ post }) {
+export default function Home({post}) {
   return (
     <Page
       title="Faruk Ipek | Front-end Developer"
-      desc="Hey! I'm Faruk Ipek, a front-end developer based in Charlotte, USA. I've been building stuff on the web for the since 2016."
-    >
+      desc="Hey! I am Faruk Ipek, a front-end developer based in Charlotte, USA. I have been building stuff on the web for the since 2016.">
       <Title
         title={"Hey! I'm Faruk, a front-end developer based in Charlotte, USA."}
-        details={
-          "I've been building stuff on the web since 2016. I've worked with clients in various countries and industries."
-        }
+        details={"I've been building stuff on the web since 2016. I've worked with clients in various countries and industries."}
         hireme={1}
       />
       <div className={styles.blog}>
@@ -29,12 +26,7 @@ export default function Home({ post }) {
           {post.nodes.map((item, id) => {
             return (
               <div key={item.postId}>
-                <Post
-                  id={id}
-                  title={item.title}
-                  date={item.date}
-                  url={item.slug}
-                />
+                <Post id={id} title={item.title} date={item.date} url={item.slug} />
               </div>
             );
           })}
@@ -62,7 +54,7 @@ export default function Home({ post }) {
 export async function getStaticProps() {
   const res = await fetch(process.env.NEXT_PUBLIC_API_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {"Content-Type": "application/json"},
     body: JSON.stringify({
       query: `query NewQuery {
         posts {

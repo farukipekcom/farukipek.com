@@ -7,7 +7,7 @@ export default function About() {
   return (
     <Page
       title="About - Faruk Ipek"
-      desc="I'm Faruk Ipek, a freelancer front-end developer from Charlotte USA. I've been building stuff on the internet for the last 6 years."
+      desc="I am Faruk Ipek, a freelancer front-end developer from Charlotte USA. I have been building stuff on the internet for the last 6 years."
     >
       <Title
         pagetitle={"About"}

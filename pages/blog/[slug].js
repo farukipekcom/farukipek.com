@@ -1,7 +1,7 @@
 // import Twitter from "../../components/icons/twitter";
 // import Copy from "../../components/icons/copy";
 import styles from "./post.module.scss";
-import { format, parseISO } from "date-fns";
+import {format, parseISO} from "date-fns";
 import Page from "../../components/page/page";
 import CommentForm from "../../components/comment-form/comment-form";
 import Comment from "../../components/comment/comment";
@@ -10,33 +10,22 @@ export default function Post(data) {
   const post = data.post;
   const comments = post.comments.nodes;
   const seo = data.post.seo;
-  const text = <div dangerouslySetInnerHTML={{ __html: post.content }}></div>;
+  const text = <div dangerouslySetInnerHTML={{__html: post.content}}></div>;
   const content = text.props.dangerouslySetInnerHTML.__html;
   return (
-    <Page
-      title={seo.title}
-      desc={seo.metaDesc}
-      image={post.featuredImage?.node.mediaItemUrl}
-    >
+    <Page title={seo.title} desc={seo.metaDesc} image={post.featuredImage?.node.mediaItemUrl}>
       <Script src="https://www.google.com/recaptcha/api.js" async defer />
       <div className={styles.heading}>
         <h1 className={styles.title}>{post.title}</h1>
         <div className={styles.info}>
           <span className={styles.date}>
-            <time dateTime={post.date}>
-              {format(parseISO(post.date), "d LLLL yyyy")}
-            </time>
+            <time dateTime={post.date}>{format(parseISO(post.date), "d LLLL yyyy")}</time>
           </span>
-          <span className={styles.readingtime}>
-            {Math.ceil(content.trim().split(/\s+/).length / 200) + 1} min read
-          </span>
+          <span className={styles.readingtime}>{Math.ceil(content.trim().split(/\s+/).length / 200) + 1} min read</span>
         </div>
       </div>
-      <div
-        className={styles.article}
-        dangerouslySetInnerHTML={{ __html: post.content }}
-      ></div>
-      <CommentForm postId={post.postId} />
+      <div className={styles.article} dangerouslySetInnerHTML={{__html: post.content}}></div>
+      {/* <CommentForm postId={post.postId} />
       {comments.length > 0 ? (
         <div className={styles.comment}>
           {comments.map((item) => {
@@ -49,7 +38,7 @@ export default function Post(data) {
         </div>
       ) : (
         ""
-      )}
+      )} */}
 
       {/* <div className={styles.share}>
         <button className={styles.item}>
@@ -68,7 +57,7 @@ export default function Post(data) {
 export async function getStaticProps(context) {
   const res = await fetch(process.env.NEXT_PUBLIC_API_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {"Content-Type": "application/json"},
     body: JSON.stringify({
       query: `
                 query SinglePost($id: ID!, $idType: PostIdType!) {
@@ -109,6 +98,9 @@ export async function getStaticProps(context) {
     }),
   });
   const json = await res.json();
+  if (json.data.post === null) {
+    return {notFound: true};
+  }
   return {
     props: {
       post: json.data.post,
@@ -119,7 +111,7 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   const res = await fetch(process.env.NEXT_PUBLIC_API_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {"Content-Type": "application/json"},
     body: JSON.stringify({
       query: `
         query AllPostsQuery {
@@ -160,7 +152,7 @@ export async function getStaticPaths() {
   const json = await res.json();
   const posts = json.data.posts.nodes;
   const paths = posts.map((post) => ({
-    params: { slug: post.slug },
+    params: {slug: post.slug},
   }));
-  return { paths, fallback: "blocking" };
+  return {paths, fallback: "blocking"};
 }

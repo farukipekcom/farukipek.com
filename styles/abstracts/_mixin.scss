@@ -91,3 +91,8 @@
   font-size: 1em;
   font-weight: 400;
 }
+@mixin postTitle {
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: -3%;
+}

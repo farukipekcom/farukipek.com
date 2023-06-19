@@ -14,17 +14,19 @@ export default function Post(data) {
   const content = text.props.dangerouslySetInnerHTML.__html;
   return (
     <Page title={seo.title} desc={seo.metaDesc} image={post.featuredImage?.node.mediaItemUrl}>
-      <Script src="https://www.google.com/recaptcha/api.js" async defer />
-      <div className={styles.heading}>
-        <h1 className={styles.title}>{post.title}</h1>
-        <div className={styles.info}>
-          <span className={styles.date}>
-            <time dateTime={post.date}>{format(parseISO(post.date), "d LLLL yyyy")}</time>
-          </span>
-          <span className={styles.readingtime}>{Math.ceil(content.trim().split(/\s+/).length / 200) + 1} min read</span>
+      {/* <Script src="https://www.google.com/recaptcha/api.js" async defer /> */}
+      <div className={styles.container}>
+        <div className={styles.heading}>
+          <h1 className={styles.title}>{post.title}</h1>
+          <div className={styles.info}>
+            <span className={styles.date}>
+              <time dateTime={post.date}>{format(parseISO(post.date), "d LLLL yyyy")}</time>
+            </span>
+            <span className={styles.readingtime}>{Math.ceil(content.trim().split(/\s+/).length / 200) + 1} min read</span>
+          </div>
         </div>
+        <div className={styles.article} dangerouslySetInnerHTML={{__html: post.content}}></div>
       </div>
-      <div className={styles.article} dangerouslySetInnerHTML={{__html: post.content}}></div>
       {/* <CommentForm postId={post.postId} />
       {comments.length > 0 ? (
         <div className={styles.comment}>
@@ -39,7 +41,6 @@ export default function Post(data) {
       ) : (
         ""
       )} */}
-
       {/* <div className={styles.share}>
         <button className={styles.item}>
           <Twitter size={15} />

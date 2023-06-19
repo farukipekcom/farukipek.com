@@ -1,20 +1,27 @@
 @import "../styles/abstracts/";
+.container {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  color: #dddddd;
+}
 .title {
   @include mobileHeading1;
   @include mq("tablet") {
-    font-size: 3em;
+    @include postTitle;
   }
   @include mq("desktop") {
-    font-size: 3.5em;
+    @include postTitle;
   }
   @include mq("large") {
-    @include heading1;
+    @include postTitle;
   }
 }
 .info {
-  @include link;
+  font-size: 0.875em;
+  font-weight: 500;
   color: $gray;
-  margin-top: 8px;
+  margin-top: 1em;
 }
 .readingtime {
   &::before {
@@ -26,17 +33,19 @@
 .article {
   display: flex;
   flex-direction: column;
-  gap: 32px;
   margin-top: 24px;
-  @include mobileText;
   @include mq("tablet") {
     margin-top: 32px;
-    @include text;
+  }
+  p {
+    font-size: 1em;
+    line-height: 1.625em;
+    margin-bottom: 2em;
   }
   p img {
     border-radius: $border;
     margin: 0 auto;
-    width: 100%;
+    max-width: 100%;
     position: relative;
     height: unset;
     @include mq("desktop") {
@@ -45,30 +54,38 @@
   }
   p a {
     margin-top: 42px;
-    transition: border 0.2s ease-in-out;
     font-weight: 600;
     position: relative;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: $blue;
+      transition: color 0.2s ease-in-out;
+    }
     &::after {
       content: "";
       position: absolute;
       bottom: 0px;
       left: 0px;
       width: 100%;
-      height: 4px;
-      background-color: #bebebe;
+      height: 3px;
+      background-color: $gray;
+      border-radius: 3px;
       transition: background-color 0.2s ease-in-out;
     }
     &:hover::after {
-      background-color: #d5b319;
+      background-color: $blue;
       transition: background-color 0.2s ease-in-out;
-      color: #d5b319;
     }
   }
   h2 {
-    font-size: 1.375em;
+    font-size: 1.325em;
+    font-weight: 600;
+
+    color: #ffffff;
   }
-  h2 + p {
-    margin-top: -16px;
+  h2 + p,
+  h2 + ul {
+    margin-top: 0.75em;
   }
   ul {
     list-style: disc;
@@ -76,6 +93,9 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+  }
+  ul + p {
+    margin-top: 2em;
   }
 }
 .heading2 {

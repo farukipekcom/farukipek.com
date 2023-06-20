@@ -3,29 +3,24 @@
 import styles from "./post.module.scss";
 import {format, parseISO} from "date-fns";
 import Page from "../../components/page/page";
+import {supabase} from "../api/supabaseClient";
 import CommentForm from "../../components/comment-form/comment-form";
 import Comment from "../../components/comment/comment";
 import Script from "next/script";
-export default function Post(data) {
-  const post = data.post;
-  const comments = post.comments.nodes;
-  const seo = data.post.seo;
-  const text = <div dangerouslySetInnerHTML={{__html: post.content}}></div>;
-  const content = text.props.dangerouslySetInnerHTML.__html;
+export default function Post({post}) {
   return (
-    <Page title={seo.title} desc={seo.metaDesc} image={post.featuredImage?.node.mediaItemUrl}>
-      {/* <Script src="https://www.google.com/recaptcha/api.js" async defer /> */}
+    <Page title={post.seo_title + " - Faruk Ipek"} desc={post.seo_description}>
       <div className={styles.container}>
         <div className={styles.heading}>
-          <h1 className={styles.title}>{post.title}</h1>
+          <h1 className={styles.title}>{post.post_title}</h1>
           <div className={styles.info}>
             <span className={styles.date}>
-              <time dateTime={post.date}>{format(parseISO(post.date), "d LLLL yyyy")}</time>
+              <time dateTime={post.created_at}>{format(parseISO(post.created_at), "d LLLL yyyy")}</time>
             </span>
-            <span className={styles.readingtime}>{Math.ceil(content.trim().split(/\s+/).length / 200) + 1} min read</span>
+            <span className={styles.readingtime}>{Math.ceil(post.post_content.trim().split(/\s+/).length / 200) + 1} min read</span>
           </div>
         </div>
-        <div className={styles.article} dangerouslySetInnerHTML={{__html: post.content}}></div>
+        <div className={styles.article} dangerouslySetInnerHTML={{__html: post.post_content}}></div>
       </div>
       {/* <CommentForm postId={post.postId} />
       {comments.length > 0 ? (
@@ -54,106 +49,19 @@ export default function Post(data) {
     </Page>
   );
 }
-
 export async function getStaticProps(context) {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({
-      query: `
-                query SinglePost($id: ID!, $idType: PostIdType!) {
-                    post(id: $id, idType: $idType) {
-                        title
-                        slug
-                        content
-                        date
-                        postId
-                        seo {
-                          metaDesc
-                          title
-                          fullHead
-                        }
-                        featuredImage {
-                          node {
-                            mediaItemUrl
-                          }
-                        }
-                        comments(first: 100) {
-                          nodes {
-                            content
-                            author {
-                              node {
-                                name
-                              }
-                            }
-                            date
-                          }
-                        }
-                    }
-                }
-            `,
-      variables: {
-        id: context.params.slug,
-        idType: "SLUG",
-      },
-    }),
-  });
-  const json = await res.json();
-  if (json.data.post === null) {
-    return {notFound: true};
-  }
+  const {data} = await supabase.from("posts").select("*").eq("post_slug", context.params.slug);
   return {
     props: {
-      post: json.data.post,
+      post: data[0],
     },
     revalidate: 10,
   };
 }
 export async function getStaticPaths() {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({
-      query: `
-        query AllPostsQuery {
-            posts {
-                nodes {
-                    slug
-                    content
-                    title
-                    date
-                    postId
-                    seo {
-                      metaDesc
-                      title
-                      fullHead
-                    }
-                    featuredImage {
-                      node {
-                        mediaItemUrl
-                      }
-                    }
-                    comments(first: 100) {
-                      nodes {
-                        content
-                        author {
-                          node {
-                            name
-                          }
-                        }
-                        date
-                      }
-                    }
-                }
-            }
-        }
-    `,
-    }),
-  });
-  const json = await res.json();
-  const posts = json.data.posts.nodes;
-  const paths = posts.map((post) => ({
-    params: {slug: post.slug},
+  const {data} = await supabase.from("posts").select("*");
+  const paths = data.map((post) => ({
+    params: {slug: post.post_slug},
   }));
   return {paths, fallback: "blocking"};
 }

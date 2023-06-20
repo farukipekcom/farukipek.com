@@ -47,7 +47,8 @@
     margin: 0 auto;
     max-width: 100%;
     position: relative;
-    height: unset;
+    width: unset !important;
+    height: unset !important;
     @include mq("desktop") {
       width: 800px;
     }

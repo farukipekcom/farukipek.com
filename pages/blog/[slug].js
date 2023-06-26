@@ -7,6 +7,7 @@ import {supabase} from "../api/supabaseClient";
 import {useEffect, useState} from "react";
 export default function Post({post}) {
   const [active, setActive] = useState(false);
+  const [triggered, setTriggered] = useState(false);
   const [sessionLike, setSessionLike] = useState(0);
   const [like, setLike] = useState(post.post_like);
   const handleLike = () => {
@@ -18,6 +19,7 @@ export default function Post({post}) {
       setLike(like + sessionLike);
       setActive(false);
       setSessionLike(0);
+      setTriggered(true);
     }, 3000);
     return () => {
       clearTimeout(timeout);
@@ -25,9 +27,12 @@ export default function Post({post}) {
   }, [sessionLike]);
 
   useEffect(() => {
-    if (like !== 0) {
+    if (like !== 0 && triggered === true) {
       const updatePost = async () => {
         const {data, error} = await supabase.from("posts").update({post_like: like}).eq("post_id", post.post_id).select("*");
+        console.log("data", data);
+        console.log("error", error);
+        setTriggered(false);
       };
       updatePost();
       revalidate();

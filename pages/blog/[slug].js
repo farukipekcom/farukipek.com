@@ -30,9 +30,12 @@ export default function Post({post}) {
         const {data, error} = await supabase.from("posts").update({post_like: like}).eq("post_id", post.post_id).select("*");
       };
       updatePost();
+      revalidate();
     }
   }, [like]);
-
+  function revalidate() {
+    fetch("/api/revalidate");
+  }
   return (
     <Page title={post.seo_title + " - Faruk Ipek"} desc={post.seo_description}>
       <div className={styles.container}>

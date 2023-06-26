@@ -28,7 +28,8 @@ const Blog = ({post}) => {
 };
 export default Blog;
 export async function getStaticProps() {
-  const {data} = await supabase.from("posts").select("*");
+  const {data} = await supabase.from("posts").select("*").order("created_at", {ascending: false});
+
   return {
     props: {
       post: data,

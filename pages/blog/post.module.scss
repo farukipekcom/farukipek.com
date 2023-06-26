@@ -22,12 +22,87 @@
   font-weight: 500;
   color: $gray;
   margin-top: 1em;
+  display: flex;
+  align-items: center;
 }
-.readingtime {
+.readingtime,
+.headerLike {
   &::before {
     content: "\2022";
     margin-left: 12px;
     margin-right: 12px;
+  }
+}
+.headerLike {
+  display: inline-flex;
+  align-items: center;
+  // position: relative;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  svg {
+    fill: white;
+    height: 20px;
+  }
+
+  .headerLikeIcon {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    // background-color: white;
+    width: max-content;
+    padding: 0px 8px;
+    cursor: pointer;
+    &:hover {
+      // background-color: black;
+      svg {
+        fill: white;
+        transition: all 0.2s ease-in-out;
+      }
+      .headerLikeCount {
+        color: white;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    svg {
+      fill: #aaaaaa;
+      width: 24px;
+      height: 24px;
+      margin-bottom: 4px;
+      transition: all 0.2s ease-in-out;
+    }
+    .headerLikeCount {
+      transition: all 0.2s ease-in-out;
+      color: #aaa;
+      font-weight: 500;
+      font-size: 15px;
+      width: max-content;
+      position: relative;
+      .headerSessionLike {
+        position: absolute;
+        right: -48px;
+        top: -5px;
+        z-index: 9999;
+        background-color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-weight: 400;
+        font-size: 14px;
+        padding: 4px;
+        opacity: 0;
+      }
+      .yeni {
+        opacity: 1;
+        animation: zoom-in-zoom-out 1.5s ease infinite;
+      }
+    }
   }
 }
 .article {
@@ -148,5 +223,73 @@
   border-radius: $border;
   @include mq("tablet") {
     width: 720px;
+  }
+}
+
+.like {
+  display: flex;
+  position: relative;
+  width: max-content;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  .sessionLike {
+    position: absolute;
+    top: -42px;
+    left: calc(50% - 16px);
+    z-index: 99;
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 4px;
+  }
+  .icon {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    border-radius: 24px;
+    padding: 12px 16px;
+    background-color: white;
+    width: max-content;
+    cursor: pointer;
+    &:hover {
+      background-color: #efefef;
+    }
+    svg {
+      fill: black;
+      width: 24px;
+      height: 24px;
+      margin-bottom: 4px;
+    }
+    .count {
+      color: black;
+      font-weight: 400;
+      font-size: 15px;
+      width: max-content;
+    }
+  }
+  .yeni {
+    display: flex;
+    animation: zoom-in-zoom-out 1.5s ease infinite;
+  }
+}
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
   }
 }

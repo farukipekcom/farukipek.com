@@ -98,7 +98,7 @@
         padding: 4px;
         opacity: 0;
       }
-      .yeni {
+      .active {
         opacity: 1;
         animation: zoom-in-zoom-out 1.5s ease infinite;
       }
@@ -277,7 +277,7 @@
       width: max-content;
     }
   }
-  .yeni {
+  .active {
     display: flex;
     animation: zoom-in-zoom-out 1.5s ease infinite;
   }

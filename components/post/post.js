@@ -17,7 +17,7 @@ const Post = ({id, title, date, url}) => {
           <div className={styles.itemInner}>
             <div className={styles.title}>{title}</div>
             <div className={styles.year}>
-              <time dateTime={date}>{format(parseISO(date), "d LLLL yyyy")}</time>
+              <time dateTime={date}>{format(parseISO(date), "LLL d, yyyy")}</time>
             </div>
           </div>
         </a>

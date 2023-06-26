@@ -40,7 +40,7 @@ export default function Post({post}) {
           <h1 className={styles.title}>{post.post_title}</h1>
           <div className={styles.info}>
             <span className={styles.date}>
-              <time dateTime={post.created_at}>{format(parseISO(post.created_at), "d LLLL yyyy")}</time>
+              <time dateTime={post.created_at}>{format(parseISO(post.created_at), "LLL d, yyyy")}</time>
             </span>
             <span className={styles.readingtime}>{Math.ceil(post.post_content.trim().split(/\s+/).length / 200) + 1} min read</span>
             <div className={styles.headerLike}>

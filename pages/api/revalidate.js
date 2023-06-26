@@ -14,7 +14,7 @@
 export default async function handler(req, res) {
   let revalidated = false;
   try {
-    await res.revalidate("/");
+    await res.revalidate(`/blog/${req.query.path}`);
     revalidated = true;
   } catch (err) {
     console.log("revalidate error", err);

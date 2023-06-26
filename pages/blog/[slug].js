@@ -39,7 +39,7 @@ export default function Post({post}) {
     }
   }, [like]);
   function revalidate() {
-    fetch("/api/revalidate");
+    fetch(`/api/revalidate?path=${post.post_slug}`);
   }
   return (
     <Page title={post.seo_title + " - Faruk Ipek"} desc={post.seo_description}>
@@ -109,7 +109,7 @@ export async function getStaticProps(context) {
     props: {
       post: data[0],
     },
-    revalidate: 10,
+    revalidate: 1,
   };
 }
 export async function getStaticPaths() {

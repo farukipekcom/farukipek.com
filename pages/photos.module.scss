@@ -18,14 +18,14 @@
       height: 500px;
       object-fit: cover;
       border-radius: $border;
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%);
-      -moz-filter: grayscale(100%);
+      filter: unset;
+      -webkit-filter: unset;
+      -moz-filter: unset;
       transition: all 0.5s;
       &:hover {
-        filter: unset;
-        -webkit-filter: unset;
-        -moz-filter: unset;
+        filter: brightness(0.8);
+        -webkit-filter: contrast(0.8);
+        -moz-filter: contrast(0.8);
         transition: all 0.5s;
       }
       @include mq("tablet") {

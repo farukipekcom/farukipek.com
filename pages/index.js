@@ -5,6 +5,7 @@ import styles from "./index.module.scss";
 import Page from "../components/page/page";
 import projects from "./api/projects.json";
 import Project from "../components/project/project";
+import {supabase} from "./api/supabaseClient";
 export default function Home({post}) {
   return (
     <Page
@@ -23,10 +24,10 @@ export default function Home({post}) {
           <ArrowRight size={15} />
         </a>
         <div className={styles.blogList}>
-          {post.nodes.map((item, id) => {
+          {post.map((item, id) => {
             return (
               <div key={item.postId}>
-                <Post id={id} title={item.title} date={item.date} url={item.slug} />
+                <Post key={item.post_id} id={id} title={item.post_title} date={item.created_at} url={item.post_slug} />
               </div>
             );
           })}
@@ -52,27 +53,11 @@ export default function Home({post}) {
   );
 }
 export async function getStaticProps() {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({
-      query: `query NewQuery {
-        posts {
-          nodes {
-            postId
-            slug
-            title
-            date
-          }
-        }
-      },
-      `,
-    }),
-  });
-  const json = await res.json();
+  const {data} = await supabase.from("posts").select("*").order("created_at", {ascending: false});
+
   return {
     props: {
-      post: json.data.posts,
+      post: data,
     },
     revalidate: 10,
   };

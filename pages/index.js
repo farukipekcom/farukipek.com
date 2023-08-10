@@ -7,6 +7,7 @@ import projects from "./api/projects.json";
 import Project from "../components/project/project";
 import {supabase} from "./api/supabaseClient";
 export default function Home({post}) {
+  console.log(post);
   return (
     <Page
       title="Faruk Ipek | Front-end Developer"
@@ -26,8 +27,8 @@ export default function Home({post}) {
         <div className={styles.blogList}>
           {post.map((item, id) => {
             return (
-              <div key={item.postId}>
-                <Post key={item.post_id} id={id} title={item.post_title} date={item.created_at} url={item.post_slug} />
+              <div key={id}>
+                <Post id={id} title={item.post_title} date={item.created_at} url={item.post_slug} />
               </div>
             );
           })}

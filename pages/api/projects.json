@@ -2,8 +2,6 @@
   {
     "name": "Skyair Shop",
     "year": 2017,
-    "image1": "/projects/skyair-shop-white.svg",
-    "image2": "/projects/skyair-shop.svg",
     "link": "https://skyairshop.com/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -11,8 +9,6 @@
   {
     "name": "TSE Lojistik",
     "year": 2017,
-    "image1": "/projects/tse-lojistik-white.svg",
-    "image2": "/projects/tse-lojistik.svg",
     "link": "https://tselojistik.com/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -20,8 +16,6 @@
   {
     "name": "Star Aviation Services",
     "year": 2018,
-    "image1": "/projects/star-aviation-services-white.svg",
-    "image2": "/projects/star-aviation-services.svg",
     "link": "https://staraircharter.com/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -29,8 +23,6 @@
   {
     "name": "Recommercer",
     "year": 2019,
-    "image1": "/projects/recommercer-white.svg",
-    "image2": "/projects/recommercer.svg",
     "link": "https://recommercer.com/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -38,8 +30,6 @@
   {
     "name": "Ateş Akü Antalya",
     "year": 2020,
-    "image1": "/projects/ates-aku-antalya-white.svg",
-    "image2": "/projects/ates-aku-antalya.svg",
     "link": "https://atesakuantalya.com/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -47,8 +37,6 @@
   {
     "name": "Özaks Group",
     "year": 2020,
-    "image1": "/projects/ozaks-group-white.svg",
-    "image2": "/projects/ozaks-group.svg",
     "link": "https://ozaksgroup.com/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -56,8 +44,6 @@
   {
     "name": "KARSU Su Arıtma Sistemleri",
     "year": 2020,
-    "image1": "/projects/karsu-white.svg",
-    "image2": "/projects/karsu.svg",
     "link": "https://karabuksuaritma.com/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -65,8 +51,6 @@
   {
     "name": "PremiumAnt",
     "year": 2020,
-    "image1": "/projects/premium-ant-white.svg",
-    "image2": "/projects/premium-ant.svg",
     "link": "https://premiumant.com/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -74,8 +58,6 @@
   {
     "name": "Facebook Clone",
     "year": 2020,
-    "image1": "/projects/facebook-white.svg",
-    "image2": "/projects/facebook.svg",
     "link": "https://farukipek.com/",
     "keywords": ["Development"],
     "category": "side-projects"
@@ -83,8 +65,6 @@
   {
     "name": "Akdeniz Volkswagen",
     "year": 2021,
-    "image1": "/projects/akdeniz-volkswagen-white.svg",
-    "image2": "/projects/akdeniz-volkswagen.svg",
     "link": "https://akdenizvolkswagen.com/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -92,8 +72,6 @@
   {
     "name": "Aslan Gayrimenkul",
     "year": 2021,
-    "image1": "/projects/aslan-gayrimenkul-white.svg",
-    "image2": "/projects/aslan-gayrimenkul.svg",
     "link": "https://aslansgayrimenkul.com/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -101,8 +79,6 @@
   {
     "name": "Sky Logistics",
     "year": 2021,
-    "image1": "/projects/sky-logistics-white.svg",
-    "image2": "/projects/sky-logistics.svg",
     "link": "https://skylogistics.com.tr/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -110,8 +86,6 @@
   {
     "name": "Webflow Clone",
     "year": 2021,
-    "image1": "/projects/webflow-white.svg",
-    "image2": "/projects/webflow.svg",
     "link": "https://webflow-clone-farukipekcom.vercel.app/",
     "keywords": ["Development"],
     "category": "side-projects"
@@ -119,8 +93,6 @@
   {
     "name": "Airbnb Clone",
     "year": 2021,
-    "image1": "/projects/airbnb-white.svg",
-    "image2": "/projects/airbnb.svg",
     "link": "https://airbnb-clone-farukipekcom.vercel.app/",
     "keywords": ["Development"],
     "category": "side-projects"
@@ -128,8 +100,6 @@
   {
     "name": "Sayram LTD",
     "year": 2022,
-    "image1": "/projects/sayram-white.svg",
-    "image2": "/projects/sayram.svg",
     "link": "https://sayramltd.com/",
     "keywords": ["Wordpress"],
     "category": "works"
@@ -137,8 +107,6 @@
   {
     "name": "Mentörbul",
     "year": 2022,
-    "image1": "/projects/mentorbul-white.svg",
-    "image2": "/projects/mentorbul.svg",
     "link": "https://mentor-bul-farukipekcom.vercel.app/",
     "keywords": ["Design & Development"],
     "category": "side-projects"
@@ -146,8 +114,6 @@
   {
     "name": "Meta Tags Generator",
     "year": 2022,
-    "image1": "/projects/meta-tags-generator-white.svg",
-    "image2": "/projects/meta-tags-generator.svg",
     "link": "https://meta-tag-farukipekcom.vercel.app",
     "keywords": ["Design & Development"],
     "category": "side-projects"
@@ -155,8 +121,6 @@
   {
     "name": "Landify Clone",
     "year": 2023,
-    "image1": "/projects/landify-white.svg",
-    "image2": "/projects/landify.svg",
     "link": "https://landify-task.vercel.app/",
     "keywords": ["Development"],
     "category": "side-projects"
@@ -164,8 +128,6 @@
   {
     "name": "Weather App",
     "year": 2023,
-    "image1": "/projects/weather-white.svg",
-    "image2": "/projects/weather.svg",
     "link": "https://weather-app-farukipekcom.vercel.app/",
     "keywords": ["Design & Development"],
     "category": "side-projects"
@@ -173,10 +135,15 @@
   {
     "name": "Skyair",
     "year": 2023,
-    "image1": "/projects/skyair-white.svg",
-    "image2": "/projects/skyair.svg",
     "link": "https://skyair.com.tr/",
     "keywords": ["Wordpress"],
     "category": "works"
+  },
+  {
+    "name": "Generate For Frontend",
+    "year": 2023,
+    "link": "https://generateforfrontend.com/",
+    "keywords": ["Design & Development"],
+    "category": "side-projects"
   }
 ]

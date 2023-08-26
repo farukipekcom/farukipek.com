@@ -33,8 +33,8 @@ const Projects = () => {
       </div>
       <div className={styles.list}>
         {projects
-          .sort((a, b) => (a.year > b.year ? -1 : 1))
           .filter(category === "all" ? (item) => item : (item) => item.category === category)
+          .reverse()
           .map((item, id) => {
             return <Project key={id} id={id} item={item} />;
           })}

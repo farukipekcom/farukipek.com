@@ -87,3 +87,43 @@
     fill: $gray;
   }
 }
+@keyframes hireme {
+  0% {
+    background-color: #61c486;
+  }
+  50% {
+    background-color: #107837;
+  }
+  100% {
+    background-color: #61c486;
+  }
+}
+.circle {
+  background-color: #61c486;
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  animation: hireme 1s infinite;
+}
+.hireme {
+  background-color: #2a3930;
+  height: 24px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  color: #61c486;
+  width: max-content;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mq("tablet") {
+    top: -60px;
+  }
+}

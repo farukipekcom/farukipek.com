@@ -7,7 +7,6 @@ import projects from "./api/projects.json";
 import Project from "../components/project/project";
 import {supabase} from "./api/supabaseClient";
 export default function Home({post}) {
-  console.log(post);
   return (
     <Page
       title="Faruk Ipek | Front-end Developer"
@@ -17,6 +16,9 @@ export default function Home({post}) {
         details={"I've been building stuff on the web since 2016. I've worked with clients in various countries and industries."}
         hireme={1}
       />
+      <a href="/contact" className={styles.hireme}>
+        <span className={styles.circle}></span>Available For Work
+      </a>
       <div className={styles.blog}>
         <h2 className={styles.shadow}>BLOG</h2>
         <p className={styles.heading}>Check out my latest articles</p>

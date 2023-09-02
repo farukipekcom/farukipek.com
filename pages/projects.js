@@ -34,10 +34,10 @@ const Projects = () => {
       <div className={styles.list}>
         {projects
           .filter(category === "all" ? (item) => item : (item) => item.category === category)
-          .reverse()
           .map((item, id) => {
             return <Project key={id} id={id} item={item} />;
-          })}
+          })
+          .reverse()}
       </div>
     </Page>
   );

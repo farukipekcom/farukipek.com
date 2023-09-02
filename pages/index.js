@@ -45,11 +45,11 @@ export default function Home({post}) {
         </a>
         <div className={styles.projectsList}>
           {projects
-            .sort((a, b) => (a.year > b.year ? -1 : 1))
-            .slice(0, 6)
             .map((item, id) => {
               return <Project key={id} id={id} item={item} />;
-            })}
+            })
+            .reverse()
+            .slice(0, 6)}
         </div>
       </div>
     </Page>

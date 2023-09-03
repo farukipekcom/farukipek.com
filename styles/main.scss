@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
 // Abstracts
 @import "abstracts/_mixin";
 @import "abstracts/_variables";
@@ -6,7 +8,6 @@
 @import "base/_formalize";
 @import "base/_normalize";
 @import "base/_global";
-
 :root {
   --max-width: 1440px;
   --background: #1b1f25;
@@ -44,7 +45,7 @@
     z-index: 999;
     padding-bottom: 12px;
     gap: 12px;
-    margin-left:-20px;
+    margin-left: -20px;
     @include mq("tablet") {
       padding-bottom: unset;
       display: flex;

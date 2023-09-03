@@ -23,7 +23,7 @@
   font-size: 4em;
   font-weight: 600;
   line-height: 84px;
-  letter-spacing: -3%;
+  letter-spacing: -2px;
 }
 @mixin heading2 {
   font-size: 1.75em;
@@ -94,5 +94,5 @@
 @mixin postTitle {
   font-size: 2em;
   font-weight: 600;
-  letter-spacing: -3%;
+  letter-spacing: -2px;
 }

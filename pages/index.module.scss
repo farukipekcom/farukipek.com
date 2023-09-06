@@ -98,13 +98,6 @@
     background-color: #61c486;
   }
 }
-.circle {
-  background-color: #61c486;
-  height: 6px;
-  width: 6px;
-  border-radius: 3px;
-  animation: hireme 1s infinite;
-}
 .hireme {
   background-color: #2a3930;
   height: 24px;
@@ -113,7 +106,7 @@
   color: #61c486;
   width: max-content;
   display: flex;
-  gap: 4px;
+  gap: 6px;
   align-items: center;
   cursor: pointer;
   border-radius: 12px;
@@ -125,5 +118,32 @@
   transform: translate(-50%, -50%);
   @include mq("tablet") {
     top: -60px;
+  }
+}
+.dot,
+.signal {
+  background-color: #61c486;
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  position: relative;
+}
+.signal {
+  animation-name: signal;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+@keyframes signal {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
   }
 }

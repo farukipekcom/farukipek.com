@@ -17,7 +17,10 @@ export default function Home({post}) {
         hireme={1}
       />
       <a href="/contact" className={styles.hireme}>
-        <span className={styles.circle}></span>Available For Work
+        <div class={styles.dot}>
+          <div class={styles.signal}></div>
+        </div>
+        Available For Work
       </a>
       <div className={styles.blog}>
         <h2 className={styles.shadow}>BLOG</h2>

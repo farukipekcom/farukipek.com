@@ -7,9 +7,7 @@ const Footer = () => {
         <div className={styles.container}>
           <div className={styles.top}>
             <div className={styles.left}>
-              <div className={styles.heading}>
-                Feeling good about a project?
-              </div>
+              <div className={styles.heading}>Feeling good about a project?</div>
               <Link href="/contact" className={styles.link}>
                 Let`s talk about it!
               </Link>
@@ -41,28 +39,16 @@ const Footer = () => {
               <div className={styles.menu}>
                 <div className={styles.heading}>Social</div>
                 <div className={styles.list}>
-                  <Link
-                    href="https://www.linkedin.com/in/farukipekcom/"
-                    className={styles.item}
-                  >
+                  <Link href="https://www.linkedin.com/in/farukipekcom/" className={styles.item}>
                     Linkedin
                   </Link>
-                  <Link
-                    href="https://github.com/farukipekcom"
-                    className={styles.item}
-                  >
+                  <Link href="https://github.com/farukipekcom" className={styles.item}>
                     Github
                   </Link>
-                  <Link
-                    href="https://twitter.com/farukipekcom"
-                    className={styles.item}
-                  >
+                  <Link href="https://twitter.com/farukipekcom" className={styles.item}>
                     Twitter
                   </Link>
-                  <Link
-                    href="https://www.instagram.com/farukipekcom/"
-                    className={styles.item}
-                  >
+                  <Link href="https://www.instagram.com/farukipekcom/" className={styles.item}>
                     Instagram
                   </Link>
                 </div>
@@ -70,10 +56,7 @@ const Footer = () => {
               <div className={styles.menu}>
                 <div className={styles.heading}>Get in touch</div>
                 <div className={styles.list}>
-                  <Link
-                    href="mailto:faruk@farukipek.com"
-                    className={styles.item}
-                  >
+                  <Link href="mailto:faruk@farukipek.com" className={styles.item}>
                     faruk@farukipek.com
                   </Link>
                 </div>
@@ -81,9 +64,7 @@ const Footer = () => {
             </div>
           </div>
           <div className={styles.bottom}>
-            <div className={styles.copyright}>
-              © 2023 Made with ❤️ and ☕ in Charlotte.
-            </div>
+            <div className={styles.copyright}>© 2024 Made with ❤️ and ☕ in Charlotte.</div>
           </div>
         </div>
       </footer>

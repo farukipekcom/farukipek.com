@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
           </div>
           <div className={styles.bottom}>
-            <div className={styles.copyright}>© 2024 Made with ❤️ and ☕ in Charlotte.</div>
+            <div className={styles.copyright}>© 2024 Made with ❤️ and ☕</div>
           </div>
         </div>
       </footer>

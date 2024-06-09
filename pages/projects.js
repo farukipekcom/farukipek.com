@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <Page
       title="Projects - Faruk Ipek"
-      desc="I am Faruk Ipek, a freelancer front-end developer from Charlotte USA. Check out my projects. Send me a message and talk about the new project.">
+      desc="I am Faruk Ipek, a freelancer front-end developer. Check out my projects. Send me a message and talk about the new project.">
       <Title
         pagetitle={"Projects"}
         title={"Check out my projects. Send me a message and talk about the new project."}

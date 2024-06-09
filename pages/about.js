@@ -7,11 +7,8 @@ export default function About() {
   return (
     <Page
       title="About - Faruk Ipek"
-      desc="I am Faruk Ipek, a freelancer front-end developer from Charlotte USA. I have been building stuff on the internet for the last 6 years.">
-      <Title
-        pagetitle={"About"}
-        title={"I'm Faruk Ipek, a freelancer front-end developer from Charlotte, USA. I build things for the web."}
-      />
+      desc="I am Faruk Ipek, a freelancer front-end developer. I have been building stuff on the internet for the last 6 years.">
+      <Title pagetitle={"About"} title={"I'm Faruk Ipek, a freelancer front-end developer. I build things for the web."} />
       <div className={styles.details}>
         <div className={styles.left}>
           <h2 className={styles.heading2}>

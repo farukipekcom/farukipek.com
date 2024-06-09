@@ -13,7 +13,7 @@ const Blog = ({post}) => {
   return (
     <Page
       title="Blog - Faruk Ipek"
-      desc="I am Faruk Ipek, a freelancer front-end developer from Charlotte USA. I enjoy share about how I work, design and live.">
+      desc="I am Faruk Ipek, a freelancer front-end developer. I enjoy share about how I work, design and live.">
       <Title pagetitle={"Blog"} title={"I enjoy share about how I work, design and live."} />
       <Search length={post.length} onChange={onChange} value={query} />
       <div className={styles.list}>

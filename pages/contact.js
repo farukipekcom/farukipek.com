@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <Page
       title="Contact - Faruk Ipek"
-      desc="I am Faruk Ipek, a freelancer front-end developer. Let's make great products together! Send me a message with contact form.">
+      desc="I am Faruk Ipek, a freelancer front-end developer from Charlotte USA. Let's make great products together! Send me a message with contact form.">
       <Title
         pagetitle={"Contact"}
         title={"Let's make great products together!"}

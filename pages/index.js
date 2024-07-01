@@ -10,9 +10,9 @@ export default function Home({post}) {
   return (
     <Page
       title="Faruk Ipek | Front-end Developer"
-      desc="Hey! I am Faruk Ipek, a front-end developer. I have been building stuff on the web for the since 2016.">
+      desc="Hey! I am Faruk Ipek, a front-end developer based in Charlotte, USA. I have been building stuff on the web for the since 2016.">
       <Title
-        title={"Hey! I'm Faruk, a front-end developer."}
+        title={"Hey! I'm Faruk, a front-end developer based in Charlotte, USA."}
         details={"I've been building stuff on the web since 2016. I've worked with clients in various countries and industries."}
         hireme={1}
       />

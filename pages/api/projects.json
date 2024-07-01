@@ -112,6 +112,13 @@
     "category": "side-projects"
   },
   {
+    "name": "Meta Tags Generator",
+    "year": 2022,
+    "link": "https://meta-tag-farukipekcom.vercel.app",
+    "keywords": ["Design & Development"],
+    "category": "side-projects"
+  },
+  {
     "name": "Landify Clone",
     "year": 2023,
     "link": "https://landify-task.vercel.app/",

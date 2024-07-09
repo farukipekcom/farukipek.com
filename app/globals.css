@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-primary text-secondary text-base leading-7 mx-4 sm:my-0 sm:mx-4 md:m-0;
+}
+.pagecontainer {
+  @apply w-full sm:w-full md:w-[960px] mx-auto;
+}
+header {
+  @apply w-auto py-5 flex items-center justify-between pagecontainer text-secondary h-20 mb-10 sm:mb-16 md:mb-20;
+}
+.menuicon {
+  @apply sm:hidden flex cursor-pointer;
+}
+nav {
+  @apply h-10 items-center hidden sm:flex;
+}
+nav a {
+  @apply text-base font-semibold text-secondary h-full px-4 flex items-center hover:bg-white/10 hover:text-white rounded-lg transition duration-300;
+}
+.mobile-nav {
+  @apply flex sm:hidden bg-primary h-auto absolute left-0 top-20 flex-col items-start w-full gap-y-2 py-4;
+}
+.mobile-nav a {
+  @apply w-full h-10;
+}

@@ -3,26 +3,43 @@
 @tailwind utilities;
 
 body {
-  @apply bg-primary text-secondary text-base leading-7 mx-4 sm:my-0 sm:mx-4 md:m-0;
+  @apply mx-4 bg-primary text-base leading-7 text-secondary sm:mx-4 sm:my-0 md:m-0;
 }
 .pagecontainer {
-  @apply w-full sm:w-full md:w-[960px] mx-auto;
+  @apply mx-auto w-full sm:w-full md:w-[960px];
 }
+/* HEADER  */
 header {
-  @apply w-auto py-5 flex items-center justify-between pagecontainer text-secondary h-20 mb-10 sm:mb-16 md:mb-20;
+  @apply pagecontainer relative mb-10 flex h-20 w-auto items-center justify-between py-5 text-secondary sm:mb-16 md:mb-20;
+}
+.logo {
+  @apply flex h-10 items-center gap-x-4 transition duration-300 hover:opacity-80;
+}
+.logo-profile {
+  @apply rounded-full;
+}
+.header-info {
+  @apply flex h-full flex-col justify-between;
+}
+.header-name {
+  @apply w-max text-lg font-semibold leading-none text-white;
+}
+.header-role {
+  @apply w-max text-sm leading-none text-secondary;
 }
 .menuicon {
-  @apply sm:hidden flex cursor-pointer;
+  @apply flex cursor-pointer sm:hidden;
 }
 nav {
-  @apply h-10 items-center hidden sm:flex;
+  @apply hidden h-10 items-center sm:flex;
 }
 nav a {
-  @apply text-base font-semibold text-secondary h-full px-4 flex items-center hover:bg-white/10 hover:text-white rounded-lg transition duration-300;
+  @apply flex h-full items-center rounded-lg px-4 text-base font-semibold text-secondary transition duration-300 hover:bg-white/10 hover:text-white;
 }
 .mobile-nav {
-  @apply flex sm:hidden bg-primary h-auto absolute left-0 top-20 flex-col items-start w-full gap-y-2 py-4;
+  @apply absolute left-0 top-20 flex h-auto w-full flex-col items-start gap-y-2 bg-primary py-4 sm:hidden;
 }
 .mobile-nav a {
-  @apply w-full h-10;
+  @apply h-10 w-full;
 }
+/* HEADER END */

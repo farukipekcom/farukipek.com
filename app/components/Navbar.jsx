@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import OpenMenuIcon from "./open-menu-icon.svg";
 import CloseMenuIcon from "./close-menu-icon.svg";
 export default function Navbar() {
@@ -33,11 +33,22 @@ export default function Navbar() {
         className="menuicon"
         onClick={() => {
           setIsMobile(!isMobile);
-        }}>
+        }}
+      >
         {isMobile === true ? (
-          <Image src={CloseMenuIcon} width={24} height={24} alt="Close Menu Icon" />
+          <Image
+            src={CloseMenuIcon}
+            width={24}
+            height={24}
+            alt="Close Menu Icon"
+          />
         ) : (
-          <Image src={OpenMenuIcon} width={24} height={24} alt="Open Menu Icon" />
+          <Image
+            src={OpenMenuIcon}
+            width={24}
+            height={24}
+            alt="Open Menu Icon"
+          />
         )}
       </div>
     </>

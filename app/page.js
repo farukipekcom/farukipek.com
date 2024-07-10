@@ -3,6 +3,7 @@ import Button from "./components/Button";
 import Arrow from "./components/icons/Arrow";
 import Link from "next/link";
 import PostList from "./components/PostList";
+import ProjectList from "./components/ProjectList";
 export default function Home() {
   return (
     <main className="pagecontainer">
@@ -15,8 +16,8 @@ export default function Home() {
         </div>
         <Button>Get in touch</Button>
       </div>
-      <div className="posts-section">
-        <div className="posts-heading">
+      <div className="section">
+        <div className="section-heading">
           <div className="section-title">Posts</div>
           <Link href="/blog" className="section-button group">
             View all blog posts
@@ -24,6 +25,16 @@ export default function Home() {
           </Link>
         </div>
         <PostList />
+      </div>
+      <div className="section">
+        <div className="section-heading">
+          <div className="section-title">Projects</div>
+          <Link href="/projects" className="section-button group">
+            View all projects
+            <Arrow size={20} />
+          </Link>
+        </div>
+        <ProjectList />
       </div>
     </main>
   );

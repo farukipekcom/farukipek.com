@@ -118,3 +118,48 @@ nav a {
   @apply border-gray flex h-7 items-center rounded-lg border border-solid px-[12px] text-sm text-secondary transition duration-500 group-hover:border-white group-hover:text-white;
 }
 /* PROJECT LIST END  */
+
+/* FOOTER */
+footer {
+  @apply mt-20 flex flex-col sm:mt-16 md:mt-20;
+}
+.footer-top {
+  @apply flex flex-col gap-y-10 md:flex-row md:gap-y-0;
+}
+.footer-heading {
+  @apply flex w-full flex-col md:w-1/2;
+}
+.footer-heading-title {
+  @apply text-4xl font-medium text-white;
+}
+.footer-heading-link {
+  @apply mt-9 text-2xl font-semibold text-orange-300 underline;
+}
+.footer-menu {
+  @apply flex w-full flex-col md:w-1/2;
+}
+.footer-title {
+  @apply text-lg font-semibold text-secondary;
+}
+.footer-menu-list {
+  @apply mt-1 flex gap-x-6;
+}
+.footer-menu-list-item {
+  @apply text-base font-medium text-white;
+}
+.footer-contact {
+  @apply mt-6 flex flex-col;
+}
+.footer-email {
+  @apply mt-1 text-base font-medium text-white;
+}
+.copyright {
+  @apply border-gray mt-10 flex h-24 flex-col justify-evenly border-t border-solid md:h-20 md:flex-row md:items-center md:justify-between;
+}
+.copyright-text {
+  @apply text-secondary;
+}
+.copyright-socials {
+  @apply flex gap-x-6;
+}
+/* FOOTER END */

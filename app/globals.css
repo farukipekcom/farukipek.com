@@ -43,3 +43,25 @@ nav a {
   @apply h-10 w-full;
 }
 /* HEADER END */
+
+/* HERO */
+.hero {
+  @apply flex flex-col gap-4;
+}
+.title {
+  @apply text-2xl font-semibold leading-9 text-white sm:w-2/3 md:w-1/2;
+}
+.text {
+  @apply text-base leading-7 text-secondary sm:w-2/3 md:w-1/2;
+}
+
+/* HERO END */
+
+/* COMPONENTS */
+.button {
+  @apply hover:bg-gray mt-2 flex h-12 w-max cursor-pointer items-center gap-x-1 rounded-lg border border-solid border-[#626262] px-6 text-base font-semibold leading-6 text-white transition duration-500 md:mt-6;
+}
+.button svg {
+  @apply transition duration-500;
+}
+/* COMPONENTS END */

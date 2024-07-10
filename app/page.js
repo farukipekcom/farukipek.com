@@ -3,7 +3,6 @@ import Arrow from "./components/icons/Arrow";
 import Link from "next/link";
 import PostList from "./components/PostList";
 import ProjectList from "./components/ProjectList";
-import Footer from "./components/Footer";
 export default function Home() {
   return (
     <main className="pagecontainer">
@@ -36,7 +35,6 @@ export default function Home() {
         </div>
         <ProjectList />
       </div>
-      <Footer />
     </main>
   );
 }

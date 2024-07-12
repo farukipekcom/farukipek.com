@@ -5,7 +5,7 @@ import PostList from "./components/PostList";
 import ProjectList from "./components/ProjectList";
 export default function Home() {
   return (
-    <main className="pagecontainer">
+    <main>
       <div className="hero">
         <div className="title">Hey! I'm Faruk 👋</div>
         <div className="text">

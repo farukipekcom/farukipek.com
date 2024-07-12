@@ -8,6 +8,9 @@ body {
 .pagecontainer {
   @apply mx-auto w-full sm:w-full md:w-[960px];
 }
+main {
+  @apply pagecontainer;
+}
 /* HEADER  */
 header {
   @apply pagecontainer relative mb-10 flex h-20 w-auto items-center justify-between py-5 text-secondary sm:mb-16 md:mb-20;
@@ -46,27 +49,27 @@ nav a {
 
 /* HERO */
 .hero {
-  @apply flex flex-col gap-4;
+  @apply flex flex-col gap-4 sm:w-2/3 md:w-1/2;
 }
 .title {
-  @apply text-2xl font-semibold leading-9 text-white sm:w-2/3 md:w-1/2;
+  @apply text-2xl font-semibold leading-9 text-white;
 }
 .text {
-  @apply text-base leading-7 text-secondary sm:w-2/3 md:w-1/2;
+  @apply mt-4 text-base leading-7 text-secondary;
 }
 
 /* HERO END */
 
 /* COMPONENTS */
 .button {
-  @apply hover:bg-gray mt-2 flex h-12 w-max cursor-pointer items-center gap-x-1 rounded-lg border border-solid border-[#626262] px-6 text-base font-semibold leading-6 text-white transition duration-500 md:mt-6;
+  @apply mt-2 flex h-12 w-max cursor-pointer items-center gap-x-1 rounded-lg border border-solid border-[#626262] px-6 text-base font-semibold leading-6 text-white transition duration-500 hover:bg-gray md:mt-6;
 }
 .button svg {
   @apply transition duration-500;
 }
 
 .post-card {
-  @apply hover:bg-gray border-gray flex h-16 items-center rounded-lg border border-solid px-4 transition duration-500 sm:border-0;
+  @apply flex h-16 items-center rounded-lg border border-solid border-gray px-4 transition duration-500 hover:bg-gray sm:border-0;
 }
 .post-card-title {
   @apply text-base font-medium leading-6 text-secondary transition duration-500 group-hover:text-white;
@@ -75,7 +78,7 @@ nav a {
   @apply text-xs leading-[18px] text-secondary transition duration-500 group-hover:text-white;
 }
 .post-card-container {
-  @apply border-gray flex h-16 w-full items-center justify-between border-b border-solid transition duration-500;
+  @apply flex h-16 w-full items-center justify-between border-b border-solid border-gray transition duration-500;
 }
 
 /* COMPONENTS END */
@@ -91,7 +94,7 @@ nav a {
   @apply title max-w-max;
 }
 .section-button {
-  @apply border-gray hover:bg-gray flex h-8 cursor-pointer items-center rounded-lg border border-solid px-4 text-sm text-white transition duration-500;
+  @apply flex h-8 cursor-pointer items-center rounded-lg border border-solid border-gray px-4 text-sm text-white transition duration-500 hover:bg-gray;
 }
 .section-button svg {
   @apply ml-2 transition duration-500;
@@ -106,16 +109,16 @@ nav a {
   @apply flex flex-wrap gap-y-4 sm:-ml-4 sm:w-[calc(100%+32px)] sm:gap-y-0;
 }
 .project-card {
-  @apply hover:bg-gray border-gray flex h-16 w-full rounded-lg border border-solid transition duration-500 sm:border-0 md:w-1/2;
+  @apply flex h-16 w-full rounded-lg border border-solid border-gray transition duration-500 hover:bg-gray sm:border-0 md:w-1/2;
 }
 .project-card-container {
-  @apply sm:border-gray mx-4 flex h-16 w-full items-center justify-between transition duration-500 sm:border-b sm:border-solid;
+  @apply mx-4 flex h-16 w-full items-center justify-between transition duration-500 sm:border-b sm:border-solid sm:border-gray;
 }
 .project-card-title {
   @apply transition duration-500 group-hover:text-white;
 }
 .project-card-category {
-  @apply border-gray flex h-7 items-center rounded-lg border border-solid px-[12px] text-sm text-secondary transition duration-500 group-hover:border-white group-hover:text-white;
+  @apply flex h-7 items-center rounded-lg border border-solid border-gray px-[12px] text-sm text-secondary transition duration-500 group-hover:border-white group-hover:text-white;
 }
 /* PROJECT LIST END  */
 
@@ -154,7 +157,7 @@ footer {
   @apply mt-1 text-base font-medium text-white;
 }
 .copyright {
-  @apply border-gray mt-10 flex h-24 flex-col justify-evenly border-t border-solid md:h-20 md:flex-row md:items-center md:justify-between;
+  @apply mt-10 flex h-24 flex-col justify-evenly border-t border-solid border-gray md:h-20 md:flex-row md:items-center md:justify-between;
 }
 .copyright-text {
   @apply text-secondary;
@@ -163,3 +166,43 @@ footer {
   @apply flex gap-x-6;
 }
 /* FOOTER END */
+
+/* ABOUT */
+.about {
+  @apply flex flex-col gap-y-10 sm:flex-row sm:justify-between sm:gap-0 sm:gap-x-6;
+}
+.about-text {
+  @apply sm:w-3/4 md:w-1/2;
+}
+.about-photo img {
+  @apply w-full rounded-2xl sm:w-full sm:max-w-[380px] sm:rotate-3;
+}
+.gallery img {
+  @apply rounded-lg;
+}
+.gallery {
+  @apply mt-4 grid grid-cols-[repeat(1,1fr)] grid-rows-[repeat(1,1fr)] gap-x-4 gap-y-4 sm:mt-16 sm:grid-cols-[repeat(2,1fr)] sm:grid-rows-[repeat(2,1fr)] md:mt-20 md:grid-cols-[repeat(3,1fr)] md:grid-rows-[repeat(3,1fr)];
+}
+.gallery div img {
+  @apply h-full w-full object-cover;
+}
+.gallery div:nth-child(1) {
+  @apply sm:h-full md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2;
+}
+.gallery div:nth-child(2) {
+  @apply sm:h-full md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3;
+}
+.gallery div:nth-child(3) {
+  @apply sm:h-full md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-2;
+}
+.gallery div:nth-child(4) {
+  @apply sm:h-full md:col-start-1 md:col-end-2 md:row-start-2 md:row-end-4;
+}
+.gallery div:nth-child(5) {
+  @apply sm:h-full md:col-start-2 md:col-end-3 md:row-start-3 md:row-end-4;
+}
+.gallery div:nth-child(6) {
+  @apply sm:h-full md:col-start-3 md:col-end-4 md:row-start-2 md:row-end-4;
+}
+
+/* ABOUT END */

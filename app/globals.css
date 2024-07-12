@@ -216,3 +216,15 @@ footer {
 }
 
 /* FILTER END */
+
+/* PHOTOS */
+.photos-heading {
+  @apply w-1/2;
+}
+.photos-gallery {
+  @apply mt-10 flex flex-wrap gap-6;
+}
+.photos-gallery img {
+  @apply w-full rounded-lg object-cover sm:w-[calc(50%-12px)] md:h-[360px] md:w-[calc(33%-13px)];
+}
+/* PHOTOS END */

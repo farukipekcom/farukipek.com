@@ -206,3 +206,13 @@ footer {
 }
 
 /* ABOUT END */
+
+/* FILTER */
+.tags {
+  @apply mb-10 mt-10 flex flex-wrap gap-3;
+}
+.tag {
+  @apply flex h-7 cursor-pointer items-center rounded-lg border border-solid border-[#525252] bg-primary px-3 text-sm text-secondary hover:border-secondary hover:bg-gray;
+}
+
+/* FILTER END */

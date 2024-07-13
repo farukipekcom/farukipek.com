@@ -1,11 +1,14 @@
 import React from "react";
 import Link from "next/link";
-export default function PostCard({ title, category }) {
+export default function ProjectCard({ title, category, link, keywords }) {
   return (
-    <Link href="#" className="project-card group">
+    <Link href={link} target="_blank" className="project-card group">
       <div className="project-card-container">
-        <div className="project-card-title">{title}</div>
-        <div className="project-card-category">{category}</div>
+        <div className="project-card-title">
+          {title}
+          <span className="project-card-category">{category}</span>
+        </div>
+        <div className="project-card-keywords">{keywords}</div>
       </div>
     </Link>
   );

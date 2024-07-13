@@ -109,16 +109,31 @@ nav a {
   @apply flex flex-wrap gap-y-4 sm:-ml-4 sm:w-[calc(100%+32px)] sm:gap-y-0;
 }
 .project-card {
-  @apply flex h-16 w-full rounded-lg border border-solid border-gray transition duration-500 hover:bg-gray sm:border-0 md:w-1/2;
+  @apply flex h-16 w-full rounded-lg border border-solid border-gray transition duration-500 sm:border-0 md:w-1/2;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.3s linear;
 }
 .project-card-container {
-  @apply mx-4 flex h-16 w-full items-center justify-between transition duration-500 sm:border-b sm:border-solid sm:border-gray;
+  @apply mx-4 flex h-16 w-full items-center justify-between transition duration-300 sm:border-b sm:border-solid sm:border-gray;
 }
 .project-card-title {
-  @apply transition duration-500 group-hover:text-white;
+  @apply relative z-10 transition-all duration-300 group-hover:text-primary;
 }
 .project-card-category {
-  @apply flex h-7 items-center rounded-lg border border-solid border-gray px-[12px] text-sm text-secondary transition duration-500 group-hover:border-white group-hover:text-white;
+  @apply absolute top-0 z-10 ml-2 hidden w-full text-xs font-medium text-primary transition-all duration-300 group-hover:inline-block;
+}
+.project-card-keywords {
+  @apply z-10 flex h-7 items-center rounded-lg border border-solid border-gray px-[12px] text-sm text-secondary transition-all duration-300 group-hover:border-primary group-hover:text-primary;
+}
+.project-card::before {
+  @apply absolute inset-0 z-[1] rounded-lg opacity-0;
+  content: "";
+  background: linear-gradient(90deg, #e4cf8d 0%, #dfb86c 50%, #dc8054 100%);
+  transition: opacity 0.3s linear;
+}
+.project-card:hover::before {
+  opacity: 1;
 }
 /* PROJECT LIST END  */
 
@@ -219,7 +234,7 @@ footer {
 
 /* PHOTOS */
 .photos-heading {
-  @apply w-1/2;
+  @apply md:w-1/2;
 }
 .photos-gallery {
   @apply mt-10 flex flex-wrap gap-6;
@@ -228,3 +243,17 @@ footer {
   @apply w-full rounded-lg object-cover sm:w-[calc(50%-12px)] md:h-[360px] md:w-[calc(33%-13px)];
 }
 /* PHOTOS END */
+
+/* PROJECTS */
+.projects-heading {
+  @apply md:w-1/2;
+}
+.projects {
+  @apply mt-10;
+}
+.projects .project-lists {
+}
+.projects .project-lists .project-card {
+  @apply md:w-8/12;
+}
+/* PROJECTS END */

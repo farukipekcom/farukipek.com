@@ -10,6 +10,7 @@ export default function PostCard({ title, date, slug }) {
     >
       <div className="post-card-container">
         <div className="post-card-title">{title}</div>
+        <div className="line"></div>
         <div className="post-card-date">{format(date, "LLLL d, yyyy")}</div>
       </div>
     </Link>

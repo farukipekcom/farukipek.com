@@ -6,7 +6,7 @@ export default async function ProjectList() {
   const supabase = createClient();
   const { data, error } = await supabase.from("projects").select();
   return (
-    <div className="project-lists">
+    <div className="project-list">
       {data.map((project) => {
         return (
           <ProjectCard

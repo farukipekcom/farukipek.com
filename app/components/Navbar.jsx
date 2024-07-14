@@ -3,9 +3,11 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Close from "./icons/Close";
 import Menu from "./icons/Menu";
+import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [width, setWidth] = useState();
+  const pathname = usePathname();
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -19,7 +21,8 @@ export default function Navbar() {
     if (width > 640) {
       setIsMobile(false);
     }
-  }, [width]);
+    setIsMobile(false);
+  }, [width, pathname]);
   return (
     <>
       <nav className={isMobile === true ? "mobile-nav" : ""}>

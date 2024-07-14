@@ -5,6 +5,9 @@
 body {
   @apply mx-4 bg-primary text-base leading-7 text-secondary sm:mx-10 sm:my-0 md:m-0;
 }
+.custom-transition {
+  @apply transition-all duration-300;
+}
 .pagecontainer {
   @apply mx-auto w-full sm:w-full md:w-[960px];
 }
@@ -16,7 +19,7 @@ header {
   @apply pagecontainer relative mb-10 flex h-20 w-auto items-center justify-between py-5 text-secondary sm:mb-16 md:mb-20;
 }
 .logo {
-  @apply flex h-10 items-center gap-x-4 transition duration-300 hover:opacity-80;
+  @apply custom-transition flex h-10 items-center gap-x-4 duration-300 hover:opacity-80;
 }
 .logo-profile {
   @apply rounded-full;
@@ -40,7 +43,7 @@ nav a {
   @apply flex h-full items-center rounded-lg px-4 text-base font-semibold text-secondary transition duration-300 hover:bg-white/10 hover:text-white;
 }
 .mobile-nav {
-  @apply absolute left-0 top-20 flex h-auto w-full flex-col items-start gap-y-2 bg-primary py-4 sm:hidden;
+  @apply absolute left-0 top-20 z-20 flex h-auto w-full flex-col items-start gap-y-2 bg-primary py-4 sm:hidden;
 }
 .mobile-nav a {
   @apply h-10 w-full;
@@ -62,38 +65,60 @@ nav a {
 
 /* COMPONENTS */
 .button {
-  @apply mt-2 flex h-12 w-max cursor-pointer items-center gap-x-1 rounded-lg border border-solid border-[#626262] px-6 text-base font-semibold leading-6 text-white transition duration-500 hover:bg-gray md:mt-6;
+  @apply custom-transition mt-2 flex h-12 w-max cursor-pointer items-center gap-x-1 rounded-lg border border-solid border-[#626262] px-6 text-base font-semibold leading-6 text-white hover:bg-gray md:mt-6;
 }
+
 .button svg {
   @apply transition duration-500;
 }
-
+/* COMPONENTS END */
+.post {
+  @apply mt-10;
+}
+.post-list {
+  @apply flex flex-wrap gap-y-4 sm:-ml-4 sm:w-[calc(100%+32px)] sm:gap-y-0;
+}
 .post-card {
-  @apply flex h-16 items-center rounded-lg border border-solid border-gray px-4 transition duration-500 hover:bg-gray sm:border-0;
-  position: relative;
-  z-index: 2;
-  transition: opacity 0.3s linear;
+  @apply custom-transition flex h-14 w-full rounded-lg hover:bg-gray sm:border-0 md:w-1/2;
 }
-.post-card-title {
-  @apply relative z-10 text-base font-medium leading-6 text-secondary transition duration-300 group-hover:text-primary;
-}
-.post-card-date {
-  @apply z-10 text-xs leading-[18px] text-secondary transition duration-300 group-hover:text-primary;
+.post-card {
+  @apply h-14 sm:w-[calc(100%+32px)];
 }
 .post-card-container {
-  @apply flex h-16 w-full items-center justify-between border-b border-solid border-gray transition duration-300;
+  @apply mx-4 flex h-14 w-full items-center justify-between;
 }
-.post-card::before {
-  @apply absolute inset-0 z-[1] rounded-lg opacity-0;
-  content: "";
-  background: linear-gradient(90deg, #e4cf8d 0%, #dfb86c 50%, #dc8054 100%);
-  transition: opacity 0.3s linear;
+.post-card-title {
+  @apply custom-transition relative min-w-max group-hover:text-white;
 }
-.post-card:hover::before {
-  opacity: 1;
+.line {
+  @apply ml-4 mr-4 h-[1px] w-full bg-white/10;
 }
-/* COMPONENTS END */
+.post-card-date {
+  @apply custom-transition min-w-max text-xs leading-[18px] text-secondary group-hover:text-white;
+}
 
+/*  */
+.project {
+  @apply mt-10;
+}
+.project-list {
+  @apply flex flex-wrap gap-4;
+}
+.project-card {
+  @apply custom-transition flex h-14 w-full rounded-lg border border-solid border-gray hover:bg-gray sm:w-[calc(100%+32px)] md:w-[calc(50%-8px)];
+}
+.project-card-container {
+  @apply mx-4 flex h-14 w-full items-center justify-between;
+}
+.project-card-title {
+  @apply custom-transition relative min-w-max group-hover:text-white;
+}
+.project-card-category {
+  @apply custom-transition absolute top-0 ml-2 w-full text-xs font-medium text-white opacity-0 group-hover:inline-block group-hover:opacity-100;
+}
+.project-card-keywords {
+  @apply custom-transition flex h-7 items-center rounded-lg border border-solid border-gray px-[12px] text-sm text-secondary group-hover:border-white group-hover:text-white;
+}
 /* BLOG POSTS LIST */
 .section {
   @apply mt-20 flex flex-col gap-y-6 sm:mt-16 md:mt-20;
@@ -105,48 +130,13 @@ nav a {
   @apply title max-w-max;
 }
 .section-button {
-  @apply flex h-8 cursor-pointer items-center rounded-lg border border-solid border-gray px-4 text-sm text-white transition duration-500 hover:bg-gray;
+  @apply custom-transition flex h-8 cursor-pointer items-center rounded-lg border border-solid border-gray px-4 text-sm text-white hover:bg-gray;
 }
 .section-button svg {
-  @apply ml-2 transition duration-500;
+  @apply custom-transition ml-2;
 }
-.posts-lists {
-  @apply mt-10 flex flex-col gap-y-4 sm:-ml-4 sm:w-[calc(100%+32px)] sm:gap-y-0;
-}
-/* BLOG POSTS LIST END */
 
-/* PROJECT LIST  */
-.project-lists {
-  @apply flex flex-wrap gap-y-4 sm:-ml-4 sm:w-[calc(100%+32px)] sm:gap-y-0;
-}
-.project-card {
-  @apply flex h-16 w-full rounded-lg border border-solid border-gray transition duration-500 sm:border-0 md:w-1/2;
-  position: relative;
-  z-index: 2;
-  transition: opacity 0.3s linear;
-}
-.project-card-container {
-  @apply mx-4 flex h-16 w-full items-center justify-between transition duration-300 sm:border-b sm:border-solid sm:border-gray;
-}
-.project-card-title {
-  @apply relative z-10 transition-all duration-300 group-hover:text-primary;
-}
-.project-card-category {
-  @apply absolute top-0 z-10 ml-2 hidden w-full text-xs font-medium text-primary transition-all duration-300 group-hover:inline-block;
-}
-.project-card-keywords {
-  @apply z-10 flex h-7 items-center rounded-lg border border-solid border-gray px-[12px] text-sm text-secondary transition-all duration-300 group-hover:border-primary group-hover:text-primary;
-}
-.project-card::before {
-  @apply absolute inset-0 z-[1] rounded-lg opacity-0;
-  content: "";
-  background: linear-gradient(90deg, #e4cf8d 0%, #dfb86c 50%, #dc8054 100%);
-  transition: opacity 0.3s linear;
-}
-.project-card:hover::before {
-  opacity: 1;
-}
-/* PROJECT LIST END  */
+/* BLOG POSTS LIST END */
 
 /* FOOTER */
 footer {
@@ -261,11 +251,6 @@ footer {
 }
 .projects {
   @apply mt-10;
-}
-.projects .project-lists {
-}
-.projects .project-lists .project-card {
-  @apply md:w-8/12;
 }
 /* PROJECTS END */
 /* POST */

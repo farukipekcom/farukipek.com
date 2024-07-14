@@ -5,13 +5,13 @@ import ProjectList from "../components/ProjectList";
 export default function Projects() {
   return (
     <main>
-      <div className="projects-heading">
+      <div className="project-heading">
         <PageTitle>Projects</PageTitle>
         <PageText>
           Companies I’ve worked with and some side projects I’ve done.
         </PageText>
       </div>
-      <div className="projects">
+      <div className="project">
         <ProjectList />
       </div>
     </main>

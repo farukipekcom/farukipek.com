@@ -6,7 +6,7 @@ export default async function PostList() {
   const supabase = createClient();
   const { data: posts, error } = await supabase.from("posts").select();
   return (
-    <div className="posts-lists">
+    <div className="post-list">
       {posts.map((post) => {
         return (
           <PostCard

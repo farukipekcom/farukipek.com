@@ -152,7 +152,7 @@ footer {
   @apply text-4xl font-medium text-white;
 }
 .footer-heading-link {
-  @apply mt-9 text-2xl font-semibold text-orange-300 underline;
+  @apply custom-transition mt-9 w-max text-2xl font-semibold text-orange-400 underline hover:text-orange-500;
 }
 .footer-menu {
   @apply flex w-full flex-col md:w-1/2;

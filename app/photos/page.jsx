@@ -13,7 +13,6 @@ async function getData() {
 }
 export default async function Photos() {
   const data = await getData();
-  console.log(data);
   return (
     <main>
       <Title>Photos</Title>

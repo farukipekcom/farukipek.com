@@ -9,9 +9,11 @@ export default function PostCard({ title, date, slug }) {
       className={`${styles.post} group`}
     >
       <div className={styles.container}>
-        <div className={styles.title}>{title}</div>
+        <div className={`${styles.title} group-hover:text-white`}>{title}</div>
         <div className={styles.line}></div>
-        <div className={styles.date}>{format(date, "LLLL d, yyyy")}</div>
+        <div className={`${styles.date} group-hover:text-white`}>
+          {format(date, "LLLL d, yyyy")}
+        </div>
       </div>
     </Link>
   );

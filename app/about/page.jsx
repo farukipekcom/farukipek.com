@@ -36,42 +36,42 @@ export default function About() {
       </div>
       <div className={styles.gallery}>
         <Image
-          src="/1.jpg"
+          src="/about-1.jpg"
           sizes="100vw"
           width={500}
           height={500}
           alt="Faruk Ipek"
         ></Image>
         <Image
-          src="/2.jpg"
+          src="/about-2.jpg"
           sizes="100vw"
           width={500}
           height={500}
           alt="Faruk Ipek"
         ></Image>
         <Image
-          src="/3.jpg"
+          src="/about-3.jpg"
           sizes="100vw"
           width={500}
           height={500}
           alt="Faruk Ipek"
         ></Image>
         <Image
-          src="/4.jpg"
+          src="/about-4.jpg"
           sizes="100vw"
           width={500}
           height={500}
           alt="Faruk Ipek"
         ></Image>
         <Image
-          src="/5.jpg"
+          src="/about-5.jpg"
           sizes="100vw"
           width={500}
           height={500}
           alt="Faruk Ipek"
         ></Image>
         <Image
-          src="/6.jpg"
+          src="/about-6.jpg"
           sizes="100vw"
           width={500}
           height={500}

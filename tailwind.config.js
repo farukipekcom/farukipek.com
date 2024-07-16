@@ -12,6 +12,10 @@ module.exports = {
         secondary: "#C4C4C4",
         gray: "#282727",
       },
+      aspectRatio: {
+        "4/3": "4 / 3",
+        "3/4": "3 / 4",
+      },
     },
     screens: {
       sm: "768px",

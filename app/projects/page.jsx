@@ -1,18 +1,15 @@
 import React from "react";
-import PageTitle from "../components/PageTitle";
-import PageText from "../components/PageText";
-import ProjectList from "../components/ProjectList";
+import Title from "../components/Title/Title";
+import Text from "../components/Text/Text";
+import List from "../components/Projects/ProjectList";
+import styles from "./projects.module.css";
 export default function Projects() {
   return (
     <main>
-      <div className="project-heading">
-        <PageTitle>Projects</PageTitle>
-        <PageText>
-          Companies I’ve worked with and some side projects I’ve done.
-        </PageText>
-      </div>
-      <div className="project">
-        <ProjectList />
+      <Title>Projects</Title>
+      <Text>Companies I’ve worked with and some side projects I’ve done.</Text>
+      <div className={styles.list}>
+        <List />
       </div>
     </main>
   );

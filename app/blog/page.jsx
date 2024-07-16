@@ -1,16 +1,15 @@
 import React from "react";
-import PageTitle from "../components/PageTitle";
-import PageText from "../components/PageText";
-import PostList from "../components/PostList";
+import Title from "../components/Title/Title";
+import Text from "../components/Text/Text";
+import BlogList from "../components/Blog/BlogList";
+import styles from "./blog.module.css";
 export default async function Blog() {
   return (
     <main>
-      <div className="post-heading">
-        <PageTitle>Blog</PageTitle>
-        <PageText>I enjoy share about how I work, design and live.</PageText>
-      </div>
-      <div className="post">
-        <PostList />
+      <Title>Blog</Title>
+      <Text>I enjoy share about how I work, design and live.</Text>
+      <div className={styles.list}>
+        <BlogList />
       </div>
     </main>
   );

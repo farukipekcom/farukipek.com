@@ -1,12 +1,12 @@
-/* eslint-disable @next/next/no-async-client-component */
 import React from "react";
 import PostCard from "./PostCard";
-import { createClient } from "../utils/supabase/server";
-export default async function PostList() {
+import { createClient } from "../../utils/supabase/server";
+import styles from "./BlogList.module.css";
+export default async function BlogList() {
   const supabase = createClient();
   const { data: posts, error } = await supabase.from("posts").select();
   return (
-    <div className="post-list">
+    <div className={styles.blog}>
       {posts.map((post) => {
         return (
           <PostCard

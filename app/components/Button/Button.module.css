@@ -1,0 +1,6 @@
+.button {
+  @apply mt-2 flex h-12 w-max cursor-pointer items-center gap-x-1 rounded-lg border border-solid border-[#626262] px-6 text-base font-semibold leading-6 text-white transition-all duration-300 hover:bg-gray md:mt-6;
+}
+.button svg {
+  @apply transition-all duration-300;
+}

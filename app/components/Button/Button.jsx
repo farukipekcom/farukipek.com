@@ -1,8 +1,9 @@
 import React from "react";
-import Arrow from "./icons/Arrow";
+import Arrow from "../icons/Arrow";
+import styles from "./Button.module.css";
 export default function Button({ children }) {
   return (
-    <div className="button group">
+    <div className={styles.button}>
       {children}
       <Arrow />
     </div>

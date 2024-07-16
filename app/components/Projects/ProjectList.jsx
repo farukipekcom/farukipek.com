@@ -1,12 +1,12 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { createClient } from "../utils/supabase/server";
-
+import { createClient } from "../../utils/supabase/server";
+import styles from "./ProjectList.module.css";
 export default async function ProjectList() {
   const supabase = createClient();
   const { data, error } = await supabase.from("projects").select();
   return (
-    <div className="project-list">
+    <div className={styles.projects}>
       {data.map((project) => {
         return (
           <ProjectCard

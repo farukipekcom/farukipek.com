@@ -1,0 +1,15 @@
+.logo {
+  @apply flex h-10 items-center gap-x-4 transition-all duration-300 hover:opacity-80;
+}
+.photo {
+  @apply rounded-full;
+}
+.heading {
+  @apply flex h-full flex-col justify-between;
+}
+.name {
+  @apply w-max text-lg font-semibold leading-none text-white;
+}
+.role {
+  @apply w-max text-sm leading-none text-secondary;
+}

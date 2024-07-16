@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import Close from "./icons/Close";
-import Menu from "./icons/Menu";
+import Close from "../icons/Close";
+import Menu from "../icons/Menu";
 import { usePathname } from "next/navigation";
+import styles from "./Navbar.module.css";
 export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [width, setWidth] = useState();
@@ -25,14 +26,14 @@ export default function Navbar() {
   }, [width, pathname]);
   return (
     <>
-      <nav className={isMobile === true ? "mobile-nav" : ""}>
+      <nav className={isMobile === true ? styles.mobile : styles.desktop}>
         <Link href="/about">About</Link>
         <Link href="/blog">Blog</Link>
         <Link href="/photos">Photos</Link>
         <Link href="/projects">Projects</Link>
       </nav>
       <div
-        className="menuicon"
+        className={styles.icon}
         onClick={() => {
           setIsMobile(!isMobile);
         }}

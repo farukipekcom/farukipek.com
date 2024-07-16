@@ -1,0 +1,33 @@
+.about {
+  @apply flex flex-col gap-y-10 sm:flex-row sm:justify-between sm:gap-0 sm:gap-x-6;
+}
+.photo {
+  @apply h-[360px] w-[360px] rounded-2xl object-cover sm:h-[auto] sm:w-[360px];
+}
+.gallery img {
+  @apply rounded-lg;
+}
+.gallery {
+  @apply mt-4 grid grid-cols-[repeat(1,1fr)] grid-rows-[repeat(1,1fr)] gap-x-4 gap-y-4 sm:mt-16 sm:grid-cols-[repeat(2,1fr)] sm:grid-rows-[repeat(2,1fr)] md:mt-20 md:grid-cols-[repeat(3,1fr)] md:grid-rows-[repeat(3,1fr)];
+}
+.gallery img {
+  @apply h-full w-full object-cover;
+}
+.gallery img:nth-child(1) {
+  @apply sm:h-full md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2;
+}
+.gallery img:nth-child(2) {
+  @apply sm:h-full md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3;
+}
+.gallery img:nth-child(3) {
+  @apply sm:h-full md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-2;
+}
+.gallery img:nth-child(4) {
+  @apply sm:h-full md:col-start-1 md:col-end-2 md:row-start-2 md:row-end-4;
+}
+.gallery img:nth-child(5) {
+  @apply sm:h-full md:col-start-2 md:col-end-3 md:row-start-3 md:row-end-4;
+}
+.gallery img:nth-child(6) {
+  @apply sm:h-full md:col-start-3 md:col-end-4 md:row-start-2 md:row-end-4;
+}

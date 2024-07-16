@@ -5,6 +5,7 @@ import Close from "../icons/Close";
 import Menu from "../icons/Menu";
 import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
+import Logo from "../Logo/Logo";
 export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [width, setWidth] = useState();
@@ -25,12 +26,37 @@ export default function Navbar() {
     setIsMobile(false);
   }, [width, pathname]);
   return (
-    <>
+    <div className={styles.navbar}>
       <nav className={isMobile === true ? styles.mobile : styles.desktop}>
-        <Link href="/about">About</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/photos">Photos</Link>
-        <Link href="/projects">Projects</Link>
+        {isMobile === true ? <Logo /> : ""}
+        <Link
+          href="/about"
+          className={styles.item}
+          onClick={() => setIsMobile(false)}
+        >
+          About
+        </Link>
+        <Link
+          href="/blog"
+          className={styles.item}
+          onClick={() => setIsMobile(false)}
+        >
+          Blog
+        </Link>
+        <Link
+          href="/photos"
+          className={styles.item}
+          onClick={() => setIsMobile(false)}
+        >
+          Photos
+        </Link>
+        <Link
+          href="/projects"
+          className={styles.item}
+          onClick={() => setIsMobile(false)}
+        >
+          Projects
+        </Link>
       </nav>
       <div
         className={styles.icon}
@@ -40,6 +66,6 @@ export default function Navbar() {
       >
         {isMobile === true ? <Close /> : <Menu />}
       </div>
-    </>
+    </div>
   );
 }

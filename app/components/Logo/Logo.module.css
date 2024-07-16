@@ -1,5 +1,5 @@
 .logo {
-  @apply flex h-10 items-center gap-x-4 transition-all duration-300 hover:opacity-80;
+  @apply flex h-10 items-center gap-x-4 transition-all duration-300 sm:hover:opacity-80;
 }
 .photo {
   @apply rounded-full;
@@ -11,5 +11,5 @@
   @apply w-max text-lg font-semibold leading-none text-white;
 }
 .role {
-  @apply w-max text-sm leading-none text-secondary;
+  @apply w-max text-sm font-normal leading-none text-secondary;
 }

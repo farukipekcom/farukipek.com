@@ -3,6 +3,13 @@ import Title from "../components/Title/Title";
 import Text from "../components/Text/Text";
 import Image from "next/image";
 import styles from "./about.module.css";
+
+export const metadata = {
+  title: "About",
+  description:
+    "I am Faruk Ipek, a freelancer front-end developer from Chicago, USA. I have been building stuff on the internet for the last 6 years.",
+};
+
 export default function About() {
   return (
     <main>

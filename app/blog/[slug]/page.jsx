@@ -3,6 +3,29 @@ import { createClient } from "../../utils/supabase/server";
 import { notFound } from "next/navigation";
 import styles from "./Post.module.css";
 export const dynamicParams = true;
+export async function generateMetadata({ params }, parent) {
+  const supabase = createClient();
+  const slug = params.slug;
+  const { data } = await supabase
+    .from("posts")
+    .select()
+    .eq("post_slug", slug)
+    .single();
+  if (!data) {
+    notFound();
+  }
+  return {
+    title: data.post_title + " - Faruk Ipek",
+    description: data.seo_description,
+    openGraph: {
+      title: data.post_title + " - Faruk Ipek",
+      description: data.seo_description,
+      type: "article",
+      publishedTime: data.created_at,
+      authors: ["Faruk Ipek"],
+    },
+  };
+}
 async function getPost(slug) {
   const supabase = createClient();
   const { data } = await supabase
@@ -15,7 +38,6 @@ async function getPost(slug) {
   }
   return data;
 }
-
 export default async function Post({ params }) {
   const post = await getPost(params.slug);
   const slug = params.slug;

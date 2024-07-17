@@ -47,10 +47,21 @@ export default function Footer() {
           © 2024 Faruk Ipek. Made with ❤️️️ and ☕ in Chicago.
         </div>
         <div className={styles.socials}>
-          <Twitter />
-          <Instagram />
-          <Linkedin />
-          <Github />
+          <Link href="https://x.com/farukipekcom" target="_blank">
+            <Twitter />
+          </Link>
+          <Link href="https://www.instagram.com/farukipekcom/" target="_blank">
+            <Instagram />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/farukipekcom/"
+            target="_blank"
+          >
+            <Linkedin />
+          </Link>
+          <Link href="https://github.com/farukipekcom/" target="_blank">
+            <Github />
+          </Link>
         </div>
       </div>
     </footer>

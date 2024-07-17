@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.custom-transition {
+  @apply transition-all duration-300;
+}
+body {
+  @apply mx-4 bg-primary text-base leading-7 text-secondary sm:mx-10 sm:my-0 md:m-0;
+}
+.pageContainer {
+  @apply mx-auto w-full sm:w-full md:w-[960px];
+}
+main {
+  @apply pageContainer;
+}
+/* FILTER */
+
+/* FILTER END */
+
+/* BLOG POST START */
+article p + p {
+  @apply mt-6;
+}
+article h2 {
+  @apply mt-10 text-3xl font-semibold text-white;
+}
+article h2 + p {
+  @apply mt-4;
+}
+article h3 {
+  @apply mt-10 text-2xl font-semibold text-white;
+}
+article h3 + p {
+  @apply mt-4;
+}
+article ul {
+  @apply mb-4 ml-6 mt-6 list-disc;
+}
+article ol {
+  @apply mb-4 ml-6 mt-6 list-decimal;
+}
+article a {
+  @apply font-bold text-white underline;
+}
+article b {
+  @apply font-bold text-white;
+}
+article img {
+  @apply mt-10 h-full w-full rounded-lg object-cover;
+}
+article .post-gallery {
+  @apply mt-10 flex flex-wrap gap-4;
+}
+article .post-gallery img {
+  @apply h-[420px] w-1/2 max-w-[376px] rounded-lg object-cover;
+}
+/* BLOG POST END */

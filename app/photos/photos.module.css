@@ -1,0 +1,9 @@
+.gallery {
+  @apply mt-10 flex flex-wrap gap-6;
+}
+.link {
+  @apply aspect-3/4 h-full w-full sm:w-[calc(50%-12px)] md:w-[calc(33%-13px)];
+}
+.photo {
+  @apply aspect-3/4 h-full w-full rounded-lg object-cover transition-all duration-300 sm:saturate-[0.8] sm:hover:scale-[1.03] sm:hover:saturate-100;
+}

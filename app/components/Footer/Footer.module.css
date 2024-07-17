@@ -1,0 +1,42 @@
+.footer {
+  @apply mt-20 flex flex-col sm:mt-16 md:mt-20;
+}
+.top {
+  @apply flex flex-col gap-y-10 md:flex-row md:gap-y-0;
+}
+.left {
+  @apply flex w-full flex-col md:w-1/2;
+}
+.heading {
+  @apply text-4xl font-medium text-white;
+}
+.link {
+  @apply mt-9 w-max text-2xl font-semibold text-orange-400 underline transition-all duration-300 hover:text-orange-500;
+}
+.right {
+  @apply flex w-full flex-col md:w-1/2;
+}
+.subtitle {
+  @apply text-lg font-semibold text-secondary;
+}
+.menu {
+  @apply mt-1 flex gap-x-6;
+}
+.item {
+  @apply text-base font-medium text-white;
+}
+.contact {
+  @apply mt-6 flex flex-col;
+}
+.email {
+  @apply mt-1 text-base font-medium text-white;
+}
+.bottom {
+  @apply mt-10 flex h-24 flex-col justify-evenly border-t border-solid border-gray md:h-20 md:flex-row md:items-center md:justify-between;
+}
+.copyright {
+  @apply text-secondary;
+}
+.socials {
+  @apply flex gap-x-6;
+}

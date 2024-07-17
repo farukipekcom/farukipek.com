@@ -1,0 +1,19 @@
+.hero {
+  @apply flex flex-col gap-4 sm:w-2/3 md:w-2/3;
+}
+
+.section {
+  @apply mt-20 flex flex-col gap-y-6 sm:mt-16 md:mt-20;
+}
+.heading {
+  @apply flex items-center gap-x-4;
+}
+.title {
+  @apply max-w-max text-2xl font-semibold leading-9 text-white;
+}
+.button {
+  @apply flex h-8 cursor-pointer items-center rounded-lg border border-solid border-gray px-4 text-sm text-white transition-all duration-300 hover:bg-gray;
+}
+.button svg {
+  @apply ml-2 transition-all duration-300;
+}

@@ -1,0 +1,15 @@
+.project {
+  @apply flex h-16 w-full rounded-lg border border-solid border-gray transition-all duration-300 hover:bg-gray sm:w-[calc(100%+32px)] md:w-[calc(50%-8px)];
+}
+.container {
+  @apply mx-4 flex h-16 w-full flex-col justify-center gap-y-2 sm:flex-row sm:items-center sm:justify-between sm:gap-0;
+}
+.title {
+  @apply relative min-w-max font-medium leading-[1rem] transition-all duration-300;
+}
+.category {
+  @apply absolute -top-2 ml-2 w-max text-xs font-medium leading-[1rem] text-white opacity-0 transition-all duration-300;
+}
+.keywords {
+  @apply flex items-center rounded-lg border-0 px-0 text-sm leading-[1rem] text-secondary transition-all duration-300 sm:h-7 sm:border sm:border-solid sm:border-gray sm:px-[12px];
+}

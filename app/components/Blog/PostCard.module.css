@@ -1,14 +1,16 @@
 .post {
-  @apply flex h-14 w-full justify-center rounded-lg border border-solid border-gray transition-all duration-300 hover:bg-gray sm:w-[calc(100%+32px)] sm:border-0;
+  @apply flex h-14 w-full justify-center rounded-lg border border-solid border-gray transition-all duration-300 hover:bg-gray sm:border-0;
+  /* sm:w-[calc(100%+32px)] */
 }
 .container {
-  @apply mx-4 flex h-14 w-full flex-col justify-center gap-y-2 sm:flex-row sm:items-center sm:justify-between sm:gap-0;
+  @apply flex h-14 w-full flex-col justify-center gap-y-2 sm:flex-row sm:items-center sm:justify-between sm:gap-0;
+  /* mx-4 */
 }
 .title {
   @apply relative min-w-max font-medium leading-[1rem] transition-all duration-300;
 }
 .line {
-  @apply ml-4 mr-4 hidden h-[1px] w-full bg-white/10 sm:flex;
+  @apply ml-4 mr-4 hidden h-[1px] bg-white/10 sm:flex;
 }
 .date {
   @apply min-w-max text-xs leading-[1rem] text-secondary transition-all duration-300;

@@ -1,3 +1,4 @@
 .blog {
-  @apply flex flex-wrap gap-y-4 sm:-ml-4 sm:w-[calc(100%+32px)] sm:gap-y-0;
+  @apply flex flex-wrap gap-y-4 sm:gap-y-0;
 }
+/* sm:-ml-4 sm:w-[calc(100%+32px)] */

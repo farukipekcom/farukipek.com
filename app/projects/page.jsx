@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <main>
       <Title>Projects</Title>
-      <Text>Companies I’ve worked with and some side projects I’ve done.</Text>
+      <Text>Companies I've worked with and side projects I've done</Text>
       <div className={styles.list}>
         <List />
       </div>

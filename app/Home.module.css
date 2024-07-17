@@ -1,5 +1,5 @@
 .hero {
-  @apply flex flex-col gap-4 sm:w-2/3 md:w-1/2;
+  @apply flex flex-col gap-4 sm:w-2/3 md:w-2/3;
 }
 
 .section {

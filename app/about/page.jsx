@@ -22,22 +22,26 @@ export default function About() {
           className={styles.photo}
         />
         <div className="page-intro">
-          <Title>
-            I'm Faruk Ipek. I live in Chicago. I build things for the web.
-          </Title>
+          <Title>I'm Faruk Ipek, a front-end developer based in Chicago.</Title>
           <Text>
-            My interest in web development started in 2013 when I started my own
-            website. I learned a lot about HTML & CSS after discovering
-            Wordpress. I've been building stuff on the web for the last 6 years.
+            My journey in web development began in 2016 when I created my first
+            website. My journey in web development began in 2016 when I created
+            my first website. Through WordPress, I gained a solid foundation in
+            web technologies, and I've been developing web projects ever since.
           </Text>
           <Text>
-            My focus is on creating fast and cool interfaces for people. Right
-            now I'm focused on Nexj.js. I love dealing with designs and writing
-            HTML & CSS.
+            My primary focus is on building fast, engaging interfaces, currently
+            with a keen interest in Next.js. I enjoy crafting designs and
+            writing HTML & CSS to bring ideas to life.
           </Text>
           <Text>
-            Outside of programming, I love designing, cycling and traveling.
-            Some of photos can be found on Instagram.
+            When I'm not programming, I love to immerse myself in various
+            activities. Photography is a significant passion of mine, and I
+            often capture moments from my cycling, hiking, and traveling
+            adventures. I enjoy exploring new trails and landscapes, whether on
+            two wheels or on foot. These activities not only keep me active but
+            also provide inspiration for my design work. You can check out some
+            of my photos on Instagram.
           </Text>
         </div>
       </div>

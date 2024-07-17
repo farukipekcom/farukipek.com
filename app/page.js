@@ -13,9 +13,10 @@ export default function Home() {
       <div className={styles.hero}>
         <Title>Hey! I'm Faruk 👋</Title>
         <Text>
-          I'm a front-end developer based in Chicago, USA. I've been building
-          stuff on the web for the last 6 years. I've worked with clients in
-          various countries and industries.
+          I'm a front-end developer from Chicago, USA. I've been designing and
+          developing websites since 2016. I have collaborated with clients
+          across different countries and industries, creating diverse web
+          solutions.
         </Text>
         <Button>Get in touch</Button>
       </div>

@@ -11,7 +11,7 @@ export const metadata = {
     default: "Faruk Ipek | Front-end Developer",
   },
   description:
-    "I am Faruk Ipek, a front-end developer based in Chicago, USA. I have been building stuff on the web for the since 2016.",
+    "I'm Faruk Ipek, a front-end developer from Chicago, USA. I've been designing and developing websites since 2016.",
   authors: [{ name: "Faruk Ipek" }],
   metadataBase: new URL("https://farukipek.com"),
   alternates: {
@@ -20,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: "Faruk Ipek | Front-end Developer",
     description:
-      "I am Faruk Ipek, a front-end developer based in Chicago, USA. I have been building stuff on the web for the since 2016.",
+      "I'm Faruk Ipek, a front-end developer from Chicago, USA. I've been designing and developing websites since 2016.",
     url: "https://nextjs.org",
     siteName: "Faruk Ipek",
     images: [

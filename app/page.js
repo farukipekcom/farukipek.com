@@ -26,7 +26,7 @@ export default function Home() {
             <Arrow size={20} />
           </Link>
         </div>
-        <BlogList />
+        <BlogList limit="5" />
       </div>
       <div className={styles.section}>
         <div className={styles.heading}>
@@ -36,7 +36,7 @@ export default function Home() {
             <Arrow size={20} />
           </Link>
         </div>
-        <ProjectList />
+        <ProjectList limit="8" />
       </div>
     </main>
   );

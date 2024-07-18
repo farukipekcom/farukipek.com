@@ -7,11 +7,11 @@
   /* mx-4 */
 }
 .title {
-  @apply relative min-w-max font-medium leading-[1rem] transition-all duration-300;
+  @apply relative ml-4 min-w-max font-medium leading-[1rem] transition-all duration-300 sm:ml-0;
 }
 .line {
   @apply ml-4 mr-4 hidden h-[1px] bg-white/10 sm:flex;
 }
 .date {
-  @apply min-w-max text-xs leading-[1rem] text-secondary transition-all duration-300;
+  @apply ml-4 min-w-max text-xs leading-[1rem] text-secondary transition-all duration-300 sm:ml-0;
 }

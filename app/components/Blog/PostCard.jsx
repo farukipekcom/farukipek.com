@@ -10,13 +10,13 @@ export default function PostCard({ title, date, slug }) {
     >
       <div className={styles.container}>
         <div
-          className={`${styles.title} group-hover:mr-4 group-hover:translate-x-4 group-hover:text-white`}
+          className={`${styles.title} group-hover:text-white sm:group-hover:mr-4 sm:group-hover:translate-x-4`}
         >
           {title}
         </div>
         <div className={`${styles.line} group w-[calc(100%)]`}></div>
         <div
-          className={`${styles.date} group-hover:ml-4 group-hover:-translate-x-4 group-hover:text-white`}
+          className={`${styles.date} group-hover:text-white sm:group-hover:ml-4 sm:group-hover:-translate-x-4`}
         >
           {format(date, "LLLL d, yyyy")}
         </div>

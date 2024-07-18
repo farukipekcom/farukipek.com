@@ -15,10 +15,11 @@ export default function About() {
     <main>
       <div className={styles.about}>
         <Image
-          src="/faruk-ipek.png"
-          width={360}
-          height={360}
+          src="/faruk-ipek.webp"
+          width={1000}
+          height={1000}
           alt="Faruk Ipek"
+          quality={100}
           className={styles.photo}
         />
         <div className="page-intro">

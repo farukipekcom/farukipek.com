@@ -7,7 +7,7 @@ import styles from "./about.module.css";
 export const metadata = {
   title: "About",
   description:
-    "I am Faruk Ipek, a freelancer front-end developer from Chicago, USA. I have been building stuff on the internet for the last 6 years.",
+    "I am Faruk Ipek, a freelancer front-end developer from Chicago, USA. My journey in web development began in 2016 when I created my first website.",
 };
 
 export default function About() {

@@ -23,20 +23,26 @@
   @apply mt-1 flex gap-x-6;
 }
 .item {
-  @apply text-base font-medium text-white;
+  @apply text-base font-medium text-white hover:underline;
 }
 .contact {
   @apply mt-6 flex flex-col;
 }
 .email {
-  @apply mt-1 text-base font-medium text-white;
+  @apply mt-1 text-base font-medium text-white hover:underline;
 }
 .bottom {
   @apply mt-10 flex h-24 flex-col justify-evenly border-t border-solid border-gray md:h-20 md:flex-row md:items-center md:justify-between;
 }
 .copyright {
-  @apply text-secondary;
+  @apply font-medium text-secondary;
 }
 .socials {
   @apply flex gap-x-6;
+}
+.socials a:hover svg,
+.socials a:hover svg path,
+.socials a:hover svg g,
+.socials a:hover svg g path {
+  @apply fill-white transition-all duration-300;
 }

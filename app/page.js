@@ -18,7 +18,7 @@ export default function Home() {
           across different countries and industries, creating diverse web
           solutions.
         </Text>
-        <Button>Get in touch</Button>
+        <Button link="mailto:faruk@farukipek.com">Get in touch</Button>
       </div>
       <div className={styles.section}>
         <div className={styles.heading}>

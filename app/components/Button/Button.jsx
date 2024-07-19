@@ -1,11 +1,12 @@
 import React from "react";
 import Arrow from "../icons/Arrow";
 import styles from "./Button.module.css";
-export default function Button({ children }) {
+import Link from "next/link";
+export default function Button({ children, link }) {
   return (
-    <div className={styles.button}>
+    <Link href={link} className={styles.button}>
       {children}
       <Arrow />
-    </div>
+    </Link>
   );
 }

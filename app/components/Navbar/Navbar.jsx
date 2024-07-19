@@ -59,7 +59,7 @@ export default function Navbar() {
         </Link>
       </nav>
       <div
-        className={styles.icon}
+        className={`${isMobile === true ? styles.icon + " " + styles.fix : styles.icon}`}
         onClick={() => {
           setIsMobile(!isMobile);
         }}

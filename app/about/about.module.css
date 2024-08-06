@@ -8,7 +8,7 @@
   @apply mt-10 grid grid-cols-[repeat(1,1fr)] grid-rows-[repeat(1,1fr)] gap-6 sm:grid-cols-[repeat(2,1fr)] sm:grid-rows-[repeat(2,1fr)] md:grid-cols-[repeat(3,1fr)] md:grid-rows-[repeat(3,1fr)];
 }
 .gallery img {
-  @apply h-full w-full object-cover ring-1 ring-[#717178]/80;
+  @apply h-full w-full cursor-pointer object-cover ring-1 ring-[#717178]/80 sm:transition-all sm:duration-300 sm:hover:scale-105;
 }
 .gallery img:nth-child(1) {
   @apply aspect-4/3 sm:h-full md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2;
@@ -27,4 +27,7 @@
 }
 .gallery img:nth-child(6) {
   @apply aspect-3/4 sm:h-full md:col-start-3 md:col-end-4 md:row-start-2 md:row-end-4;
+}
+.test {
+  @apply h-10 w-10 bg-red-300;
 }

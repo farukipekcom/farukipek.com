@@ -2,9 +2,9 @@
 
 I'm a front-end developer from Chicago, USA. I've been designing and developing websites since 2016. I have collaborated with clients across different countries and industries, creating diverse web solutions.
 
-## ⭐️ [Demo](https://farukipek.com/)
-## ⭐️ [Figma](https://www.figma.com/design/xJhwNNOMM1Sih9UKE5t1LI/farukipek.com-2024?node-id=0-1&t=YpcXMVpePyvAal0a-1)
-
+### ⭐️ [Demo](https://farukipek.com/)
+### 📌 [Figma Design File](https://www.figma.com/design/xJhwNNOMM1Sih9UKE5t1LI/farukipek.com-2024?node-id=0-1&t=YpcXMVpePyvAal0a-1)
+---
 ### 📌 Homepage
 <img width="1527" alt="farukipek.com" src="https://github.com/user-attachments/assets/d06c2ecb-3071-4971-b89f-6674a597ca84">
 

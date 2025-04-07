@@ -44,7 +44,7 @@ export default function Footer() {
       </div>
       <div className={styles.bottom}>
         <div className={styles.copyright}>
-          © 2024 Faruk Ipek. Made with ❤️️️ and ☕ in Chicago.
+          © 2025 Faruk Ipek. Made with ❤️️️ and ☕ in Chicago.
         </div>
         <div className={styles.socials}>
           <Link

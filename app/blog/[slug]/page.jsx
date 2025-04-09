@@ -4,8 +4,9 @@ import { notFound } from "next/navigation";
 import styles from "./Post.module.css";
 export const dynamicParams = true;
 export async function generateMetadata({ params }, parent) {
-  const supabase = createClient();
-  const slug = params.slug;
+  const supabase = await createClient();
+  const getParams = await params;
+  const slug = await getParams.slug;
   const { data } = await supabase
     .from("posts")
     .select()
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }, parent) {
   };
 }
 async function getPost(slug) {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data } = await supabase
     .from("posts")
     .select()
@@ -39,8 +40,9 @@ async function getPost(slug) {
   return data;
 }
 export default async function Post({ params }) {
-  const post = await getPost(params.slug);
-  const slug = params.slug;
+  const getParams = await params;
+  const slug = await getParams.slug;
+  const post = await getPost(await slug);
   return (
     <article className={`${styles.article} pageContainer`}>
       <div className={styles.heading}>

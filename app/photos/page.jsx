@@ -29,7 +29,7 @@ export default async function Photos() {
         {data.map((item) => {
           return (
             <Link
-              key="id"
+              key={item.id}
               href={item.links.html}
               target="_blank"
               className={styles.link}

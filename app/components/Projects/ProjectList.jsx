@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 import { createClient } from "../../utils/supabase/server";
 import styles from "./ProjectList.module.css";
 export default async function ProjectList({ limit = "1000" }) {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data, error } = await supabase
     .from("projects")
     .select()

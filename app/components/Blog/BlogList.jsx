@@ -3,7 +3,7 @@ import PostCard from "./PostCard";
 import { createClient } from "../../utils/supabase/server";
 import styles from "./BlogList.module.css";
 export default async function BlogList({ limit = "1000" }) {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: posts, error } = await supabase
     .from("posts")
     .select()

@@ -1,9 +1,9 @@
-import React from "react";
-import Twitter from "../icons/Twitter";
-import Instagram from "../icons/Instagram";
-import Github from "../icons/Github";
-import Linkedin from "../icons/Linkedin";
 import Link from "next/link";
+import React from "react";
+import Github from "../icons/Github";
+import Instagram from "../icons/Instagram";
+import Linkedin from "../icons/Linkedin";
+import Twitter from "../icons/Twitter";
 import styles from "./Footer.module.css";
 export default function Footer() {
   return (
@@ -44,7 +44,7 @@ export default function Footer() {
       </div>
       <div className={styles.bottom}>
         <div className={styles.copyright}>
-          © 2025 Faruk Ipek. Made with ❤️️️ and ☕ in Chicago.
+          © 2026 Faruk Ipek. Made with ❤️️️ and ☕ in Chicago.
         </div>
         <div className={styles.socials}>
           <Link

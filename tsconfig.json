@@ -12,10 +12,10 @@
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "plugins": [
       {
         "name": "next"
@@ -28,7 +28,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "app/blog/[slug]/page.jsx"
+    "app/blog/[slug]/page.jsx",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

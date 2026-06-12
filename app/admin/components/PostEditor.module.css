@@ -1,0 +1,36 @@
+.wrapper {
+  @apply overflow-hidden rounded-lg border border-gray;
+}
+
+.wrapper :global(.bn-container) {
+  --bn-colors-editor-background: #111010;
+  --bn-colors-editor-text: #c4c4c4;
+  --bn-colors-menu-background: #282727;
+  --bn-colors-menu-text: #c4c4c4;
+  --bn-colors-tooltip-background: #282727;
+  --bn-colors-tooltip-text: #ffffff;
+  --bn-colors-hovered-background: #282727;
+  --bn-colors-selected-background: #282727;
+  --bn-colors-disabled-background: #111010;
+  --bn-colors-disabled-text: #666666;
+  --bn-colors-shadow: rgba(0, 0, 0, 0.4);
+  --bn-colors-border: #282727;
+  --bn-colors-side-menu: #666666;
+  --bn-border-radius: 8px;
+}
+
+.wrapper :global(.bn-editor) {
+  @apply min-h-[320px] bg-primary px-2 py-3;
+}
+
+.wrapper :global(.bn-block-group) {
+  @apply text-secondary;
+}
+
+.wrapper :global(.bn-inline-content strong) {
+  @apply text-white;
+}
+
+.wrapper :global(.bn-inline-content a) {
+  @apply text-white underline;
+}

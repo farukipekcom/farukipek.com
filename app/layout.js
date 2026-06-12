@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        {children}
+        <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
         <AdminShortcut />
         <SpeedInsights />

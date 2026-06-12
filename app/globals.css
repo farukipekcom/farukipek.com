@@ -5,7 +5,7 @@
   @apply transition-all duration-300;
 }
 body {
-  @apply mx-4 bg-primary text-base leading-7 text-secondary sm:mx-10 sm:my-0 md:m-0;
+  @apply mx-4 flex min-h-screen flex-col bg-primary text-base leading-7 text-secondary sm:mx-10 sm:my-0 md:m-0;
 }
 .pageContainer {
   @apply mx-auto w-full sm:w-full md:w-[960px];

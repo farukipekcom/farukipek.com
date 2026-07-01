@@ -5,10 +5,10 @@ import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import AdminShortcut from "./components/AdminShortcut/AdminShortcut";
-
+import type { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     template: "%s - Faruk Ipek",
     default: "Faruk Ipek | Front-end Developer",

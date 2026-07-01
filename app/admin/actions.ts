@@ -1,16 +1,8 @@
 "use server";
 
 import { createClient } from "../utils/supabase/server";
+import { slugify } from "../utils/slugify";
 import { redirect } from "next/navigation";
-
-function slugify(text: string) {
-  return text
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/[\s_-]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
 
 function isEmptyHtml(html: string) {
   return !html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim();
@@ -53,8 +45,9 @@ export async function createPost(formData: FormData) {
   const ogImage = (formData.get("og_image") as string).trim();
   const category = (formData.get("post_category") as string).trim();
   const content = (formData.get("post_content") as string).trim();
+  const createdAt = (formData.get("created_at") as string).trim();
 
-  if (!title || !seoDescription || isEmptyHtml(content)) {
+  if (!title || !seoDescription || isEmptyHtml(content) || !createdAt) {
     redirect("/admin/posts/new?error=Title, SEO description, and content are required");
   }
 
@@ -65,6 +58,7 @@ export async function createPost(formData: FormData) {
     og_image: ogImage || null,
     post_category: category || null,
     post_content: content,
+    created_at: new Date(createdAt).toISOString(),
   });
 
   if (error) {
@@ -94,8 +88,9 @@ export async function updatePost(formData: FormData) {
   const ogImage = (formData.get("og_image") as string).trim();
   const category = (formData.get("post_category") as string).trim();
   const content = (formData.get("post_content") as string).trim();
+  const createdAt = (formData.get("created_at") as string).trim();
 
-  if (!postId || !title || !seoDescription || isEmptyHtml(content)) {
+  if (!postId || !title || !seoDescription || isEmptyHtml(content) || !createdAt) {
     redirect(
       `/admin/posts/${postId}/edit?error=Title, SEO description, and content are required`,
     );
@@ -110,6 +105,7 @@ export async function updatePost(formData: FormData) {
       og_image: ogImage || null,
       post_category: category || null,
       post_content: content,
+      created_at: new Date(createdAt).toISOString(),
     })
     .eq("post_id", postId);
 

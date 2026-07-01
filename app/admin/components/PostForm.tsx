@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import { createPost, updatePost } from "../actions";
+import { slugify } from "../../utils/slugify";
 
 const PostEditor = dynamic(() => import("./PostEditor"), {
   ssr: false,
@@ -21,6 +22,12 @@ function isEmptyHtml(html: string) {
     .trim();
 }
 
+function toDatetimeLocalValue(date: Date | string) {
+  const d = typeof date === "string" ? new Date(date) : date;
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+
 type Post = {
   post_id: number;
   post_title: string;
@@ -29,6 +36,7 @@ type Post = {
   og_image: string | null;
   post_category: string | null;
   post_content: string;
+  created_at: string;
 };
 
 export default function PostForm({
@@ -39,8 +47,26 @@ export default function PostForm({
   post?: Post;
 }) {
   const isEditing = Boolean(post);
+  const [title, setTitle] = useState(post?.post_title ?? "");
+  const [slug, setSlug] = useState(post?.post_slug ?? "");
+  const [slugManuallyEdited, setSlugManuallyEdited] = useState(() =>
+    post ? post.post_slug !== slugify(post.post_title) : false,
+  );
   const [content, setContent] = useState(post?.post_content ?? "");
   const [contentError, setContentError] = useState("");
+
+  function handleTitleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const value = e.target.value;
+    setTitle(value);
+    if (!slugManuallyEdited) {
+      setSlug(slugify(value));
+    }
+  }
+
+  function handleSlugChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setSlugManuallyEdited(true);
+    setSlug(e.target.value);
+  }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     if (isEmptyHtml(content)) {
@@ -72,7 +98,8 @@ export default function PostForm({
           type="text"
           name="title"
           required
-          defaultValue={post?.post_title}
+          value={title}
+          onChange={handleTitleChange}
           className={inputClassName}
         />
       </label>
@@ -87,9 +114,15 @@ export default function PostForm({
           type="text"
           name="slug"
           placeholder="my-new-post"
-          defaultValue={post?.post_slug}
+          value={slug}
+          onChange={handleSlugChange}
           className={inputClassName}
         />
+        {slug && (
+          <span className="mt-2 block text-xs text-secondary/70">
+            /blog/{slug}
+          </span>
+        )}
       </label>
       <label className="mb-4 block">
         <span className="mb-2 block text-sm text-secondary">
@@ -127,6 +160,16 @@ export default function PostForm({
           name="post_category"
           defaultValue={post?.post_category ?? ""}
           className={inputClassName}
+        />
+      </label>
+      <label className="mb-4 block">
+        <span className="mb-2 block text-sm text-secondary">Publish date</span>
+        <input
+          type="datetime-local"
+          name="created_at"
+          required
+          defaultValue={toDatetimeLocalValue(post?.created_at ?? new Date())}
+          className={`${inputClassName} [color-scheme:dark]`}
         />
       </label>
       <div className="mb-6 block">

@@ -50,6 +50,7 @@ export async function createPost(formData: FormData) {
   const slugInput = (formData.get("slug") as string).trim();
   const slug = slugInput || slugify(title);
   const seoDescription = (formData.get("seo_description") as string).trim();
+  const ogImage = (formData.get("og_image") as string).trim();
   const category = (formData.get("post_category") as string).trim();
   const content = (formData.get("post_content") as string).trim();
 
@@ -61,6 +62,7 @@ export async function createPost(formData: FormData) {
     post_title: title,
     post_slug: slug,
     seo_description: seoDescription,
+    og_image: ogImage || null,
     post_category: category || null,
     post_content: content,
   });
@@ -89,6 +91,7 @@ export async function updatePost(formData: FormData) {
   const slugInput = (formData.get("slug") as string).trim();
   const slug = slugInput || slugify(title);
   const seoDescription = (formData.get("seo_description") as string).trim();
+  const ogImage = (formData.get("og_image") as string).trim();
   const category = (formData.get("post_category") as string).trim();
   const content = (formData.get("post_content") as string).trim();
 
@@ -104,6 +107,7 @@ export async function updatePost(formData: FormData) {
       post_title: title,
       post_slug: slug,
       seo_description: seoDescription,
+      og_image: ogImage || null,
       post_category: category || null,
       post_content: content,
     })

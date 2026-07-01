@@ -24,7 +24,7 @@ export const metadata = {
     title: "Faruk Ipek | Front-end Developer",
     description:
       "I'm Faruk Ipek, a front-end developer from Chicago, USA. I've been designing and developing websites since 2016.",
-    url: "https://nextjs.org",
+    url: "https://farukipek.com",
     siteName: "Faruk Ipek",
     images: [
       {

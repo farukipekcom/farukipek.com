@@ -15,7 +15,10 @@ const inputClassName =
   "w-full rounded-lg border border-gray bg-primary px-4 py-3 text-white outline-none focus:border-secondary";
 
 function isEmptyHtml(html: string) {
-  return !html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim();
+  return !html
+    .replace(/<[^>]*>/g, "")
+    .replace(/&nbsp;/g, " ")
+    .trim();
 }
 
 type Post = {
@@ -23,6 +26,7 @@ type Post = {
   post_title: string;
   post_slug: string;
   seo_description: string;
+  og_image: string | null;
   post_category: string | null;
   post_content: string;
 };
@@ -75,7 +79,9 @@ export default function PostForm({
       <label className="mb-4 block">
         <span className="mb-2 block text-sm text-secondary">
           Slug{" "}
-          <span className="text-secondary/70">(optional — generated from title)</span>
+          <span className="text-secondary/70">
+            (optional — generated from title)
+          </span>
         </span>
         <input
           type="text"
@@ -86,12 +92,29 @@ export default function PostForm({
         />
       </label>
       <label className="mb-4 block">
-        <span className="mb-2 block text-sm text-secondary">SEO description</span>
+        <span className="mb-2 block text-sm text-secondary">
+          SEO description
+        </span>
         <textarea
           name="seo_description"
           required
           rows={2}
           defaultValue={post?.seo_description}
+          className={inputClassName}
+        />
+      </label>
+      <label className="mb-4 block">
+        <span className="mb-2 block text-sm text-secondary">
+          Open Graph image URL{" "}
+          <span className="text-secondary/70">
+            (optional — 1200×630 recommended)
+          </span>
+        </span>
+        <input
+          type="url"
+          name="og_image"
+          placeholder="https://farukipek.com/og-image.png"
+          defaultValue={post?.og_image ?? ""}
           className={inputClassName}
         />
       </label>

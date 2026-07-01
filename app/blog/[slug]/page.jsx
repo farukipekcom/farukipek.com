@@ -17,12 +17,17 @@ export async function generateMetadata({ params }, parent) {
   }
 
   const ogImage = data.og_image || "/og-image.png";
+  const url = `https://farukipek.com/blog/${data.post_slug}`;
 
   return {
     title: data.post_title,
     description: data.seo_description,
+    alternates: {
+      canonical: `/blog/${data.post_slug}`,
+    },
     openGraph: {
       title: data.post_title,
+      url: url,
       description: data.seo_description,
       type: "article",
       publishedTime: data.created_at,

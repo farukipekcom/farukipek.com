@@ -7,7 +7,7 @@ export default async function BlogList({ limit = "1000" }) {
   const { data: posts, error } = await supabase
     .from("posts")
     .select()
-    .order("post_id", { ascending: false })
+    .order("created_at", { ascending: false })
     .range(0, limit - 1);
   return (
     <div className={styles.blog}>

@@ -5,7 +5,10 @@ import { slugify } from "../utils/slugify";
 import { redirect } from "next/navigation";
 
 function isEmptyHtml(html: string) {
-  return !html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim();
+  return !html
+    .replace(/<[^>]*>/g, "")
+    .replace(/&nbsp;/g, " ")
+    .trim();
 }
 
 export async function login(formData: FormData) {
@@ -48,7 +51,9 @@ export async function createPost(formData: FormData) {
   const createdAt = (formData.get("created_at") as string).trim();
 
   if (!title || !seoDescription || isEmptyHtml(content) || !createdAt) {
-    redirect("/admin/posts/new?error=Title, SEO description, and content are required");
+    redirect(
+      "/admin/posts/new?error=Title, SEO description, and content are required",
+    );
   }
 
   const { error } = await supabase.from("posts").insert({
@@ -62,9 +67,7 @@ export async function createPost(formData: FormData) {
   });
 
   if (error) {
-    redirect(
-      `/admin/posts/new?error=${encodeURIComponent(error.message)}`,
-    );
+    redirect(`/admin/posts/new?error=${encodeURIComponent(error.message)}`);
   }
 
   redirect(`/blog/${slug}`);
@@ -90,7 +93,13 @@ export async function updatePost(formData: FormData) {
   const content = (formData.get("post_content") as string).trim();
   const createdAt = (formData.get("created_at") as string).trim();
 
-  if (!postId || !title || !seoDescription || isEmptyHtml(content) || !createdAt) {
+  if (
+    !postId ||
+    !title ||
+    !seoDescription ||
+    isEmptyHtml(content) ||
+    !createdAt
+  ) {
     redirect(
       `/admin/posts/${postId}/edit?error=Title, SEO description, and content are required`,
     );

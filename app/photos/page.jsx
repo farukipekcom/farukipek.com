@@ -8,6 +8,9 @@ export const metadata = {
   title: "Photos",
   description:
     "I am Faruk Ipek, a freelancer front-end developer from Chicago, USA. I love taking pictures of the world around me, capturing moments and emotions as they happen.",
+  alternates: {
+    canonical: "/photos",
+  },
 };
 async function getData() {
   const res = await fetch(

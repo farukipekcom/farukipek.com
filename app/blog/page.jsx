@@ -8,6 +8,9 @@ export const metadata = {
   title: "Blog",
   description:
     "I am Faruk Ipek, a freelancer front-end developer from Chicago, USA. I enjoy share about how I work, design and live.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default async function Blog() {

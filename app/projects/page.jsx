@@ -7,6 +7,9 @@ export const metadata = {
   title: "Projects",
   description:
     "I am Faruk Ipek, a freelancer front-end developer from Chicago, USA. Check out my projects. Send me a message and talk about the new project.",
+  alternates: {
+    canonical: "/projects",
+  },
 };
 export default function Projects() {
   return (

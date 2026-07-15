@@ -6,7 +6,11 @@ import ProjectList from "./components/Projects/ProjectList";
 import Title from "./components/Title/Title";
 import Text from "./components/Text/Text";
 import styles from "./Home.module.css";
-
+export const metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 export default function Home() {
   return (
     <main>

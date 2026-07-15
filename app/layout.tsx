@@ -17,9 +17,6 @@ export const metadata: Metadata = {
     "I'm Faruk Ipek, a front-end developer from Chicago, USA. I've been designing and developing websites since 2016.",
   authors: [{ name: "Faruk Ipek" }],
   metadataBase: new URL("https://farukipek.com"),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "Faruk Ipek | Front-end Developer",
     description:

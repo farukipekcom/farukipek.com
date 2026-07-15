@@ -6,14 +6,51 @@ import ProjectList from "./components/Projects/ProjectList";
 import Title from "./components/Title/Title";
 import Text from "./components/Text/Text";
 import styles from "./Home.module.css";
+import JsonLd from "./components/JsonLd";
 export const metadata = {
   alternates: {
     canonical: "/",
   },
 };
+const homepageJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://farukipek.com/#person",
+      name: "Faruk Ipek",
+      url: "https://farukipek.com/",
+      image: "https://farukipek.com/logo.png",
+      jobTitle: "Front-end Developer",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Chicago",
+        addressRegion: "IL",
+        addressCountry: "US",
+      },
+      sameAs: [
+        "https://x.com/farukipekcom",
+        "https://www.instagram.com/farukipekcom/",
+        "https://www.linkedin.com/in/farukipekcom/",
+        "https://github.com/farukipekcom/",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://farukipek.com/#website",
+      url: "https://farukipek.com/",
+      name: "Faruk Ipek",
+      inLanguage: "en-US",
+      publisher: {
+        "@id": "https://farukipek.com/#person",
+      },
+    },
+  ],
+};
 export default function Home() {
   return (
     <main>
+      <JsonLd data={homepageJsonLd} />
       <div className={styles.hero}>
         <Title>Hey! I'm Faruk 👋</Title>
         <Text>

@@ -55,3 +55,30 @@ article .post-gallery img {
   @apply h-[420px] w-1/2 max-w-[376px] rounded-lg object-cover;
 }
 /* BLOG POST END */
+table,
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  border: 1px solid #999;
+}
+
+th,
+th {
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid #999;
+}
+
+td,
+td {
+  padding: 0.75rem;
+  border: 1px solid #999;
+}
+
+tbody tr:hover,
+tbody tr:hover {
+  background: hsl(var(--muted) / 0.35);
+}
